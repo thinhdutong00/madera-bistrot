@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { MenuItem, MenuItemWithDesc } from '@/components/MenuComponents';
 
 export default function DrinkPage() {
@@ -104,7 +103,7 @@ export default function DrinkPage() {
         {/* COLONNA DESTRA */}
         <div className="space-y-16">
           
-          {/* GINTONERIA (17 DRINK) */}
+          {/* GINTONERIA (17 DRINK) - Prezzo a destra */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Gintoneria</h3>
             <div className="space-y-1">
@@ -128,7 +127,7 @@ export default function DrinkPage() {
             </div>
           </section>
 
-          {/* COCKTAIL INTERNAZIONALI (28 DRINK) */}
+          {/* COCKTAIL INTERNAZIONALI (28 DRINK) - Prezzo a destra */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Cocktail Internazionali</h3>
             <div className="space-y-4">
@@ -163,7 +162,7 @@ export default function DrinkPage() {
             </div>
           </section>
 
-          {/* DISTILLATI */}
+          {/* DISTILLATI - Prezzo a destra */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <section>
               <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Whiskey</h3>
@@ -207,7 +206,7 @@ export default function DrinkPage() {
             </section>
           </div>
 
-          {/* ANALCOLICI (3 DRINK) */}
+          {/* ANALCOLICI (3 DRINK) - Prezzo a destra */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Analcolici</h3>
             <div className="space-y-4">
