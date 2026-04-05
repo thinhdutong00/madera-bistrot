@@ -19,7 +19,7 @@ export default function HomePage() {
       <section className="relative h-[90vh] md:h-screen w-full overflow-hidden">
         {/* Immagine di fondo dinamica */}
         <Image 
-          src="/hero_cups.jpg" // Usa l'immagine con le tazze del video
+          src="/hero01.png" // Usa l'immagine con le tazze del video
           alt="Atmosfera Madera" 
           fill 
           className="object-cover object-center transition-transform duration-[10s] hover:scale-105" 
@@ -77,7 +77,7 @@ export default function HomePage() {
           </div>
           {/* Bento Box Immagine */}
           <div className="relative h-[400px] lg:h-[600px] w-full rounded-[40px] md:rounded-[80px] overflow-hidden border-[15px] border-[#1a1a1a]/5 shadow-inner">
-             <Image src="/interno02.jpg" alt="Interno Madera" fill className="object-cover" />
+             <Image src="/sfondobottiglieluce.jpg" alt="Interno Madera" fill className="object-cover" />
           </div>
         </div>
 
