@@ -63,7 +63,7 @@ export default function BarCaffetteria() {
           {/* L'immagine ora cresce per riempire il vuoto senza deformarsi */}
           <div className="relative flex-grow min-h-[400px] mb-12 rounded-3xl overflow-hidden shadow-2xl">
             <Image 
-              src="/barmadera.jpg" 
+              src="/panini&croissant.jpg" 
               alt="Atmosfera Madera" 
               fill 
               className="object-cover"
