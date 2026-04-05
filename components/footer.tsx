@@ -17,10 +17,10 @@ export default function Footer() {
     <footer className="w-full">
       {/* SEZIONE BORDEAUX - #642d3a */}
       <div className="bg-[#642d3a] text-[#ffefcc] py-16 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 items-center">
           
           {/* 1. Orari di Apertura */}
-          <div className="space-y-6">
+          <div className="space-y-6 w-full max-w-xs justify-self-start">
             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffefcc]/20 pb-4">
               Orari di Apertura
             </h4>
@@ -34,8 +34,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 2. Contatti & Posizione + IMMAGINE RETTANGOLARE */}
-          <div className="flex flex-row items-center justify-between gap-6 md:gap-8">
+          {/* 2. Contatti & Posizione + IMMAGINE ALLINEATA AL CENTRO */}
+          <div className="flex flex-row items-center justify-center gap-8 md:gap-10 w-full">
             <div className="flex flex-col space-y-10 text-left min-w-fit">
               <div className="space-y-3">
                 <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
@@ -55,8 +55,8 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Immagine Rettangolare in lunghezza su Desktop */}
-            <div className="relative flex-shrink-0 w-32 h-32 md:w-64 md:h-44 lg:w-80 lg:h-48 overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
+            {/* Immagine Rettangolare */}
+            <div className="relative flex-shrink-0 w-32 h-32 md:w-56 md:h-40 lg:w-72 lg:h-44 overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
               <Image 
                 src="/panini&croissant.jpg" 
                 alt="Panini e Croissant Madera" 
@@ -66,8 +66,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* 3. Branding */}
-          <div className="flex flex-col justify-center items-center md:items-end">
+          {/* 3. Branding - Allineato a destra */}
+          <div className="flex flex-col justify-center items-center md:items-end justify-self-end">
             <div className="text-center md:text-right">
                <p className="text-[11px] uppercase tracking-[0.5em] font-black opacity-30 leading-loose">
                  Madera <br className="hidden md:block"/> Caffetteria <br className="hidden md:block"/> & Bistrot
@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* SEZIONE GRIGIO MEDIO-SCURO - #2a2a2a */}
+      {/* SEZIONE GRIGIO MEDIO-SCURO */}
       <div className="bg-[#2a2a2a] py-8 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto flex flex-col items-center space-y-6">
           <div className="flex space-x-6 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-bold text-[#aaaaaa]">
