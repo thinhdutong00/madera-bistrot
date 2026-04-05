@@ -58,7 +58,7 @@ export default function Footer() {
             {/* Immagine allungata e alta */}
             <div className="relative flex-shrink-0 w-32 h-32 md:w-64 md:h-52 lg:w-[420px] lg:h-64 overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
               <Image 
-                src="/panini&croissant.jpg" 
+                src="/barmadera.jpg" 
                 alt="Panini e Croissant Madera" 
                 fill 
                 className="object-cover"
