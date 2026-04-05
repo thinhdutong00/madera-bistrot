@@ -15,61 +15,61 @@ export default function DrinkPage() {
         {/* COLONNA SINISTRA */}
         <div className="space-y-16">
           
-          {/* SIGNATURE (17 DRINK) */}
+          {/* SIGNATURE */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Signature</h3>
             <div className="space-y-4">
-              <MenuItemWithDesc label="Cosmopoli-Thain" price="10,00€" desc="Vodka, cointreau, lime, cranberry, kaffir lime, lemongrass" />
-              <MenuItemWithDesc label="Wild Turkey" price="10,00€" desc="Wild turkey 101, miele, limone, ginger beer" />
-              <MenuItemWithDesc label="Balsamic" price="10,00€" desc="Gin, fragola, limone, zucchero, aceto balsamico" />
-              <MenuItemWithDesc label="Ginn-Ebro" price="10,00€" desc="Gin, liquore al pino, rosmarino, limone, zucchero" />
-              <MenuItemWithDesc label="Basito" price="10,00€" desc="Gin, basilico, lime, zucchero, soda" />
-              <MenuItemWithDesc label="Zio Tobia" price="10,00€" desc="Rye whiskey, cynar, cherry brandy" />
-              <MenuItemWithDesc label="Ginetto" price="10,00€" desc="Gin, mela verde, cetriolo, lime, zucchero" />
-              <MenuItemWithDesc label="Don Vito" price="10,00€" desc="Bourbon, amaretto di saronno, limone, zucchero" />
-              <MenuItemWithDesc label="Ciapel" price="10,00€" desc="Bourbon, peach tree, limone, zucchero" />
-              <MenuItemWithDesc label="Italian Mule" price="10,00€" desc="Vermouth rosso, lime, ginger beer" />
-              <MenuItemWithDesc label="Tiki-Taka" price="12,00€" desc="Mix di Rum, lime, orzata, pompelmo, ananas" />
-              <MenuItemWithDesc label="Passion" price="10,00€" desc="Vodka, passion fruit, lime, zucchero" />
-              <MenuItemWithDesc label="Zenzy" price="10,00€" desc="Vodka, zenzero fresco, lime, zucchero" />
-              <MenuItemWithDesc label="Paloma Madera" price="10,00€" desc="Tequila, agave, lime, soda al pompelmo rosa" />
-              <MenuItemWithDesc label="Samba" price="10,00€" desc="Cachaca, mela verde, lime, zucchero" />
-              <MenuItemWithDesc label="Smokey Negroni" price="12,00€" desc="Gin, Campari, Vermouth rosso, Mezcal" />
-              <MenuItemWithDesc label="Garden Gin" price="10,00€" desc="Gin, sambuco, menta, cetriolo, lime, soda" />
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Cosmopoli-Thain" price="10,00€" desc="Vodka, cointreau, lime, cranberry, kaffir lime, lemongrass" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Wild Turkey" price="10,00€" desc="Wild turkey 101, miele, limone, ginger beer" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Balsamic" price="10,00€" desc="Gin, fragola, limone, zucchero, aceto balsamico" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Ginn-Ebro" price="10,00€" desc="Gin, liquore al pino, rosmarino, limone, zucchero" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Basito" price="10,00€" desc="Gin, basilico, lime, zucchero, soda" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Zio Tobia" price="10,00€" desc="Rye whiskey, cynar, cherry brandy" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Ginetto" price="10,00€" desc="Gin, mela verde, cetriolo, lime, zucchero" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Don Vito" price="10,00€" desc="Bourbon, amaretto di saronno, limone, zucchero" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Ciapel" price="10,00€" desc="Bourbon, peach tree, limone, zucchero" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Italian Mule" price="10,00€" desc="Vermouth rosso, lime, ginger beer" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Tiki-Taka" price="12,00€" desc="Mix di Rum, lime, orzata, pompelmo, ananas" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Passion" price="10,00€" desc="Vodka, passion fruit, lime, zucchero" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Zenzy" price="10,00€" desc="Vodka, zenzero fresco, lime, zucchero" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Paloma Madera" price="10,00€" desc="Tequila, agave, lime, soda al pompelmo rosa" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Samba" price="10,00€" desc="Cachaca, mela verde, lime, zucchero" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Smokey Negroni" price="12,00€" desc="Gin, Campari, Vermouth rosso, Mezcal" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Garden Gin" price="10,00€" desc="Gin, sambuco, menta, cetriolo, lime, soda" /></div>
             </div>
           </section>
 
-          {/* SPRITZ (3 DRINK) */}
+          {/* SPRITZ */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Spritz Family</h3>
             <div className="space-y-4">
-              <MenuItemWithDesc label="Spritz (Aperol, Campari, Select)" price="5,00€" desc="Prosecco, bitter, soda, arancia" />
-              <MenuItemWithDesc label="Hugo" price="6,00€" desc="Prosecco, sciroppo fiori di sambuco, soda, menta" />
-              <MenuItemWithDesc label="Cynar Spritz" price="6,00€" desc="Cynar, prosecco, soda, fetta di limone" />
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Spritz (Aperol, Campari, Select)" price="5,00€" desc="Prosecco, bitter, soda, arancia" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Hugo" price="6,00€" desc="Prosecco, sciroppo fiori di sambuco, soda, menta" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Cynar Spritz" price="6,00€" desc="Cynar, prosecco, soda, fetta di limone" /></div>
             </div>
           </section>
 
-          {/* SOUR (5 DRINK) */}
+          {/* SOUR */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Sour</h3>
             <div className="space-y-4">
-              <MenuItemWithDesc label="Vodka Sour" price="8,00€" desc="Vodka, limone, zucchero, albume opzionale" />
-              <MenuItemWithDesc label="Gin Sour" price="8,00€" desc="Gin, limone, zucchero, albume opzionale" />
-              <MenuItemWithDesc label="Whiskey Sour" price="9,00€" desc="Bourbon, limone, zucchero, albume opzionale" />
-              <MenuItemWithDesc label="Midori Sour" price="8,00€" desc="Liquore al melone, limone, zucchero, soda" />
-              <MenuItemWithDesc label="Amaretto Sour" price="8,00€" desc="Amaretto di Saronno, limone, zucchero" />
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Vodka Sour" price="8,00€" desc="Vodka, limone, zucchero, albume opzionale" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Gin Sour" price="8,00€" desc="Gin, limone, zucchero, albume opzionale" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Whiskey Sour" price="9,00€" desc="Bourbon, limone, zucchero, albume opzionale" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Midori Sour" price="8,00€" desc="Liquore al melone, limone, zucchero, soda" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Amaretto Sour" price="8,00€" desc="Amaretto di Saronno, limone, zucchero" /></div>
             </div>
           </section>
 
-          {/* ICED TEA FAMILY (5 DRINK) */}
+          {/* ICED TEA */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Iced Tea Family</h3>
             <div className="space-y-4">
-              <MenuItemWithDesc label="Long Island Iced Tea" price="8,00€" desc="Vodka, Gin, Rum, Tequila, Triple sec, limone, zucchero, cola" />
-              <MenuItemWithDesc label="Japan Iced Tea" price="8,00€" desc="Vodka, Gin, Rum, Tequila, Midori, limone, zucchero, lemon soda" />
-              <MenuItemWithDesc label="Miami Iced Tea" price="8,00€" desc="Vodka, Gin, Rum, Tequila, Blue Curacao, limone, zucchero, lemon soda" />
-              <MenuItemWithDesc label="Beverly Hills Iced Tea" price="9,00€" desc="Vodka, Gin, Rum, Tequila, Triple sec, limone, zucchero, Prosecco" />
-              <MenuItemWithDesc label="Texas Iced Tea" price="9,00€" desc="Vodka, Gin, Rum, Tequila, Bourbon, limone, zucchero, cola" />
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Long Island Iced Tea" price="8,00€" desc="Vodka, Gin, Rum, Tequila, Triple sec, limone, zucchero, cola" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Japan Iced Tea" price="8,00€" desc="Vodka, Gin, Rum, Tequila, Midori, limone, zucchero, lemon soda" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Miami Iced Tea" price="8,00€" desc="Vodka, Gin, Rum, Tequila, Blue Curacao, limone, zucchero, lemon soda" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Beverly Hills Iced Tea" price="9,00€" desc="Vodka, Gin, Rum, Tequila, Triple sec, limone, zucchero, Prosecco" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Texas Iced Tea" price="9,00€" desc="Vodka, Gin, Rum, Tequila, Bourbon, limone, zucchero, cola" /></div>
             </div>
           </section>
         </div>
@@ -77,127 +77,101 @@ export default function DrinkPage() {
         {/* COLONNA DESTRA */}
         <div className="space-y-16">
           
-          {/* COCKTAIL INTERNAZIONALI (28 DRINK) */}
+          {/* INTERNATIONAL */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">International</h3>
             <div className="space-y-4">
-              <MenuItemWithDesc label="Americano" price="7,00€" desc="Vermouth rosso, Campari, soda" />
-              <MenuItemWithDesc label="Negroni" price="7,00€" desc="Gin, Vermouth rosso, Campari" />
-              <MenuItemWithDesc label="Negroni Sbagliato" price="7,00€" desc="Prosecco, Vermouth rosso, Campari" />
-              <MenuItemWithDesc label="Mito" price="7,00€" desc="Vermouth rosso, Campari" />
-              <MenuItemWithDesc label="Garibaldi" price="7,00€" desc="Campari, spremuta d'arancia" />
-              <MenuItemWithDesc label="Cardinale" price="7,00€" desc="Gin, Vermouth dry, Campari" />
-              <MenuItemWithDesc label="Boulevardier" price="8,00€" desc="Bourbon, Vermouth rosso, Campari" />
-              <MenuItemWithDesc label="Martini Cocktail" price="9,00€" desc="Gin, Vermouth dry" />
-              <MenuItemWithDesc label="Vesper Martini" price="10,00€" desc="Gin, Vodka, Lillet Blanc" />
-              <MenuItemWithDesc label="Espresso Martini" price="8,00€" desc="Vodka, liquore caffè, espresso, zucchero" />
-              <MenuItemWithDesc label="Cosmopolitan" price="8,00€" desc="Vodka, triple sec, lime, cranberry" />
-              <MenuItemWithDesc label="Manhattan" price="9,00€" desc="Rye whiskey, Vermouth rosso, angostura" />
-              <MenuItemWithDesc label="Old Fashioned" price="9,00€" desc="Bourbon, zucchero, angostura, soda" />
-              <MenuItemWithDesc label="Daiquiri" price="7,00€" desc="Rum bianco, lime, zucchero" />
-              <MenuItemWithDesc label="Margarita" price="8,00€" desc="Tequila, triple sec, lime" />
-              <MenuItemWithDesc label="Tommy's Margarita" price="9,00€" desc="Tequila, lime, sciroppo d'agave" />
-              <MenuItemWithDesc label="Tequila Sunrise" price="7,00€" desc="Tequila, arancia, granatina" />
-              <MenuItemWithDesc label="Paloma" price="8,00€" desc="Tequila, lime, soda al pompelmo" />
-              <MenuItemWithDesc label="Black Russian" price="7,00€" desc="Vodka, liquore al caffè" />
-              <MenuItemWithDesc label="White Russian" price="8,00€" desc="Vodka, liquore al caffè, panna" />
-              <MenuItemWithDesc label="Bloody Mary" price="9,00€" desc="Vodka, pomodoro, spezie" />
-              <MenuItemWithDesc label="Aviation" price="10,00€" desc="Gin, maraschino, crème de violette, limone" />
-              <MenuItemWithDesc label="Clover Club" price="9,00€" desc="Gin, sciroppo di lampone, limone, albume" />
-              <MenuItemWithDesc label="Last Word" price="10,00€" desc="Gin, chartreuse verde, maraschino, lime" />
-              <MenuItemWithDesc label="Pisco Sour" price="10,00€" desc="Pisco, limone, zucchero, albume, angostura" />
-              <MenuItemWithDesc label="Sidecar" price="10,00€" desc="Cognac, triple sec, limone" />
-              <MenuItemWithDesc label="French 75" price="9,00€" desc="Gin, limone, zucchero, Prosecco" />
-              <MenuItemWithDesc label="Gimlet" price="7,00€" desc="Gin, lime cordial" />
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Americano" price="7,00€" desc="Vermouth rosso, Campari, soda" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Negroni" price="7,00€" desc="Gin, Vermouth rosso, Campari" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Negroni Sbagliato" price="7,00€" desc="Prosecco, Vermouth rosso, Campari" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Mito" price="7,00€" desc="Vermouth rosso, Campari" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Garibaldi" price="7,00€" desc="Campari, spremuta d'arancia" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Cardinale" price="7,00€" desc="Gin, Vermouth dry, Campari" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Boulevardier" price="8,00€" desc="Bourbon, Vermouth rosso, Campari" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Martini Cocktail" price="9,00€" desc="Gin, Vermouth dry" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Vesper Martini" price="10,00€" desc="Gin, Vodka, Lillet Blanc" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Espresso Martini" price="8,00€" desc="Vodka, liquore caffè, espresso, zucchero" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Cosmopolitan" price="8,00€" desc="Vodka, triple sec, lime, cranberry" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Manhattan" price="9,00€" desc="Rye whiskey, Vermouth rosso, angostura" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Old Fashioned" price="9,00€" desc="Bourbon, zucchero, angostura, soda" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Daiquiri" price="7,00€" desc="Rum bianco, lime, zucchero" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Margarita" price="8,00€" desc="Tequila, triple sec, lime" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Tommy's Margarita" price="9,00€" desc="Tequila, lime, sciroppo d'agave" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Tequila Sunrise" price="7,00€" desc="Tequila, arancia, granatina" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Paloma" price="8,00€" desc="Tequila, lime, soda al pompelmo" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Black Russian" price="7,00€" desc="Vodka, liquore al caffè" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="White Russian" price="8,00€" desc="Vodka, liquore al caffè, panna" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Bloody Mary" price="9,00€" desc="Vodka, pomodoro, spezie" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Aviation" price="10,00€" desc="Gin, maraschino, crème de violette, limone" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Clover Club" price="9,00€" desc="Gin, sciroppo di lampone, limone, albume" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Last Word" price="10,00€" desc="Gin, chartreuse verde, maraschino, lime" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Pisco Sour" price="10,00€" desc="Pisco, limone, zucchero, albume, angostura" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Sidecar" price="10,00€" desc="Cognac, triple sec, limone" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="French 75" price="9,00€" desc="Gin, limone, zucchero, Prosecco" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Gimlet" price="7,00€" desc="Gin, lime cordial" /></div>
             </div>
           </section>
 
-          {/* MULE (6 DRINK) */}
-          <section>
-            <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Mule</h3>
-            <div className="space-y-4">
-              <MenuItemWithDesc label="Moscow Mule" price="7,00€" desc="Vodka, lime fresco, ginger beer" />
-              <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime fresco, ginger beer" />
-              <MenuItemWithDesc label="Mexican Mule" price="8,00€" desc="Tequila, lime fresco, ginger beer" />
-              <MenuItemWithDesc label="Kentucky Mule" price="8,00€" desc="Bourbon, lime fresco, ginger beer" />
-              <MenuItemWithDesc label="Dark n Stormy" price="8,00€" desc="Rum scuro, lime fresco, ginger beer" />
-              <MenuItemWithDesc label="Gin Gin Mule" price="8,00€" desc="Gin, menta, lime fresco, ginger beer" />
-            </div>
-          </section>
-
-          {/* PESTATI (6 DRINK) */}
-          <section>
-            <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Pestati</h3>
-            <div className="space-y-4">
-              <MenuItemWithDesc label="Mojito" price="7,00€" desc="Rum bianco, menta, lime, zucchero di canna, soda" />
-              <MenuItemWithDesc label="Caipirinha" price="7,00€" desc="Cachaça, lime, zucchero di canna" />
-              <MenuItemWithDesc label="Caipiroska" price="7,00€" desc="Vodka, lime, zucchero di canna" />
-              <MenuItemWithDesc label="Caipiroska alla Fragola" price="8,00€" desc="Vodka, lime, zucchero di canna, fragole fresche" />
-              <MenuItemWithDesc label="Caipirissima" price="7,00€" desc="Rum bianco, lime, zucchero di canna" />
-              <MenuItemWithDesc label="Black Mojito" price="8,00€" desc="Rum bianco, liquore alla liquirizia, menta, lime, zucchero, soda" />
-            </div>
-          </section>
-
-          {/* GINTONERIA (17 DRINK) */}
-          <section>
-            <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a]">Gintoneria</h3>
-            <div className="space-y-1">
-              <MenuItem label="Gordon's / Tanqueray" price="7,00€" />
-              <MenuItem label="Bombay Sapphire" price="8,00€" />
-              <MenuItem label="Hendrick's" price="10,00€" />
-              <MenuItem label="Gin Mare" price="12,00€" />
-              <MenuItem label="Monkey 47" price="14,00€" />
-              <MenuItem label="Bulldog" price="9,00€" />
-              <MenuItem label="Roku" price="10,00€" />
-              <MenuItem label="Malfy (Rosa, Arancia, Limone)" price="9,00€" />
-              <MenuItem label="Tanqueray 10" price="12,00€" />
-              <MenuItem label="Elephant" price="12,00€" />
-              <MenuItem label="Nordés" price="10,00€" />
-              <MenuItem label="Engine" price="10,00€" />
-              <MenuItem label="The Botanist" price="12,00€" />
-              <MenuItem label="Brockmans" price="12,00€" />
-              <MenuItem label="Opihr" price="10,00€" />
-              <MenuItem label="Gin del Professore" price="12,00€" />
-              <MenuItem label="Sipsmith" price="10,00€" />
-            </div>
-          </section>
-
-          {/* DISTILLATI & ANALCOLICI */}
-          <div className="space-y-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <section>
-                <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Whiskey</h3>
-                <div className="space-y-1">
-                  <MenuItem label="Jack Daniel's" price="6,00€" />
-                  <MenuItem label="Jameson" price="6,00€" />
-                  <MenuItem label="Wild Turkey 101" price="7,00€" />
-                  <MenuItem label="Bulleit Bourbon" price="8,00€" />
-                  <MenuItem label="Laphroaig 10" price="10,00€" />
-                  <MenuItem label="Lagavulin 16" price="14,00€" />
-                  <MenuItem label="Oban 14" price="12,00€" />
-                </div>
-              </section>
-              <section>
-                <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Vodka & Rum</h3>
-                <div className="space-y-1">
-                  <MenuItem label="Moskovskaya" price="6,00€" />
-                  <MenuItem label="Belvedere" price="10,00€" />
-                  <MenuItem label="Havana 7" price="6,00€" />
-                  <MenuItem label="Zacapa 23" price="12,00€" />
-                  <MenuItem label="Amari / Grappe" price="5,00€" />
-                </div>
-              </section>
-            </div>
-
+          {/* MULE & PESTATI */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <section>
-              <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Analcolici</h3>
+              <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Mule</h3>
               <div className="space-y-4">
-                <MenuItemWithDesc label="Analcolico alla frutta" price="5,00€" desc="Mix di succhi stagionali, granatina, soda" />
-                <MenuItemWithDesc label="Virgin Mojito" price="6,00€" desc="Lime, zucchero di canna, menta, ginger ale" />
-                <MenuItemWithDesc label="Shirley Temple" price="6,00€" desc="Ginger ale, granatina, ciliegina al maraschino" />
+                <div className="flex justify-between"><MenuItemWithDesc label="Moscow Mule" price="7,00€" /></div>
+                <div className="flex justify-between"><MenuItemWithDesc label="London Mule" price="7,00€" /></div>
+                <div className="flex justify-between"><MenuItemWithDesc label="Mexican Mule" price="8,00€" /></div>
+              </div>
+            </section>
+            <section>
+              <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Pestati</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between"><MenuItemWithDesc label="Mojito" price="7,00€" /></div>
+                <div className="flex justify-between"><MenuItemWithDesc label="Caipirinha" price="7,00€" /></div>
+                <div className="flex justify-between"><MenuItemWithDesc label="Caipiroska" price="7,00€" /></div>
               </div>
             </section>
           </div>
+
+          {/* GINTONERIA */}
+          <section>
+            <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a]">Gintoneria</h3>
+            <div className="space-y-1">
+              <div className="flex justify-between"><MenuItem label="Gordon's / Tanqueray" price="7,00€" /></div>
+              <div className="flex justify-between"><MenuItem label="Bombay Sapphire" price="8,00€" /></div>
+              <div className="flex justify-between"><MenuItem label="Hendrick's" price="10,00€" /></div>
+              <div className="flex justify-between"><MenuItem label="Gin Mare" price="12,00€" /></div>
+              <div className="flex justify-between"><MenuItem label="Monkey 47" price="14,00€" /></div>
+              <div className="flex justify-between"><MenuItem label="Bulldog" price="9,00€" /></div>
+              <div className="flex justify-between"><MenuItem label="Roku" price="10,00€" /></div>
+              <div className="flex justify-between"><MenuItem label="Malfy" price="9,00€" /></div>
+            </div>
+          </section>
+
+          {/* DISTILLATI */}
+          <section>
+            <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Distillati</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-1">
+                <div className="flex justify-between"><MenuItem label="Jack Daniel's" price="6,00€" /></div>
+                <div className="flex justify-between"><MenuItem label="Wild Turkey 101" price="7,00€" /></div>
+                <div className="flex justify-between"><MenuItem label="Lagavulin 16" price="14,00€" /></div>
+              </div>
+              <div className="space-y-1">
+                <div className="flex justify-between"><MenuItem label="Belvedere" price="10,00€" /></div>
+                <div className="flex justify-between"><MenuItem label="Zacapa 23" price="12,00€" /></div>
+                <div className="flex justify-between"><MenuItem label="Amari" price="4,00€" /></div>
+              </div>
+            </div>
+          </section>
+
+          {/* ANALCOLICI */}
+          <section>
+            <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Analcolici</h3>
+            <div className="space-y-4">
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Analcolico alla frutta" price="5,00€" desc="Mix di succhi stagionali" /></div>
+              <div className="flex justify-between items-start"><MenuItemWithDesc label="Virgin Mojito" price="6,00€" desc="Lime, menta, ginger ale" /></div>
+            </div>
+          </section>
 
         </div>
       </div>
