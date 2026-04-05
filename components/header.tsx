@@ -37,10 +37,19 @@ export default function Header() {
     };
   }, [lastScrollY, isOpen]);
 
+  const menuSubLinks = [
+    { name: 'Bar Caffetteria', href: '/menu/caffetteria' },
+    { name: 'Stuzzicherie', href: '/menu/stuzzicherie' },
+    { name: 'Apericena', href: '/menu/apericena' },
+    { name: 'Drink & Cocktail', href: '/menu/drink' },
+    { name: 'Carta dei Vini', href: '/menu/vini' },
+    { name: 'Birre', href: '/menu/birre' },
+  ];
+
   const navLinks = [
     { name: 'Madera', href: '/' },
     { name: 'Chi Siamo', href: '/informazioni' },
-    { name: 'Menu', href: '/menu' },
+    { name: 'Menu', href: '/menu', submenu: menuSubLinks },
     { name: 'Contatti', href: '/contatti' },
   ];
 
@@ -64,21 +73,37 @@ export default function Header() {
             />
           </Link>
 
-          {/* NAV DESKTOP - Al Centro */}
+          {/* NAV DESKTOP */}
           <nav className="hidden md:flex items-center space-x-10 text-[11px] uppercase tracking-[0.3em] font-bold text-[#1a1a1a]">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href} 
-                className="hover:text-[#642d3a] transition-colors relative group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#642d3a] transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+              <div key={link.name} className="relative group py-4">
+                <Link 
+                  href={link.href} 
+                  className="hover:text-[#642d3a] transition-colors relative"
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#642d3a] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+
+                {/* DROPDOWN DESKTOP */}
+                {link.submenu && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-56 bg-white shadow-xl border border-gray-50 rounded-2xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-2">
+                    {link.submenu.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        href={sub.href}
+                        className="block px-6 py-2 text-[10px] tracking-[0.2em] hover:bg-gray-50 hover:text-[#642d3a] transition-colors"
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 
-          {/* CTA DESKTOP & TABLET - Riserva un tavolo */}
+          {/* CTA DESKTOP */}
           <div className="hidden md:flex items-center justify-end md:w-40 lg:w-56">
             <a 
               href="tel:3517688658" 
@@ -88,7 +113,7 @@ export default function Header() {
             </a>
           </div>
 
-          {/* HAMBURGER BUTTON - Mobile */}
+          {/* HAMBURGER BUTTON */}
           <button 
             onClick={toggleMenu} 
             className="md:hidden p-2 text-[#1a1a1a] z-[210] focus:outline-none"
@@ -110,7 +135,7 @@ export default function Header() {
         } md:hidden`}
       >
         <div className="p-8 flex flex-col min-h-screen">
-          <div className="flex justify-between items-center mb-16">
+          <div className="flex justify-between items-center mb-12">
             <Image 
               src="/logo.png" 
               alt="Logo Madera" 
@@ -129,19 +154,36 @@ export default function Header() {
             </button>
           </div>
 
-          <nav className="flex flex-col space-y-8">
+          <nav className="flex flex-col space-y-6">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href} 
-                onClick={toggleMenu} 
-                className="text-4xl font-black tracking-tighter text-[#1a1a1a] uppercase active:text-[#642d3a] transition-colors"
-              >
-                {link.name}
-              </Link>
+              <div key={link.name} className="flex flex-col">
+                <Link 
+                  href={link.href} 
+                  onClick={toggleMenu} 
+                  className="text-4xl font-black tracking-tighter text-[#1a1a1a] uppercase active:text-[#642d3a] transition-colors"
+                >
+                  {link.name}
+                </Link>
+                
+                {/* SOTTOMENU MOBILE */}
+                {link.submenu && (
+                  <div className="mt-4 ml-2 flex flex-col space-y-3 border-l-2 border-[#642d3a]/20 pl-4">
+                    {link.submenu.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        href={sub.href}
+                        onClick={toggleMenu}
+                        className="text-sm font-bold uppercase tracking-widest text-[#642d3a]/70 active:text-[#642d3a]"
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             
-            <div className="pt-12">
+            <div className="pt-8">
               <a 
                 href="tel:3517688658" 
                 className="inline-block w-full bg-[#642d3a] text-white py-5 rounded-full text-center font-bold uppercase tracking-[0.2em] text-xs shadow-xl active:scale-95 transition-all"
