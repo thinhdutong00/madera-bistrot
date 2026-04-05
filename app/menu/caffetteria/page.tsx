@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { MenuItem, MenuItemWithDesc, ApericenaCard } from '@/components/MenuComponents';
+import { MenuItem } from '@/components/MenuComponents';
 
 export default function CaffetteriaPage() {
   return (
@@ -12,13 +12,34 @@ export default function CaffetteriaPage() {
       </div>
 
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-        {/* COLONNA SINISTRA */}
+        {/* COLONNA SINISTRA: BEVANDE & AMARI */}
         <div className="flex flex-col">
           <div className="space-y-1 pl-4 border-l-2 border-[#642d3a]/20">
             <MenuItem label="Caffè" price="1,30€" />
             <MenuItem label="Caffè Deca" price="1,50€" />
+            <MenuItem label="Caffè Corretto" price="2,00€" />
             <MenuItem label="Cappuccino" price="1,50€" />
-            {/* ... inserisci gli altri elementi della caffetteria qui ... */}
+            <MenuItem label="Cappuccino Deca" price="2,00€" />
+            <MenuItem label="Caffè Marocchino" price="1,80€" />
+            <MenuItem label="Cappuccino di Soia" price="2,00€" />
+            <MenuItem label="Latte Macchiato" price="2,00€" />
+            <MenuItem label="Macchiatone" price="1,50€" />
+            <MenuItem label="Ginseng Piccolo" price="1,50€" />
+            <MenuItem label="Ginseng Grande" price="1,80€" />
+            <MenuItem label="Spremuta Arancia" price="4,50€" />
+            <MenuItem label="Orzo Piccolo" price="1,30€" />
+            <MenuItem label="Orzo Grande" price="1,50€" />
+            <MenuItem label="Caffè Shakerato" price="3,50€" />
+            <MenuItem label="Succhi di Frutta" price="3,50€" />
+            <MenuItem label="Acqua Naturale/Frizzante 1/2 L" price="1,00€" />
+            <MenuItem label="Bicchiere di Acqua" price="0,50€" />
+            <MenuItem label="Thè Caldo" price="3,50€" />
+            <MenuItem label="Tisana" price="5,00€" />
+            <MenuItem label="Cioccolata Calda" price="5,00€" />
+            <MenuItem label="Cioccolata Calda con Panna" price="6,50€" />
+            <MenuItem label="Bibite in Bottiglia" price="4,00€" />
+            <MenuItem label="Red Bull / Crodino / Bitter" price="3,50€" />
+            <MenuItem label="Amari" price="4,00€" />
             <MenuItem label="Grappe" price="5,00€" />
           </div>
 
@@ -29,20 +50,36 @@ export default function CaffetteriaPage() {
             </p>
             <div className="space-y-1 pl-4 border-l-2 border-[#642d3a]/20">
               <MenuItem label="Brioches" price="1,50€" />
+              <MenuItem label="Brioches Piccola" price="1,00€" />
+              <MenuItem label="Biscottoni al Cioccolato" price="1,50€" />
               <MenuItem label="Fetta di Torta" price="3,00€" />
             </div>
           </div>
         </div>
 
-        {/* COLONNA DESTRA */}
+        {/* COLONNA DESTRA: IMMAGINE & SALATI */}
         <div className="flex flex-col h-full">
           <div className="relative flex-grow min-h-[400px] mb-12 rounded-3xl overflow-hidden shadow-2xl">
-            <Image src="/panini&croissant.jpg" alt="Atmosfera Madera" fill className="object-cover" priority />
+            <Image 
+              src="/panini&croissant.jpg" 
+              alt="Atmosfera Madera" 
+              fill 
+              className="object-cover"
+              priority
+            />
           </div>
           <div className="space-y-1 pl-4 border-l-2 border-[#642d3a]/20">
             <MenuItem label="Erbazzone" price="2,50€" />
             <MenuItem label="Toast" price="3,50€" />
+            <MenuItem label="Pizza" price="2,80€" />
             <MenuItem label="Piadina" price="5,00€" />
+            <MenuItem label="Tramezzino" price="3,50€" />
+            <MenuItem label="Panino Grande Farcito" price="3,00€" />
+            <MenuItem label="Panino Medio Farcito" price="2,50€" />
+            <MenuItem label="Panino Piccolo Farcito" price="2,00€" />
+            <MenuItem label="Panino Semidolce" price="2,00€" />
+            <MenuItem label="Gnocco Farcito" price="3,00€" />
+            <MenuItem label="Filoncino Farcito Integrale ai Cereali" price="4,00€" />
           </div>
         </div>
       </div>
