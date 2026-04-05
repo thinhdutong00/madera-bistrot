@@ -43,13 +43,13 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-6 pt-10">
               <a 
                 href="#eventi" 
-                className="bg-[#ffefcc] text-[#455970] px-10 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] shadow-2xl hover:bg-white hover:scale-105 transition-all duration-300 inline-block active:scale-95"
+                className="bg-[#ffefcc] text-[#455970] px-10 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] shadow-2xl hover:bg-white hover:scale-105 transition-all duration-300 inline-block active:scale-95 text-center"
               >
                 Scopri i nostri Eventi
               </a>
               <a 
                 href="/menu" 
-                className="text-white border-b-2 border-white/20 pb-1.5 font-bold uppercase text-[10px] tracking-[0.3em] hover:border-[#ffefcc] hover:text-[#ffefcc] transition-all"
+                className="text-white border-b-2 border-white/20 pb-1.5 font-bold uppercase text-[10px] tracking-[0.3em] hover:border-[#ffefcc] hover:text-[#ffefcc] transition-all text-center sm:text-left"
               >
                 Guarda il Menù
               </a>
@@ -113,7 +113,6 @@ export default function HomePage() {
           
           {/* Header Sezione */}
           <div className="text-center space-y-4 max-w-xl mx-auto relative">
-             {/* Cerchio decorativo sfocato */}
              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#ffefcc]/10 rounded-full blur-[100px] pointer-events-none" />
              
              <span className="text-[#ffefcc] uppercase tracking-[0.4em] text-[10px] md:text-xs font-black opacity-80 block relative z-10">
@@ -130,7 +129,9 @@ export default function HomePage() {
               <a 
                 key={cat.name} 
                 href="/menu" 
-                className={`relative aspect-[1/1.3] rounded-[40px] overflow-hidden group shadow-xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.5)] transition-all duration-500 delay-[${index * 50}ms]`}
+                // Corretto: uso style inline per l'index dinamico
+                style={{ transitionDelay: `${index * 50}ms` }}
+                className="relative aspect-[1/1.3] rounded-[40px] overflow-hidden group shadow-xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.5)] transition-all duration-500"
               >
                 <Image 
                   src={cat.src} 
@@ -138,7 +139,6 @@ export default function HomePage() {
                   fill 
                   className="object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
-                {/* Overlay card */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/5 z-10" />
                 
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] bg-white/95 backdrop-blur-sm rounded-full py-5 px-6 flex justify-between items-center z-20 group-hover:-translate-y-2 transition-transform shadow-lg">
@@ -163,7 +163,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. FINAL CTA - Bento Style (Nuova Sezione) */}
+      {/* 4. FINAL CTA - Bento Style */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="bg-[#1a1a1a]/5 rounded-[60px] md:rounded-[100px] p-16 md:p-32 text-center relative overflow-hidden group">
           
@@ -182,14 +182,16 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-8 pt-6">
               <a 
-                href="tel:0598752431" 
+                href="tel:3517688658" 
                 className="bg-[#642d3a] text-white px-12 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] shadow-xl hover:bg-[#ffefcc] hover:text-[#1a1a1a] hover:scale-105 transition-all duration-300 inline-block active:scale-95"
               >
                 Prenota un Tavolo
               </a>
               
               <a 
-                href="tel:0598752431" 
+                href="https://maps.google.com/?q=Via+Alcide+Garagnani+10+Carpi" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#1a1a1a] border-b-2 border-[#1a1a1a]/20 pb-1 font-bold uppercase text-[10px] tracking-[0.3em] hover:border-[#642d3a] hover:text-[#642d3a] transition-all"
               >
                 Vedi dove siamo
@@ -197,9 +199,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Numero civico decorativo sullo sfondo */}
-          <span className="absolute -bottom-10 right-10 text-white font-black text-[15rem] select-none pointer-events-none">
-            Madera
+          <span className="absolute -bottom-10 right-10 text-white font-black text-[15rem] select-none pointer-events-none opacity-50">
+            Maderas
           </span>
         </div>
       </section>
