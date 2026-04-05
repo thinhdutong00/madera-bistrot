@@ -19,7 +19,7 @@ export default function DrinkPage() {
           {/* SIGNATURE (17 DRINK) */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Signature</h3>
-            <div className="space-y-1">
+            <div className="space-y-4">
               <MenuItemWithDesc label="Cosmopoli-Thain" price="10,00€" desc="Vodka, cointreau, lime, cranberry, kaffir lime, lemongrass" />
               <MenuItemWithDesc label="Wild Turkey" price="10,00€" desc="Wild turkey 101, miele, limone, ginger beer" />
               <MenuItemWithDesc label="Balsamic" price="10,00€" desc="Gin, fragola, limone, zucchero, aceto balsamico" />
@@ -43,60 +43,60 @@ export default function DrinkPage() {
           {/* SPRITZ (3 DRINK) */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Spritz Family</h3>
-            <div className="space-y-1">
-              <MenuItem label="Spritz (Aperol, Campari, Select)" price="5,00€" />
-              <MenuItem label="Hugo" price="6,00€" />
-              <MenuItem label="Cynar Spritz" price="6,00€" />
+            <div className="space-y-4">
+              <MenuItemWithDesc label="Spritz (Aperol, Campari, Select)" price="5,00€" desc="Prosecco, bitter, soda, arancia" />
+              <MenuItemWithDesc label="Hugo" price="6,00€" desc="Prosecco, sciroppo fiori di sambuco, soda, menta" />
+              <MenuItemWithDesc label="Cynar Spritz" price="6,00€" desc="Cynar, prosecco, soda, fetta di limone" />
             </div>
           </section>
 
           {/* SOUR (5 DRINK) */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Sour</h3>
-            <div className="space-y-1">
-              <MenuItem label="Vodka Sour" price="8,00€" />
-              <MenuItem label="Gin Sour" price="8,00€" />
-              <MenuItem label="Whiskey Sour" price="9,00€" />
-              <MenuItem label="Midori Sour" price="8,00€" />
-              <MenuItem label="Amaretto Sour" price="8,00€" />
+            <div className="space-y-4">
+              <MenuItemWithDesc label="Vodka Sour" price="8,00€" desc="Vodka, limone, zucchero, albume opzionale" />
+              <MenuItemWithDesc label="Gin Sour" price="8,00€" desc="Gin, limone, zucchero, albume opzionale" />
+              <MenuItemWithDesc label="Whiskey Sour" price="9,00€" desc="Bourbon, limone, zucchero, albume opzionale" />
+              <MenuItemWithDesc label="Midori Sour" price="8,00€" desc="Liquore al melone, limone, zucchero, soda" />
+              <MenuItemWithDesc label="Amaretto Sour" price="8,00€" desc="Amaretto di Saronno, limone, zucchero" />
             </div>
           </section>
 
           {/* ICED TEA FAMILY (5 DRINK) */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Iced Tea Family</h3>
-            <div className="space-y-1">
-              <MenuItem label="Long Island Iced Tea" price="8,00€" />
-              <MenuItem label="Japan Iced Tea" price="8,00€" />
-              <MenuItem label="Miami Iced Tea" price="8,00€" />
-              <MenuItem label="Beverly Hills Iced Tea" price="9,00€" />
-              <MenuItem label="Texas Iced Tea" price="9,00€" />
+            <div className="space-y-4">
+              <MenuItemWithDesc label="Long Island Iced Tea" price="8,00€" desc="Vodka, Gin, Rum, Tequila, Triple sec, limone, zucchero, cola" />
+              <MenuItemWithDesc label="Japan Iced Tea" price="8,00€" desc="Vodka, Gin, Rum, Tequila, Midori, limone, zucchero, lemon soda" />
+              <MenuItemWithDesc label="Miami Iced Tea" price="8,00€" desc="Vodka, Gin, Rum, Tequila, Blue Curacao, limone, zucchero, lemon soda" />
+              <MenuItemWithDesc label="Beverly Hills Iced Tea" price="9,00€" desc="Vodka, Gin, Rum, Tequila, Triple sec, limone, zucchero, Prosecco" />
+              <MenuItemWithDesc label="Texas Iced Tea" price="9,00€" desc="Vodka, Gin, Rum, Tequila, Bourbon, limone, zucchero, cola" />
             </div>
           </section>
 
           {/* MULE (6 DRINK) */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Mule</h3>
-            <div className="space-y-1">
-              <MenuItem label="Moscow Mule" price="7,00€" />
-              <MenuItem label="London Mule" price="7,00€" />
-              <MenuItem label="Mexican Mule" price="8,00€" />
-              <MenuItem label="Kentucky Mule" price="8,00€" />
-              <MenuItem label="Dark n Stormy" price="8,00€" />
-              <MenuItem label="Gin Gin Mule" price="8,00€" />
+            <div className="space-y-4">
+              <MenuItemWithDesc label="Moscow Mule" price="7,00€" desc="Vodka, lime fresco, ginger beer" />
+              <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime fresco, ginger beer" />
+              <MenuItemWithDesc label="Mexican Mule" price="8,00€" desc="Tequila, lime fresco, ginger beer" />
+              <MenuItemWithDesc label="Kentucky Mule" price="8,00€" desc="Bourbon, lime fresco, ginger beer" />
+              <MenuItemWithDesc label="Dark n Stormy" price="8,00€" desc="Rum scuro, lime fresco, ginger beer" />
+              <MenuItemWithDesc label="Gin Gin Mule" price="8,00€" desc="Gin, menta, lime fresco, ginger beer" />
             </div>
           </section>
 
           {/* PESTATI (6 DRINK) */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Pestati</h3>
-            <div className="space-y-1">
-              <MenuItem label="Mojito" price="7,00€" />
-              <MenuItem label="Caipirinha" price="7,00€" />
-              <MenuItem label="Caipiroska" price="7,00€" />
-              <MenuItem label="Caipiroska alla Fragola" price="8,00€" />
-              <MenuItem label="Caipirissima" price="7,00€" />
-              <MenuItem label="Black Mojito" price="8,00€" />
+            <div className="space-y-4">
+              <MenuItemWithDesc label="Mojito" price="7,00€" desc="Rum bianco, menta, lime, zucchero di canna, soda" />
+              <MenuItemWithDesc label="Caipirinha" price="7,00€" desc="Cachaça, lime, zucchero di canna" />
+              <MenuItemWithDesc label="Caipiroska" price="7,00€" desc="Vodka, lime, zucchero di canna" />
+              <MenuItemWithDesc label="Caipiroska alla Fragola" price="8,00€" desc="Vodka, lime, zucchero di canna, fragole fresche" />
+              <MenuItemWithDesc label="Caipirissima" price="7,00€" desc="Rum bianco, lime, zucchero di canna" />
+              <MenuItemWithDesc label="Black Mojito" price="8,00€" desc="Rum bianco, liquore alla liquirizia, menta, lime, zucchero, soda" />
             </div>
           </section>
         </div>
@@ -128,42 +128,42 @@ export default function DrinkPage() {
             </div>
           </section>
 
-          {/* COCKTAIL (28 DRINK) */}
+          {/* COCKTAIL INTERNAZIONALI (28 DRINK) */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Cocktail Internazionali</h3>
-            <div className="grid grid-cols-1 gap-1 text-sm">
-              <MenuItem label="Americano" price="7,00€" />
-              <MenuItem label="Negroni" price="7,00€" />
-              <MenuItem label="Negroni Sbagliato" price="7,00€" />
-              <MenuItem label="Mito" price="7,00€" />
-              <MenuItem label="Garibaldi" price="7,00€" />
-              <MenuItem label="Cardinale" price="7,00€" />
-              <MenuItem label="Boulevardier" price="8,00€" />
-              <MenuItem label="Martini Cocktail" price="9,00€" />
-              <MenuItem label="Vesper Martini" price="10,00€" />
-              <MenuItem label="Espresso Martini" price="8,00€" />
-              <MenuItem label="Cosmopolitan" price="8,00€" />
-              <MenuItem label="Manhattan" price="9,00€" />
-              <MenuItem label="Old Fashioned" price="9,00€" />
-              <MenuItem label="Daiquiri" price="7,00€" />
-              <MenuItem label="Margarita" price="8,00€" />
-              <MenuItem label="Tommy's Margarita" price="9,00€" />
-              <MenuItem label="Tequila Sunrise" price="7,00€" />
-              <MenuItem label="Paloma" price="8,00€" />
-              <MenuItem label="Black Russian" price="7,00€" />
-              <MenuItem label="White Russian" price="8,00€" />
-              <MenuItem label="Bloody Mary" price="9,00€" />
-              <MenuItem label="Aviation" price="10,00€" />
-              <MenuItem label="Clover Club" price="9,00€" />
-              <MenuItem label="Last Word" price="10,00€" />
-              <MenuItem label="Pisco Sour" price="10,00€" />
-              <MenuItem label="Sidecar" price="10,00€" />
-              <MenuItem label="French 75" price="9,00€" />
-              <MenuItem label="Gimlet" price="7,00€" />
+            <div className="grid grid-cols-1 gap-4 text-sm">
+              <MenuItemWithDesc label="Americano" price="7,00€" desc="Vermouth rosso, Campari, soda" />
+              <MenuItemWithDesc label="Negroni" price="7,00€" desc="Gin, Vermouth rosso, Campari" />
+              <MenuItemWithDesc label="Negroni Sbagliato" price="7,00€" desc="Prosecco, Vermouth rosso, Campari" />
+              <MenuItemWithDesc label="Mito" price="7,00€" desc="Vermouth rosso, Campari" />
+              <MenuItemWithDesc label="Garibaldi" price="7,00€" desc="Campari, spremuta d'arancia" />
+              <MenuItemWithDesc label="Cardinale" price="7,00€" desc="Gin, Vermouth dry, Campari" />
+              <MenuItemWithDesc label="Boulevardier" price="8,00€" desc="Bourbon, Vermouth rosso, Campari" />
+              <MenuItemWithDesc label="Martini Cocktail" price="9,00€" desc="Gin, Vermouth dry" />
+              <MenuItemWithDesc label="Vesper Martini" price="10,00€" desc="Gin, Vodka, Lillet Blanc" />
+              <MenuItemWithDesc label="Espresso Martini" price="8,00€" desc="Vodka, liquore caffè, espresso, zucchero" />
+              <MenuItemWithDesc label="Cosmopolitan" price="8,00€" desc="Vodka, triple sec, lime, cranberry" />
+              <MenuItemWithDesc label="Manhattan" price="9,00€" desc="Rye whiskey, Vermouth rosso, angostura" />
+              <MenuItemWithDesc label="Old Fashioned" price="9,00€" desc="Bourbon, zucchero, angostura, soda" />
+              <MenuItemWithDesc label="Daiquiri" price="7,00€" desc="Rum bianco, lime, zucchero" />
+              <MenuItemWithDesc label="Margarita" price="8,00€" desc="Tequila, triple sec, lime" />
+              <MenuItemWithDesc label="Tommy's Margarita" price="9,00€" desc="Tequila, lime, sciroppo d'agave" />
+              <MenuItemWithDesc label="Tequila Sunrise" price="7,00€" desc="Tequila, arancia, granatina" />
+              <MenuItemWithDesc label="Paloma" price="8,00€" desc="Tequila, lime, soda al pompelmo" />
+              <MenuItemWithDesc label="Black Russian" price="7,00€" desc="Vodka, liquore al caffè" />
+              <MenuItemWithDesc label="White Russian" price="8,00€" desc="Vodka, liquore al caffè, panna" />
+              <MenuItemWithDesc label="Bloody Mary" price="9,00€" desc="Vodka, pomodoro, spezie" />
+              <MenuItemWithDesc label="Aviation" price="10,00€" desc="Gin, maraschino, crème de violette, limone" />
+              <MenuItemWithDesc label="Clover Club" price="9,00€" desc="Gin, sciroppo di lampone, limone, albume" />
+              <MenuItemWithDesc label="Last Word" price="10,00€" desc="Gin, chartreuse verde, maraschino, lime" />
+              <MenuItemWithDesc label="Pisco Sour" price="10,00€" desc="Pisco, limone, zucchero, albume, angostura" />
+              <MenuItemWithDesc label="Sidecar" price="10,00€" desc="Cognac, triple sec, limone" />
+              <MenuItemWithDesc label="French 75" price="9,00€" desc="Gin, limone, zucchero, Prosecco" />
+              <MenuItemWithDesc label="Gimlet" price="7,00€" desc="Gin, lime cordial" />
             </div>
           </section>
 
-          {/* WHISKEY, VODKA, RUM (DISTILLATI) */}
+          {/* DISTILLATI */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <section>
               <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Whiskey (7)</h3>
@@ -210,10 +210,10 @@ export default function DrinkPage() {
           {/* ANALCOLICI (3 DRINK) */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Analcolici</h3>
-            <div className="space-y-1">
-              <MenuItem label="Analcolico alla frutta" price="5,00€" />
-              <MenuItem label="Virgin Mojito" price="6,00€" />
-              <MenuItem label="Shirley Temple" price="6,00€" />
+            <div className="space-y-4">
+              <MenuItemWithDesc label="Analcolico alla frutta" price="5,00€" desc="Mix di succhi stagionali, granatina, soda" />
+              <MenuItemWithDesc label="Virgin Mojito" price="6,00€" desc="Lime, zucchero di canna, menta, ginger ale" />
+              <MenuItemWithDesc label="Shirley Temple" price="6,00€" desc="Ginger ale, granatina, ciliegina al maraschino" />
             </div>
           </section>
         </div>
