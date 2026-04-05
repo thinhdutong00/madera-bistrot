@@ -133,6 +133,39 @@ export default function MenuPage() {
         </div>
       </section>
 
+
+{/* 3. SEZIONE SFIZI */}
+      <section id="sfizi" className="py-20 px-6 w-full bg-white">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          
+          {/* COLONNA SINISTRA: TESTI */}
+          <div className="flex flex-col justify-center">
+            <div className="space-y-8 pl-4 border-l-2 border-[#642d3a]/20">
+              <MenuItemWithDesc 
+                label="Patatine Fritte" 
+                price="5,00€" 
+              />
+              <MenuItemWithDesc 
+                label="Tagliere di Formaggi Misti" 
+                price="7,00€" 
+              />
+            </div>
+          </div>
+
+          {/* COLONNA DESTRA: IMMAGINE */}
+          <div className="relative w-full aspect-square rounded-3xl overflow-hidden shadow-2xl">
+            <Image 
+              src="/paninoavocado.jpg" 
+              alt="Sfizi Madera" 
+              fill 
+              className="object-cover"
+            />
+          </div>
+
+        </div>
+      </section>
+
+
     </div>
   );
 }
