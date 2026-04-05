@@ -94,7 +94,7 @@ export default function HomePage() {
                 </div>
             </div>
             <div id="eventi" className="relative h-[300px] rounded-[30px] overflow-hidden border-2 border-white/50 group">
-                <Image src="/eventi.jpg" alt="Prossimi Eventi" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                <Image src="/dj.jpg" alt="Prossimi Eventi" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-black/60 flex flex-col justify-end p-8 space-y-4">
                     <h4 className="text-3xl font-black text-white uppercase italic tracking-tighter">Madera Caffè & Bistrot</h4>
                     <div className="flex gap-4">
