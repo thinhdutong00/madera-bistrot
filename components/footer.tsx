@@ -17,11 +17,11 @@ export default function Footer() {
     <footer className="w-full">
       {/* SEZIONE BORDEAUX - #642d3a */}
       <div className="bg-[#642d3a] text-[#ffefcc] py-16 px-6">
-        {/* Grid a 4 colonne su desktop, 1 colonna su mobile */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-start">
+        {/* Layout a 4 colonne con allineamento centrale per evitare buchi visivi */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 items-center">
           
           {/* 1. COLONNA: Orari di Apertura */}
-          <div className="space-y-6">
+          <div className="space-y-6 self-start">
             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffefcc]/20 pb-4">
               Orari di Apertura
             </h4>
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
 
           {/* 2. COLONNA: Contattaci & Dove Siamo */}
-          <div className="flex flex-col space-y-10">
+          <div className="flex flex-col space-y-10 self-start">
             <div className="space-y-3">
               <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
               <a 
@@ -55,8 +55,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* 3. COLONNA: Immagine */}
-          <div className="relative w-full aspect-square md:aspect-video lg:aspect-square overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
+          {/* 3. COLONNA: Immagine - Ottimizzata per riempire lo spazio */}
+          <div className="relative w-full aspect-[4/3] md:aspect-video overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
             <Image 
               src="/barmadera.jpg" 
               alt="Interno Madera" 
@@ -66,12 +66,12 @@ export default function Footer() {
           </div>
 
           {/* 4. COLONNA: Testo Madera */}
-          <div className="flex flex-col justify-center h-full lg:items-end">
+          <div className="flex flex-col justify-center lg:items-end">
             <div className="text-left lg:text-right">
-               <p className="text-[20px] md:text-[24px] uppercase tracking-[0.3em] font-black leading-none italic opacity-80">
+               <p className="text-[20px] md:text-[24px] lg:text-[28px] uppercase tracking-[0.3em] font-black leading-none italic opacity-80">
                  Madera <br/> 
-                 <span className="text-[14px] tracking-[0.5em] opacity-50 not-italic">Caffetteria</span> <br/> 
-                 <span className="text-[14px] tracking-[0.5em] opacity-50 not-italic">& Bistrot</span>
+                 <span className="text-[14px] tracking-[0.5em] opacity-50 not-italic block mt-2">Caffetteria</span>
+                 <span className="text-[14px] tracking-[0.5em] opacity-50 not-italic block">& Bistrot</span>
                </p>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* SEZIONE GRIGIO MEDIO-SCURO - Invariata */}
+      {/* SEZIONE GRIGIO MEDIO-SCURO */}
       <div className="bg-[#2a2a2a] py-8 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto flex flex-col items-center space-y-6">
           <div className="flex space-x-6 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-bold text-[#aaaaaa]">
