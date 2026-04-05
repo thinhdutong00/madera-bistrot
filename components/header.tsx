@@ -21,10 +21,7 @@ export default function Header() {
 
   useEffect(() => {
     const controlHeader = () => {
-      // Effetto scroll per altezza e ombra
       setIsScrolled(window.scrollY > 20);
-
-      // Logica Mostra/Nascondi header allo scroll
       if (window.scrollY > lastScrollY && window.scrollY > 150) {
         if (!isOpen) setIsVisible(false);
       } else {
@@ -81,8 +78,15 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Placeholder per bilanciare il logo a sinistra su desktop */}
-          <div className="hidden md:block w-40"></div>
+          {/* CTA DESKTOP & TABLET - Riserva un tavolo */}
+          <div className="hidden md:flex items-center justify-end md:w-40 lg:w-56">
+            <a 
+              href="tel:3517688658" 
+              className="bg-[#642d3a] text-white px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.15em] hover:bg-[#1a1a1a] hover:scale-105 active:scale-95 transition-all shadow-md"
+            >
+              Riserva un tavolo
+            </a>
+          </div>
 
           {/* HAMBURGER BUTTON - Mobile */}
           <button 
@@ -106,7 +110,6 @@ export default function Header() {
         } md:hidden`}
       >
         <div className="p-8 flex flex-col min-h-screen">
-          {/* Header interno alla tendina */}
           <div className="flex justify-between items-center mb-16">
             <Image 
               src="/logo.png" 
@@ -115,7 +118,6 @@ export default function Header() {
               height={50} 
               className="object-contain" 
             />
-            {/* Tasto X integrato nel design mobile */}
             <button 
               onClick={toggleMenu} 
               className="p-2 text-[#1a1a1a]"
@@ -127,7 +129,6 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Link del Menu */}
           <nav className="flex flex-col space-y-8">
             {navLinks.map((link) => (
               <Link 
@@ -140,7 +141,6 @@ export default function Header() {
               </Link>
             ))}
             
-            {/* CTA Riserva un tavolo */}
             <div className="pt-12">
               <a 
                 href="tel:3517688658" 
@@ -151,7 +151,6 @@ export default function Header() {
             </div>
           </nav>
 
-          {/* Info footer mobile */}
           <div className="mt-auto pt-16">
             <p className="text-[10px] uppercase tracking-widest text-gray-400 font-bold">
               Via Alcide Garagnani, 10, <br/> 41012 Carpi MO
