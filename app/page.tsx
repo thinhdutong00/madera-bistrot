@@ -200,7 +200,7 @@ export default function HomePage() {
           </div>
 
           <span className="absolute -bottom-10 right-10 text-white font-black text-[15rem] select-none pointer-events-none opacity-50">
-            Maderas
+            Madera
           </span>
         </div>
       </section>
