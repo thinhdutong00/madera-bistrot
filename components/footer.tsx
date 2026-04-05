@@ -17,10 +17,10 @@ export default function Footer() {
     <footer className="w-full">
       {/* SEZIONE BORDEAUX - #642d3a */}
       <div className="bg-[#642d3a] text-[#ffefcc] py-16 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 items-center">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-12 md:gap-4">
           
-          {/* 1. Orari di Apertura */}
-          <div className="space-y-6 w-full max-w-xs justify-self-start">
+          {/* 1. Orari di Apertura - Larghezza fissa per stabilità */}
+          <div className="space-y-6 w-full md:w-[250px] flex-shrink-0">
             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffefcc]/20 pb-4">
               Orari di Apertura
             </h4>
@@ -34,8 +34,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 2. Contatti & Posizione + IMMAGINE PIÙ GRANDE E LUNGA */}
-          <div className="flex flex-row items-center justify-center gap-6 md:gap-4 lg:gap-8 w-full">
+          {/* 2. Contatti & Immagine - Questa sezione ora occupa tutto lo spazio centrale */}
+          <div className="flex flex-row items-center justify-center gap-6 md:gap-8 flex-grow">
             <div className="flex flex-col space-y-10 text-left min-w-fit">
               <div className="space-y-3">
                 <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
@@ -55,8 +55,8 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Immagine con altezza e larghezza aumentate su desktop */}
-            <div className="relative flex-shrink-0 w-32 h-32 md:w-72 md:h-52 lg:w-[450px] lg:h-64 overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
+            {/* Immagine allungata e alta */}
+            <div className="relative flex-shrink-0 w-32 h-32 md:w-64 md:h-52 lg:w-[420px] lg:h-64 overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
               <Image 
                 src="/panini&croissant.jpg" 
                 alt="Panini e Croissant Madera" 
@@ -66,8 +66,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* 3. Branding - Allineato a destra */}
-          <div className="flex flex-col justify-center items-center md:items-end justify-self-end">
+          {/* 3. Branding - Spinto tutto a destra */}
+          <div className="flex flex-col justify-center items-center md:items-end flex-shrink-0 md:pl-4">
             <div className="text-center md:text-right">
                <p className="text-[11px] uppercase tracking-[0.5em] font-black opacity-30 leading-loose">
                  Madera <br className="hidden md:block"/> Caffetteria <br className="hidden md:block"/> & Bistrot
