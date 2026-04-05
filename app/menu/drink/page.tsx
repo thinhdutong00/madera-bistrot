@@ -103,7 +103,6 @@ export default function DrinkPage() {
         {/* COLONNA DESTRA */}
         <div className="space-y-16">
           
-          {/* GINTONERIA */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Gintoneria</h3>
             <div className="space-y-2">
@@ -127,7 +126,6 @@ export default function DrinkPage() {
             </div>
           </section>
 
-          {/* COCKTAIL INTERNAZIONALI */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Cocktail Internazionali</h3>
             <div className="space-y-4">
