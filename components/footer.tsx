@@ -34,8 +34,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 2. Contatti & Posizione + IMMAGINE ALLARGATA */}
-          <div className="flex flex-row items-center justify-between gap-4 md:gap-10">
+          {/* 2. Contatti & Posizione + IMMAGINE RETTANGOLARE */}
+          <div className="flex flex-row items-center justify-between gap-6 md:gap-8">
             <div className="flex flex-col space-y-10 text-left min-w-fit">
               <div className="space-y-3">
                 <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
@@ -55,8 +55,8 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Immagine Allargata su Desktop */}
-            <div className="relative flex-shrink-0 w-32 h-32 md:w-56 md:h-56 lg:w-64 lg:h-64 overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
+            {/* Immagine Rettangolare in lunghezza su Desktop */}
+            <div className="relative flex-shrink-0 w-32 h-32 md:w-64 md:h-44 lg:w-80 lg:h-48 overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
               <Image 
                 src="/panini&croissant.jpg" 
                 alt="Panini e Croissant Madera" 
