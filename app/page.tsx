@@ -8,7 +8,7 @@ export default function HomePage() {
   const categorieMenu = [
     { name: 'Colazione', src: '/colazione.jpg', icon: '☕' },
     { name: 'Stuzzicherie', src: '/stuzzicherie.jpg', icon: '🍔' },
-    { name: 'Menù dei Drink', src: '/drink.jpg', icon: '🍹' },
+    { name: 'Menù dei Drink', src: '/2bicchieri.jpg', icon: '🍹' },
     { name: 'Apericena', src: '/apericena.jpg', icon: '🍣' },
   ];
 
