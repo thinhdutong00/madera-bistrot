@@ -199,7 +199,7 @@ export default function HomePage() {
 
           {/* Numero civico decorativo sullo sfondo */}
           <span className="absolute -bottom-10 right-10 text-white font-black text-[15rem] select-none pointer-events-none">
-            Bistrot
+            Madera
           </span>
         </div>
       </section>
