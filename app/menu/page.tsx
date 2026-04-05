@@ -7,7 +7,6 @@ export default function MenuPage() {
       
       {/* 1. SEZIONE BAR CAFFETTERIA */}
       <section id="colazione" className="pt-32 pb-20 px-6 w-full">
-        {/* Container Titolo */}
         <div className="max-w-[1400px] mx-auto mb-16">
           <h2 className="text-4xl font-black uppercase tracking-tighter italic text-[#642d3a]">
             Bar Caffetteria
@@ -88,11 +87,9 @@ export default function MenuPage() {
         </div>
       </section>
 
-      {/* 2. SEZIONE STUZZICHERIE */}
+      {/* 2. SEZIONE STUZZICHERIE & SFIZI */}
       <section id="stuzzicherie" className="py-20 px-6 w-full">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          
-          {/* COLONNA SINISTRA: IMMAGINE (Invertita rispetto sopra) */}
           <div className="relative w-full aspect-square rounded-3xl overflow-hidden shadow-2xl order-2 md:order-1">
             <Image 
               src="/gnocco&salumi.jpg" 
@@ -102,7 +99,6 @@ export default function MenuPage() {
             />
           </div>
 
-          {/* COLONNA DESTRA: TESTI ALLINEATI A DESTRA */}
           <div className="flex flex-col justify-center order-1 md:order-2">
             <h2 className="text-4xl font-black uppercase tracking-tighter italic text-[#642d3a] mb-12 text-right">
               Stuzzicherie
@@ -127,7 +123,7 @@ export default function MenuPage() {
                 label="Mix fritto" 
                 price="6,00€" 
                 desc="Patatine, crocchette di patate, crocchette di pollo, olive ascolane"
-                />
+              />
               <MenuItemWithDesc 
                 label="Patatine Fritte" 
                 price="5,00€" 
@@ -141,9 +137,40 @@ export default function MenuPage() {
         </div>
       </section>
 
+      {/* 3. SEZIONE APERICENA */}
+      <section id="apericena" className="py-24 px-6 w-full bg-white">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black uppercase tracking-tighter italic text-[#642d3a] mb-4">
+              Apericena
+            </h2>
+            <p className="text-xs uppercase tracking-[0.2em] font-bold text-[#642d3a] opacity-70 underline decoration-1 underline-offset-4">
+              Incluso alla scelta puoi scegliere un analcolico, calice di vino, spritz o birra (dalle 18:00 alle 22:30)
+            </p>
+          </div>
 
-
-
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <ApericenaCard 
+              image="/apericena-tradizionale.jpg" 
+              title="Tradizionale"
+              price="12,00€"
+              desc="Tagliere di affettati misti con gnocco fritto, porzione di patatine, crocchette di pollo e crocchette di patate."
+            />
+            <ApericenaCard 
+              image="/apericena-madera.jpg"
+              title="Madera"
+              price="14,00€"
+              desc="Tagliere di affettati e formaggi misti, crostone e focaccia, olive, salsa di miele e aceto balsamico."
+            />
+            <ApericenaCard 
+              image="/apericena-vegetariano.jpg"
+              title="Vegetariano"
+              price="16,00€"
+              desc="Burger vegetariano, olive, formaggio, uovo sodo, zucchine grigliate, flan di verdure, peperoni arrostiti, parmigiana di melanzane stick."
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
@@ -181,6 +208,25 @@ function MenuItemWithDesc({ label, price, desc }: { label: string; price: string
           {desc}
         </p>
       )}
+    </div>
+  );
+}
+
+function ApericenaCard({ image, title, price, desc }: { image: string; title: string; price: string; desc: string }) {
+  return (
+    <div className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-[#642d3a]/5">
+      <div className="relative h-64 w-full">
+        <Image src={image} alt={title} fill className="object-cover" />
+      </div>
+      <div className="p-8 flex flex-col h-full text-center">
+        <div className="flex justify-center items-baseline gap-2 mb-4">
+          <h3 className="text-2xl font-black uppercase italic text-[#642d3a]">{title}</h3>
+          <span className="text-xl font-bold text-[#642d3a] opacity-80">— {price}</span>
+        </div>
+        <p className="text-sm leading-relaxed text-[#642d3a] opacity-70 uppercase tracking-wider font-medium">
+          {desc}
+        </p>
+      </div>
     </div>
   );
 }
