@@ -34,14 +34,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 2. Contatti & Posizione + IMMAGINE (Colonna Centrale) */}
-          <div className="flex flex-row items-center justify-between gap-6">
-            <div className="flex flex-col space-y-10 text-left">
+          {/* 2. Contatti & Posizione + IMMAGINE ALLARGATA */}
+          <div className="flex flex-row items-center justify-between gap-4 md:gap-10">
+            <div className="flex flex-col space-y-10 text-left min-w-fit">
               <div className="space-y-3">
                 <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
                 <a 
                   href="tel:3517688658" 
-                  className="text-2xl md:text-3xl font-black tracking-tighter hover:text-white transition-colors block"
+                  className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tighter hover:text-white transition-colors block"
                 >
                   351 768 8658
                 </a>
@@ -55,8 +55,8 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Immagine di fianco ai contatti */}
-            <div className="relative flex-shrink-0 w-32 h-32 md:w-40 md:h-40 overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
+            {/* Immagine Allargata su Desktop */}
+            <div className="relative flex-shrink-0 w-32 h-32 md:w-56 md:h-56 lg:w-64 lg:h-64 overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
               <Image 
                 src="/panini&croissant.jpg" 
                 alt="Panini e Croissant Madera" 
@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* 3. Branding (A destra, pulito) */}
+          {/* 3. Branding */}
           <div className="flex flex-col justify-center items-center md:items-end">
             <div className="text-center md:text-right">
                <p className="text-[11px] uppercase tracking-[0.5em] font-black opacity-30 leading-loose">
