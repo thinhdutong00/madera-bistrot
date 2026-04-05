@@ -17,10 +17,11 @@ export default function Footer() {
     <footer className="w-full">
       {/* SEZIONE BORDEAUX - #642d3a */}
       <div className="bg-[#642d3a] text-[#ffefcc] py-16 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-12 md:gap-4">
+        {/* Grid a 4 colonne su desktop, 1 colonna su mobile */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-start">
           
-          {/* 1. Orari di Apertura - Larghezza fissa per stabilità */}
-          <div className="space-y-6 w-full md:w-[250px] flex-shrink-0">
+          {/* 1. COLONNA: Orari di Apertura */}
+          <div className="space-y-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffefcc]/20 pb-4">
               Orari di Apertura
             </h4>
@@ -34,50 +35,51 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 2. Contatti & Immagine - Questa sezione ora occupa tutto lo spazio centrale */}
-          <div className="flex flex-row items-center justify-center gap-6 md:gap-8 flex-grow">
-            <div className="flex flex-col space-y-10 text-left min-w-fit">
-              <div className="space-y-3">
-                <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
-                <a 
-                  href="tel:3517688658" 
-                  className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tighter hover:text-white transition-colors block"
-                >
-                  351 768 8658
-                </a>
-              </div>
-              <div className="space-y-3">
-                <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Dove Siamo</h4>
-                <p className="text-sm font-bold leading-relaxed tracking-tight">
-                  Via Alcide Garagnani, 10,<br/> 
-                  41012 Carpi (MO)
-                </p>
-              </div>
+          {/* 2. COLONNA: Contattaci & Dove Siamo */}
+          <div className="flex flex-col space-y-10">
+            <div className="space-y-3">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
+              <a 
+                href="tel:3517688658" 
+                className="text-2xl xl:text-3xl font-black tracking-tighter hover:text-white transition-colors block"
+              >
+                351 768 8658
+              </a>
             </div>
-
-            {/* Immagine allungata e alta */}
-            <div className="relative flex-shrink-0 w-32 h-32 md:w-64 md:h-52 lg:w-[420px] lg:h-64 overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
-              <Image 
-                src="/barmadera.jpg" 
-                alt="Panini e Croissant Madera" 
-                fill 
-                className="object-cover"
-              />
+            <div className="space-y-3">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Dove Siamo</h4>
+              <p className="text-sm font-bold leading-relaxed tracking-tight">
+                Via Alcide Garagnani, 10,<br/> 
+                41012 Carpi (MO)
+              </p>
             </div>
           </div>
 
-          {/* 3. Branding - Spinto tutto a destra */}
-          <div className="flex flex-col justify-center items-center md:items-end flex-shrink-0 md:pl-4">
-            <div className="text-center md:text-right">
-               <p className="text-[11px] uppercase tracking-[0.5em] font-black opacity-30 leading-loose">
-                 Madera <br className="hidden md:block"/> Caffetteria <br className="hidden md:block"/> & Bistrot
+          {/* 3. COLONNA: Immagine */}
+          <div className="relative w-full aspect-square md:aspect-video lg:aspect-square overflow-hidden rounded-2xl shadow-2xl border border-[#ffefcc]/10">
+            <Image 
+              src="/barmadera.jpg" 
+              alt="Interno Madera" 
+              fill 
+              className="object-cover"
+            />
+          </div>
+
+          {/* 4. COLONNA: Testo Madera */}
+          <div className="flex flex-col justify-center h-full lg:items-end">
+            <div className="text-left lg:text-right">
+               <p className="text-[20px] md:text-[24px] uppercase tracking-[0.3em] font-black leading-none italic opacity-80">
+                 Madera <br/> 
+                 <span className="text-[14px] tracking-[0.5em] opacity-50 not-italic">Caffetteria</span> <br/> 
+                 <span className="text-[14px] tracking-[0.5em] opacity-50 not-italic">& Bistrot</span>
                </p>
             </div>
           </div>
+
         </div>
       </div>
 
-      {/* SEZIONE GRIGIO MEDIO-SCURO */}
+      {/* SEZIONE GRIGIO MEDIO-SCURO - Invariata */}
       <div className="bg-[#2a2a2a] py-8 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto flex flex-col items-center space-y-6">
           <div className="flex space-x-6 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-bold text-[#aaaaaa]">
