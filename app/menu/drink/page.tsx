@@ -39,7 +39,7 @@ export default function DrinkPage() {
           
           <section>
             <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Signature</h3>
-            <div className="space-y-6">
+            <div className="space-y-5">
               <DrinkRowWithDesc label="Cosmopoli-Thain" price="10,00€" desc="Vodka, cointreau, lime, cranberry, kaffir lime, lemongrass" />
               <DrinkRowWithDesc label="Wild Turkey" price="10,00€" desc="Wild turkey 101, miele, limone, ginger beer" />
               <DrinkRowWithDesc label="Balsamic" price="10,00€" desc="Gin, fragola, limone, zucchero, aceto balsamico" />
@@ -61,22 +61,45 @@ export default function DrinkPage() {
           </section>
 
           <section>
-            <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Spritz Family</h3>
-            <div className="space-y-6">
-              <DrinkRowWithDesc label="Spritz (Aperol, Campari, Select)" price="5,00€" desc="Prosecco, bitter, soda, arancia" />
+            <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Spritz Family</h3>
+            <div className="space-y-5">
+              <DrinkRowWithDesc label="Spritz" price="5,00€" desc="Aperol, Campari o Select, Prosecco, soda, arancia" />
               <DrinkRowWithDesc label="Hugo" price="6,00€" desc="Prosecco, sciroppo fiori di sambuco, soda, menta" />
               <DrinkRowWithDesc label="Cynar Spritz" price="6,00€" desc="Cynar, prosecco, soda, fetta di limone" />
             </div>
           </section>
 
           <section>
-            <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Sour</h3>
-            <div className="space-y-6">
+            <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Sour</h3>
+            <div className="space-y-5">
               <DrinkRowWithDesc label="Vodka Sour" price="8,00€" desc="Vodka, limone, zucchero, albume opzionale" />
               <DrinkRowWithDesc label="Gin Sour" price="8,00€" desc="Gin, limone, zucchero, albume opzionale" />
               <DrinkRowWithDesc label="Whiskey Sour" price="9,00€" desc="Bourbon, limone, zucchero, albume opzionale" />
               <DrinkRowWithDesc label="Midori Sour" price="8,00€" desc="Liquore al melone, limone, zucchero, soda" />
               <DrinkRowWithDesc label="Amaretto Sour" price="8,00€" desc="Amaretto di Saronno, limone, zucchero" />
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Iced Tea Family</h3>
+            <div className="space-y-5">
+              <DrinkRowWithDesc label="Long Island" price="8,00€" desc="Vodka, Gin, Rum, Tequila, Triple sec, limone, zucchero, cola" />
+              <DrinkRowWithDesc label="Japan Iced Tea" price="8,00€" desc="Vodka, Gin, Rum, Tequila, Midori, limone, zucchero, lemon soda" />
+              <DrinkRowWithDesc label="Miami Iced Tea" price="8,00€" desc="Vodka, Gin, Rum, Tequila, Blue Curacao, limone, zucchero, lemon soda" />
+              <DrinkRowWithDesc label="Beverly Hills" price="9,00€" desc="Vodka, Gin, Rum, Tequila, Triple sec, limone, zucchero, Prosecco" />
+              <DrinkRowWithDesc label="Texas Iced Tea" price="9,00€" desc="Vodka, Gin, Rum, Tequila, Bourbon, limone, zucchero, cola" />
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Mule & Pestati</h3>
+            <div className="space-y-5">
+              <DrinkRowWithDesc label="Moscow Mule" price="7,00€" desc="Vodka, lime fresco, ginger beer" />
+              <DrinkRowWithDesc label="London Mule" price="7,00€" desc="Gin, lime fresco, ginger beer" />
+              <DrinkRowWithDesc label="Mexican Mule" price="8,00€" desc="Tequila, lime fresco, ginger beer" />
+              <DrinkRowWithDesc label="Mojito" price="7,00€" desc="Rum bianco, menta, lime, zucchero di canna, soda" />
+              <DrinkRowWithDesc label="Caipiroska" price="7,00€" desc="Vodka, lime, zucchero di canna" />
+              <DrinkRowWithDesc label="Black Mojito" price="8,00€" desc="Rum bianco, liquore liquirizia, menta, lime, zucchero, soda" />
             </div>
           </section>
         </div>
@@ -108,17 +131,25 @@ export default function DrinkPage() {
           </section>
 
           <section>
-            <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Cocktail Internazionali</h3>
+            <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Cocktail Internazionali</h3>
             <div className="space-y-4">
               <DrinkRowWithDesc label="Americano" price="7,00€" desc="Vermouth rosso, Campari, soda" />
               <DrinkRowWithDesc label="Negroni" price="7,00€" desc="Gin, Vermouth rosso, Campari" />
               <DrinkRowWithDesc label="Negroni Sbagliato" price="7,00€" desc="Prosecco, Vermouth rosso, Campari" />
+              <DrinkRowWithDesc label="Mito" price="7,00€" desc="Vermouth rosso, Campari" />
               <DrinkRowWithDesc label="Boulevardier" price="8,00€" desc="Bourbon, Vermouth rosso, Campari" />
+              <DrinkRowWithDesc label="Martini Cocktail" price="9,00€" desc="Gin, Vermouth dry" />
               <DrinkRowWithDesc label="Espresso Martini" price="8,00€" desc="Vodka, liquore caffè, espresso, zucchero" />
               <DrinkRowWithDesc label="Cosmopolitan" price="8,00€" desc="Vodka, triple sec, lime, cranberry" />
+              <DrinkRowWithDesc label="Manhattan" price="9,00€" desc="Rye whiskey, Vermouth rosso, angostura" />
               <DrinkRowWithDesc label="Old Fashioned" price="9,00€" desc="Bourbon, zucchero, angostura, soda" />
+              <DrinkRowWithDesc label="Daiquiri" price="7,00€" desc="Rum bianco, lime, zucchero" />
               <DrinkRowWithDesc label="Margarita" price="8,00€" desc="Tequila, triple sec, lime" />
+              <DrinkRowWithDesc label="Tommy's Margarita" price="9,00€" desc="Tequila, lime, sciroppo d'agave" />
               <DrinkRowWithDesc label="Paloma" price="8,00€" desc="Tequila, lime, soda al pompelmo" />
+              <DrinkRowWithDesc label="Bloody Mary" price="9,00€" desc="Vodka, pomodoro, spezie" />
+              <DrinkRowWithDesc label="Aviation" price="10,00€" desc="Gin, maraschino, crème de violette, limone" />
+              <DrinkRowWithDesc label="Pisco Sour" price="10,00€" desc="Pisco, limone, zucchero, albume, angostura" />
             </div>
           </section>
 
@@ -129,22 +160,27 @@ export default function DrinkPage() {
                 <DrinkRowSimple label="Jack Daniel's" price="6,00€" />
                 <DrinkRowSimple label="Jameson" price="6,00€" />
                 <DrinkRowSimple label="Wild Turkey 101" price="7,00€" />
+                <DrinkRowSimple label="Laphroaig 10" price="10,00€" />
                 <DrinkRowSimple label="Lagavulin 16" price="14,00€" />
+                <DrinkRowSimple label="Oban 14" price="12,00€" />
               </div>
             </section>
             <section>
-              <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Vodka</h3>
+              <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Vodka & Rum</h3>
               <div className="space-y-1">
                 <DrinkRowSimple label="Moskovskaya" price="6,00€" />
                 <DrinkRowSimple label="Belvedere" price="10,00€" />
                 <DrinkRowSimple label="Grey Goose" price="10,00€" />
+                <DrinkRowSimple label="Havana 3 / 7" price="6,00€" />
+                <DrinkRowSimple label="Diplomatico" price="10,00€" />
+                <DrinkRowSimple label="Zacapa 23" price="12,00€" />
               </div>
             </section>
           </div>
 
           <section>
-            <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Analcolici</h3>
-            <div className="space-y-6">
+            <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Analcolici</h3>
+            <div className="space-y-5">
               <DrinkRowWithDesc label="Analcolico alla frutta" price="5,00€" desc="Mix di succhi stagionali, granatina, soda" />
               <DrinkRowWithDesc label="Virgin Mojito" price="6,00€" desc="Lime, zucchero di canna, menta, ginger ale" />
               <DrinkRowWithDesc label="Shirley Temple" price="6,00€" desc="Ginger ale, granatina, ciliegina al maraschino" />
