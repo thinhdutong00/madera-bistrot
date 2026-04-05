@@ -107,7 +107,7 @@ export default function DrinkPage() {
           {/* GINTONERIA (17 DRINK) */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Gintoneria</h3>
-            <div className="grid grid-cols-1 gap-1">
+            <div className="space-y-1">
               <MenuItem label="Gordon's / Tanqueray" price="7,00€" />
               <MenuItem label="Bombay Sapphire" price="8,00€" />
               <MenuItem label="Hendrick's" price="10,00€" />
@@ -131,7 +131,7 @@ export default function DrinkPage() {
           {/* COCKTAIL INTERNAZIONALI (28 DRINK) */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Cocktail Internazionali</h3>
-            <div className="grid grid-cols-1 gap-4 text-sm">
+            <div className="space-y-4">
               <MenuItemWithDesc label="Americano" price="7,00€" desc="Vermouth rosso, Campari, soda" />
               <MenuItemWithDesc label="Negroni" price="7,00€" desc="Gin, Vermouth rosso, Campari" />
               <MenuItemWithDesc label="Negroni Sbagliato" price="7,00€" desc="Prosecco, Vermouth rosso, Campari" />
@@ -166,7 +166,7 @@ export default function DrinkPage() {
           {/* DISTILLATI */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <section>
-              <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Whiskey (7)</h3>
+              <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Whiskey</h3>
               <div className="space-y-1">
                 <MenuItem label="Jack Daniel's" price="6,00€" />
                 <MenuItem label="Jameson" price="6,00€" />
@@ -178,7 +178,7 @@ export default function DrinkPage() {
               </div>
             </section>
             <section>
-              <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Vodka (4)</h3>
+              <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Vodka</h3>
               <div className="space-y-1">
                 <MenuItem label="Moskovskaya" price="6,00€" />
                 <MenuItem label="Stolichnaya" price="7,00€" />
@@ -190,7 +190,7 @@ export default function DrinkPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <section>
-              <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Rum (4)</h3>
+              <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Rum</h3>
               <div className="space-y-1">
                 <MenuItem label="Havana 3 / 7" price="6,00€" />
                 <MenuItem label="Diplomatico" price="10,00€" />
@@ -199,7 +199,7 @@ export default function DrinkPage() {
               </div>
             </section>
             <section>
-              <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Liquori (2)</h3>
+              <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Liquori</h3>
               <div className="space-y-1">
                 <MenuItem label="Amari Vari" price="4,00€" />
                 <MenuItem label="Grappe Selezionate" price="5,00€" />
