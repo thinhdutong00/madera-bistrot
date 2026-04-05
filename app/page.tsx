@@ -7,9 +7,9 @@ export default function HomePage() {
   // Dati per la sezione Menu
   const categorieMenu = [
     { name: 'Colazione', src: '/colazione.jpg', icon: '☕' },
-    { name: 'Stuzzicherie', src: '/stuzzicherie.jpg', icon: '🍔' },
+    { name: 'Stuzzicherie', src: '/paninoavocado.jpg', icon: '🍔' },
     { name: 'Menù dei Drink', src: '/2bicchieri.jpg', icon: '🍹' },
-    { name: 'Apericena', src: '/apericena.jpg', icon: '🍣' },
+    { name: 'Apericena', src: '/gnocco&salumi.jpg', icon: '🍣' },
   ];
 
   return (
