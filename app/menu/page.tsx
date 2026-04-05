@@ -3,12 +3,16 @@ import Image from 'next/image';
 
 export default function BarCaffetteria() {
   return (
-    <section id="colazione" className="py-20 px-6 max-w-7xl mx-auto bg-[#ffefcc]">
-      <h2 className="text-4xl font-black uppercase tracking-tighter mb-12 italic text-[#642d3a]">
-        Bar Caffetteria
-      </h2>
+    <section id="colazione" className="py-20 px-6 w-full bg-white">
+      {/* Container per il titolo per mantenerlo allineato al contenuto */}
+      <div className="max-w-[1400px] mx-auto mb-12">
+        <h2 className="text-4xl font-black uppercase tracking-tighter italic text-[#642d3a]">
+          Bar Caffetteria
+        </h2>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        
         {/* COLONNA SINISTRA: CAFFETTERIA & DOLCI */}
         <div className="space-y-12">
           <div className="space-y-1 pl-4 border-l-2 border-[#642d3a]/20">
@@ -54,9 +58,10 @@ export default function BarCaffetteria() {
           </div>
         </div>
 
-        {/* COLONNA DESTRA: IMMAGINE & SALATI */}
+        {/* COLONNA DESTRA: IMMAGINE 1:1 & SALATI */}
         <div className="space-y-12">
-          <div className="relative h-[450px] rounded-3xl overflow-hidden shadow-2xl">
+          {/* Immagine con Aspect Ratio 1:1 */}
+          <div className="relative w-full aspect-square rounded-3xl overflow-hidden shadow-2xl">
             <Image 
               src="/barmadera.jpg" 
               alt="Atmosfera Madera" 
