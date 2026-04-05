@@ -4,13 +4,13 @@ import Image from 'next/image';
 
 export default function Footer() {
   const orari = [
-    { giorno: "Domenica", ore: "08–01" },
     { giorno: "Lunedì", ore: "07–01" },
     { giorno: "Martedì", ore: "07–01" },
     { giorno: "Mercoledì", ore: "07–01" },
     { giorno: "Giovedì", ore: "07–01" },
     { giorno: "Venerdì", ore: "07–03" },
     { giorno: "Sabato", ore: "07–03" },
+    { giorno: "Domenica", ore: "08–01" },
   ];
 
   return (
