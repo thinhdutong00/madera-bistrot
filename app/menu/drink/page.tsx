@@ -15,7 +15,7 @@ export default function DrinkPage() {
         {/* COLONNA SINISTRA */}
         <div className="space-y-16">
           
-          {/* SIGNATURE (17 DRINK) */}
+          {/* SIGNATURE */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Signature</h3>
             <div className="space-y-4">
@@ -39,7 +39,7 @@ export default function DrinkPage() {
             </div>
           </section>
 
-          {/* SPRITZ (3 DRINK) */}
+          {/* SPRITZ FAMILY */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Spritz Family</h3>
             <div className="space-y-4">
@@ -49,7 +49,7 @@ export default function DrinkPage() {
             </div>
           </section>
 
-          {/* SOUR (5 DRINK) */}
+          {/* SOUR */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Sour</h3>
             <div className="space-y-4">
@@ -61,7 +61,7 @@ export default function DrinkPage() {
             </div>
           </section>
 
-          {/* ICED TEA FAMILY (5 DRINK) */}
+          {/* ICED TEA FAMILY */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Iced Tea Family</h3>
             <div className="space-y-4">
@@ -73,7 +73,7 @@ export default function DrinkPage() {
             </div>
           </section>
 
-          {/* MULE (6 DRINK) */}
+          {/* MULE */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Mule</h3>
             <div className="space-y-4">
@@ -86,7 +86,7 @@ export default function DrinkPage() {
             </div>
           </section>
 
-          {/* PESTATI (6 DRINK) */}
+          {/* PESTATI */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Pestati</h3>
             <div className="space-y-4">
@@ -103,10 +103,10 @@ export default function DrinkPage() {
         {/* COLONNA DESTRA */}
         <div className="space-y-16">
           
-          {/* GINTONERIA (17 DRINK) - Prezzo a destra */}
+          {/* GINTONERIA */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Gintoneria</h3>
-            <div className="space-y-1">
+            <div className="space-y-2">
               <MenuItem label="Gordon's / Tanqueray" price="7,00€" />
               <MenuItem label="Bombay Sapphire" price="8,00€" />
               <MenuItem label="Hendrick's" price="10,00€" />
@@ -127,7 +127,7 @@ export default function DrinkPage() {
             </div>
           </section>
 
-          {/* COCKTAIL INTERNAZIONALI (28 DRINK) - Prezzo a destra */}
+          {/* COCKTAIL INTERNAZIONALI */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Cocktail Internazionali</h3>
             <div className="space-y-4">
@@ -162,11 +162,11 @@ export default function DrinkPage() {
             </div>
           </section>
 
-          {/* DISTILLATI - Prezzo a destra */}
+          {/* DISTILLATI */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <section>
               <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Whiskey</h3>
-              <div className="space-y-1">
+              <div className="space-y-2">
                 <MenuItem label="Jack Daniel's" price="6,00€" />
                 <MenuItem label="Jameson" price="6,00€" />
                 <MenuItem label="Wild Turkey 101" price="7,00€" />
@@ -178,7 +178,7 @@ export default function DrinkPage() {
             </section>
             <section>
               <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Vodka</h3>
-              <div className="space-y-1">
+              <div className="space-y-2">
                 <MenuItem label="Moskovskaya" price="6,00€" />
                 <MenuItem label="Stolichnaya" price="7,00€" />
                 <MenuItem label="Belvedere" price="10,00€" />
@@ -190,7 +190,7 @@ export default function DrinkPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <section>
               <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Rum</h3>
-              <div className="space-y-1">
+              <div className="space-y-2">
                 <MenuItem label="Havana 3 / 7" price="6,00€" />
                 <MenuItem label="Diplomatico" price="10,00€" />
                 <MenuItem label="Zacapa 23" price="12,00€" />
@@ -199,14 +199,14 @@ export default function DrinkPage() {
             </section>
             <section>
               <h3 className="text-xl font-black uppercase mb-4 italic text-[#642d3a]">Liquori</h3>
-              <div className="space-y-1">
+              <div className="space-y-2">
                 <MenuItem label="Amari Vari" price="4,00€" />
                 <MenuItem label="Grappe Selezionate" price="5,00€" />
               </div>
             </section>
           </div>
 
-          {/* ANALCOLICI (3 DRINK) - Prezzo a destra */}
+          {/* ANALCOLICI */}
           <section>
             <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Analcolici</h3>
             <div className="space-y-4">
