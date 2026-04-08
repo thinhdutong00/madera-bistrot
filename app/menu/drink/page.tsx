@@ -190,21 +190,21 @@ export default function DrinkPage() {
   </h3>
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
     <MenuItemWithDesc 
-      label="Analcolico alla frutta" 
-      price="5,00€" 
-      desc="Mix di succhi stagionali, granatina, soda" 
+      label="SWEET DREAM" 
+      price="7,00€" 
+      desc="Succo di arancia, succo di ananas, fragola, soda al limone, succo di limone fresco" 
       priceRight 
     />
     <MenuItemWithDesc 
-      label="Virgin Mojito" 
-      price="6,00€" 
-      desc="Lime, zucchero di canna, menta, ginger ale" 
+      label="CRODINO LOVERS" 
+      price="7,00€" 
+      desc="Succo di lime fresco, melograno, Crodino, soda aromatizzata al pompelmo" 
       priceRight 
     />
     <MenuItemWithDesc 
-      label="Crodino / Sanbitter" 
-      price="4,50€" 
-      desc="Servito con ghiaccio e fetta d'arancia" 
+      label="PASSION SUNSET" 
+      price="7,00€" 
+      desc="Succo di arancia, melograno, maracuja, soda al limone, succo di lime fresco" 
       priceRight 
     />
   </div>
