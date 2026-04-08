@@ -65,7 +65,7 @@ const isMenuPage = pathname?.startsWith('/menu');
   isMenuPage ? 'hidden md:flex' : 'flex'
 }`}
       >
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center w-full">
           
           {/* LOGO */}
           <Link href="/" className="relative w-32 h-12 md:w-40 md:h-14 flex items-center">
