@@ -7,12 +7,12 @@ export default function GlobalMenu() {
   const pathname = usePathname();
 
   const pages = [
-    { name: 'Bar & Caffetteria', href: '/caffetteria' },
-    { name: 'Stuzzicherie', href: '/stuzzicherie' },
-    { name: 'Apericena', href: '/apericena' },
-    { name: 'Drink', href: '/drink' },
-    { name: 'Vini', href: '/vini' },
-    { name: 'Birre', href: '/birre' },
+    { name: 'Bar & Caffetteria', href: '/menu/caffetteria' },
+    { name: 'Stuzzicherie', href: '/menu/stuzzicherie' },
+    { name: 'Apericena', href: '/menu/apericena' },
+    { name: 'Drink', href: '/menu/drink' },
+    { name: 'Vini', href: '/menu/vini' },
+    { name: 'Birre', href: '/menu/birre' },
   ];
 
   // Trova l'indice della pagina attuale
