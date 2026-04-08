@@ -1,8 +1,11 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { MenuItem, MenuItemWithDesc } from '@/components/MenuComponents';
 
 export default function DrinkPage() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isAtFooter, setIsAtFooter] = useState(false);
+
   // Configurazione categorie per il menu galleggiante
   const categories = [
     { name: 'Signature', id: 'signature' },
@@ -22,7 +25,26 @@ export default function DrinkPage() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Risolto l'errore TS specificando il tipo (string)
+  // Logica per fermare il menu prima del footer
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      
+      const rect = containerRef.current.getBoundingClientRect();
+      const footerThreshold = 120; // Distanza dal fondo desiderata
+      
+      // Se la fine del contenitore è vicina al fondo della finestra, blocca il menu
+      if (rect.bottom <= window.innerHeight + footerThreshold) {
+        setIsAtFooter(true);
+      } else {
+        setIsAtFooter(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const navigate = (direction: 'next' | 'prev') => {
     let newIndex = direction === 'next' 
       ? (currentIndex + 1) % categories.length 
@@ -45,10 +67,12 @@ export default function DrinkPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white pt-32 pb-40 px-4 md:px-8 w-full">
+    <div ref={containerRef} className="relative min-h-screen bg-white pt-32 pb-40 px-4 md:px-8 w-full">
       
-      {/* MENU GALLEGGIANTE ANCOR */}
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[90] flex items-center bg-[#642d3a] text-[#ffefcc] px-6 py-3 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[280px] justify-between">
+      {/* MENU GALLEGGIANTE ANCOR - Dinamico per il footer */}
+      <div className={`left-1/2 -translate-x-1/2 z-[90] flex items-center bg-[#642d3a] text-[#ffefcc] px-6 py-3 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[280px] justify-between transition-all duration-300 ${
+        isAtFooter ? 'absolute bottom-10' : 'fixed bottom-8'
+      }`}>
         <button 
           onClick={() => navigate('prev')}
           className="text-2xl font-black p-2 hover:scale-125 transition-transform"
