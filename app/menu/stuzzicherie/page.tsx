@@ -16,7 +16,7 @@ export default function StuzzicheriePage() {
 
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
         
-        {/* COLONNA SINISTRA: IMMAGINE (Stile Caffetteria) */}
+        {/* COLONNA SINISTRA: IMMAGINE */}
         <div className="flex flex-col h-full">
           <div className="relative flex-grow min-h-[400px] md:min-h-[500px] mb-6 rounded-3xl overflow-hidden shadow-2xl">
             <Image 
@@ -27,7 +27,6 @@ export default function StuzzicheriePage() {
               priority
             />
           </div>
-          {/* Spazio per una nota sotto l'immagine se necessario, o lasciamo pulito */}
           <div className="hidden md:block opacity-60">
             <p className="text-[10px] uppercase tracking-[0.2em] text-[#642d3a]">
               Prodotti freschi e selezionati ogni giorno
@@ -38,24 +37,31 @@ export default function StuzzicheriePage() {
         {/* COLONNA DESTRA: I SFIZI */}
         <div className="flex flex-col">
           <div className="space-y-4 pl-4 border-l-2 border-[#642d3a]/20">
+            {/* Per MenuItemWithDesc usiamo priceRight={true} per spostare il prezzo a destra 
+                (visto che nel tuo componente di base sta a sinistra)
+            */}
             <MenuItemWithDesc 
               label="8 pz gnocco fritto con affettati misti" 
               price="8,00€" 
               desc="3 salame, 2 crudo, 2 mortadella" 
+              priceRight={true}
             />
             
             <MenuItemWithDesc 
               label="8 pz gnocco fritto con solo crudo" 
               price="10,00€" 
               desc="8 fette" 
+              priceRight={true}
             />
             
+            {/* MenuItem semplice ha già il prezzo a destra nel tuo codice */}
             <MenuItem label="4 pz gnocco fritto" price="3,00€" />
             
             <MenuItemWithDesc 
               label="Mix fritto" 
               price="6,00€" 
               desc="Patatine, crocchette di patate, crocchette di pollo, olive ascolane" 
+              priceRight={true}
             />
             
             <MenuItem label="Patatine Fritte" price="5,00€" />
@@ -63,7 +69,7 @@ export default function StuzzicheriePage() {
             <MenuItem label="Tagliere di Formaggi Misti" price="7,00€" />
           </div>
 
-          {/* FOOD NOTA (Stile Caffetteria) */}
+          {/* NOTA INFERIORE */}
           <div className="mt-12">
             <h3 className="text-2xl font-black uppercase mb-2 italic text-[#642d3a]">Madera Sfizi</h3>
             <p className="text-[10px] uppercase tracking-[0.2em] opacity-60 mb-6 text-[#642d3a]">
