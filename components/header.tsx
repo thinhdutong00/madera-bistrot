@@ -2,8 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+  const pathname = usePathname();
+const isMenuPage = pathname?.startsWith('/menu');
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,8 +60,10 @@ export default function Header() {
     <>
       <header 
         className={`fixed top-0 w-full z-[100] transition-all duration-500 bg-white border-b border-gray-100 ${
-          isVisible ? 'translate-y-0' : '-translate-y-full'
-        } ${isScrolled ? 'py-2 shadow-sm' : 'py-4'}`}
+  isVisible ? 'translate-y-0' : '-translate-y-full'
+} ${isScrolled ? 'py-2 shadow-sm' : 'py-4'} ${
+  isMenuPage ? 'hidden md:flex' : 'flex'
+}`}
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           
