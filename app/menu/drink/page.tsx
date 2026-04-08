@@ -11,8 +11,7 @@ export default function DrinkPage() {
         </h2>
       </div>
 
-      {/* Contenitore Unica Colonna */}
-      <div className="max-w-[800px] mx-auto space-y-20">
+      <div className="max-w-[800px] mx-auto space-y-24">
         
         {/* SIGNATURE */}
         <section>
@@ -41,7 +40,7 @@ export default function DrinkPage() {
         {/* GINTONERIA */}
         <section>
           <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Gintoneria</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2">
             <MenuItem label="Gordon's / Tanqueray" price="7,00€" />
             <MenuItem label="Bombay Sapphire" price="8,00€" />
             <MenuItem label="Hendrick's" price="10,00€" />
@@ -64,7 +63,7 @@ export default function DrinkPage() {
 
         {/* COCKTAIL INTERNAZIONALI */}
         <section>
-          <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a]">Cocktail Internazionali</h3>
+          <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Cocktail Internazionali</h3>
           <div className="space-y-6">
             <MenuItemWithDesc label="Americano" price="7,00€" desc="Vermouth rosso, Campari, soda" priceRight />
             <MenuItemWithDesc label="Negroni" price="7,00€" desc="Gin, Vermouth rosso, Campari" priceRight />
@@ -97,10 +96,10 @@ export default function DrinkPage() {
           </div>
         </section>
 
-        {/* SPRITZ & SOUR */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* SPRITZ, SOUR, MULE, PESTATI (Griglia 2 Colonne) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
             <section>
-              <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Spritz Family</h3>
+              <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Spritz Family</h3>
               <div className="space-y-4">
                 <MenuItemWithDesc label="Spritz" price="5,00€" desc="Prosecco, bitter, soda" priceRight />
                 <MenuItemWithDesc label="Hugo" price="6,00€" desc="Sambuco, prosecco, menta" priceRight />
@@ -108,95 +107,73 @@ export default function DrinkPage() {
               </div>
             </section>
             <section>
-              <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Sour</h3>
+              <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Sour</h3>
               <div className="space-y-4">
                 <MenuItemWithDesc label="Vodka Sour" price="8,00€" desc="Vodka, limone, zucchero" priceRight />
                 <MenuItemWithDesc label="Whiskey Sour" price="9,00€" desc="Bourbon, limone, zucchero" priceRight />
                 <MenuItemWithDesc label="Amaretto Sour" price="8,00€" desc="Amaretto, limone, zucchero" priceRight />
               </div>
             </section>
+            <section>
+              <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Mule</h3>
+              <div className="space-y-4">
+                <MenuItemWithDesc label="Moscow Mule" price="7,00€" desc="Vodka, lime, ginger beer" priceRight />
+                <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime, ginger beer" priceRight />
+                <MenuItemWithDesc label="Dark n Stormy" price="8,00€" desc="Rum scuro, lime, ginger beer" priceRight />
+              </div>
+            </section>
+            <section>
+              <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Pestati</h3>
+              <div className="space-y-4">
+                <MenuItemWithDesc label="Mojito" price="7,00€" desc="Rum, menta, lime, zucchero" priceRight />
+                <MenuItemWithDesc label="Caipirinha" price="7,00€" desc="Cachaça, lime, zucchero" priceRight />
+                <MenuItemWithDesc label="Caipiroska" price="7,00€" desc="Vodka, lime, zucchero" priceRight />
+              </div>
+            </section>
         </div>
 
-        {/* MULE & PESTATI */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <section>
-            <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Mule</h3>
-            <div className="space-y-4">
-              <MenuItemWithDesc label="Moscow Mule" price="7,00€" desc="Vodka, lime, ginger beer" priceRight />
-              <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime, ginger beer" priceRight />
-              <MenuItemWithDesc label="Dark n Stormy" price="8,00€" desc="Rum scuro, lime, ginger beer" priceRight />
+        {/* DISTILLATI (Riorganizzati in Griglia) */}
+        <section className="pt-10 border-t border-gray-100">
+          <h3 className="text-4xl font-black uppercase mb-16 italic text-[#642d3a] text-center tracking-tighter">I Nostri Distillati</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+            <div>
+              <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Whiskey</h4>
+              <div className="space-y-2">
+                <MenuItem label="Jack Daniel's" price="6,00€" />
+                <MenuItem label="Jameson" price="6,00€" />
+                <MenuItem label="Laphroaig 10" price="10,00€" />
+                <MenuItem label="Lagavulin 16" price="14,00€" />
+              </div>
             </div>
-          </section>
-          <section>
-            <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Pestati</h3>
-            <div className="space-y-4">
-              <MenuItemWithDesc label="Mojito" price="7,00€" desc="Rum, menta, lime, zucchero" priceRight />
-              <MenuItemWithDesc label="Caipirinha" price="7,00€" desc="Cachaça, lime, zucchero" priceRight />
-              <MenuItemWithDesc label="Caipiroska" price="7,00€" desc="Vodka, lime, zucchero" priceRight />
+            <div>
+              <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Vodka</h4>
+              <div className="space-y-2">
+                <MenuItem label="Moskovskaya" price="6,00€" />
+                <MenuItem label="Belvedere" price="10,00€" />
+                <MenuItem label="Grey Goose" price="10,00€" />
+              </div>
             </div>
-          </section>
-        </div>
-
-        {/* DISTILLATI */}
-<section className="pt-20 border-t border-gray-100">
-  <h2 className="text-4xl font-black uppercase mb-16 italic text-[#642d3a] text-center tracking-tighter">
-    I Nostri Distillati
-  </h2>
-
-  <div className="space-y-16">
-    {/* WHISKEY */}
-    <div className="max-w-[600px] mx-auto">
-      <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">
-        Whiskey
-      </h4>
-      <div className="space-y-2">
-        <MenuItem label="Jack Daniel's" price="6,00€" />
-        <MenuItem label="Jameson" price="6,00€" />
-        <MenuItem label="Laphroaig 10" price="10,00€" />
-        <MenuItem label="Lagavulin 16" price="14,00€" />
-      </div>
-    </div>
-
-    {/* VODKA */}
-    <div className="max-w-[600px] mx-auto">
-      <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">
-        Vodka
-      </h4>
-      <div className="space-y-2">
-        <MenuItem label="Moskovskaya" price="6,00€" />
-        <MenuItem label="Belvedere" price="10,00€" />
-        <MenuItem label="Grey Goose" price="10,00€" />
-      </div>
-    </div>
-
-    {/* RUM */}
-    <div className="max-w-[600px] mx-auto">
-      <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">
-        Rum
-      </h4>
-      <div className="space-y-2">
-        <MenuItem label="Havana 7" price="6,00€" />
-        <MenuItem label="Diplomatico" price="10,00€" />
-        <MenuItem label="Zacapa 23" price="12,00€" />
-      </div>
-    </div>
-
-    {/* AMARI E GRAPPE */}
-    <div className="max-w-[600px] mx-auto">
-      <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">
-        Amari & Grappe
-      </h4>
-      <div className="space-y-2">
-        <MenuItem label="Amari" price="4,00€" />
-        <MenuItem label="Grappe" price="5,00€" />
-      </div>
-    </div>
-  </div>
-</section>
+            <div>
+              <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Rum</h4>
+              <div className="space-y-2">
+                <MenuItem label="Havana 7" price="6,00€" />
+                <MenuItem label="Diplomatico" price="10,00€" />
+                <MenuItem label="Zacapa 23" price="12,00€" />
+              </div>
+            </div>
+            <div>
+              <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Extra</h4>
+              <div className="space-y-2">
+                <MenuItem label="Amari" price="4,00€" />
+                <MenuItem label="Grappe" price="5,00€" />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ANALCOLICI */}
         <section className="pb-20">
-          <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Analcolici</h3>
+          <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Analcolici</h3>
           <div className="space-y-4">
             <MenuItemWithDesc label="Analcolico alla frutta" price="5,00€" desc="Mix di succhi stagionali, granatina, soda" priceRight />
             <MenuItemWithDesc label="Virgin Mojito" price="6,00€" desc="Lime, zucchero di canna, menta, ginger ale" priceRight />
