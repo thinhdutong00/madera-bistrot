@@ -70,7 +70,7 @@ export default function DrinkPage() {
     <div ref={containerRef} className="relative min-h-screen bg-white pt-32 pb-40 px-4 md:px-8 w-full">
       
       {/* MENU GALLEGGIANTE ANCOR - Dinamico per il footer */}
-      <div className={`left-1/2 -translate-x-1/2 z-[90] flex items-center bg-[#642d3a]/80 backdrop-blur-md text-[#ffefcc] px-8 py-1.5 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[320px] justify-between transition-all duration-300 ${
+      <div className={`left-1/2 -translate-x-1/2 z-[90] flex items-center bg-[#642d3a]/95 backdrop-blur-md text-[#ffefcc] px-8 py-1.5 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[320px] justify-between transition-all duration-300 ${
         isAtFooter ? 'absolute bottom-10' : 'fixed bottom-8'
       }`}>
         <button 
