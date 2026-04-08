@@ -1,15 +1,17 @@
+"use client";
 import React from 'react';
 import { MenuItem, MenuItemWithDesc, ApericenaCard } from '@/components/MenuComponents';
+import GlobalMenu from '@/components/GlobalMenu';
 
 export default function ApericenaPage() {
   return (
-    <div className="min-h-screen bg-white pt-32 pb-20 px-6 w-full">
+    <div className="relative min-h-screen bg-white pt-12 md:pt-32 pb-40 px-6 w-full">
       <div className="max-w-[1400px] mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 px-2">
           <h2 className="text-5xl font-black uppercase tracking-tighter italic text-[#642d3a] mb-4">
             Apericena
           </h2>
-          <p className="text-sm uppercase tracking-[0.2em] font-bold text-[#642d3a] opacity-70 underline decoration-1 underline-offset-4 max-w-2xl mx-auto">
+          <p className="text-sm uppercase tracking-[0.2em] font-bold text-[#642d3a] opacity-70 underline decoration-1 underline-offset-4 max-w-2xl mx-auto leading-relaxed">
             Dalle 18:00 alle 22:30. Incluso puoi scegliere un analcolico, calice di vino, spritz o birra.
           </p>
         </div>
@@ -20,6 +22,8 @@ export default function ApericenaPage() {
           <ApericenaCard image="/apericena-vegetariano.jpg" title="Vegetariano" price="16,00€" desc="Burger veg, olive, formaggio, zucchine grigliate, flan di verdure e parmigiana." />
         </div>
       </div>
+
+      <GlobalMenu />
     </div>
   );
 }
