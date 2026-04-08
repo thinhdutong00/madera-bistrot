@@ -184,13 +184,31 @@ export default function DrinkPage() {
         </section>
 
         {/* ANALCOLICI */}
-        <section className="pb-20">
-          <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Analcolici</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <MenuItemWithDesc label="Analcolico alla frutta" price="5,00€" desc="Mix di succhi stagionali, granatina, soda" priceRight />
-            <MenuItemWithDesc label="Virgin Mojito" price="6,00€" desc="Lime, zucchero di canna, menta, ginger ale" priceRight />
-          </div>
-        </section>
+<section className="pb-20">
+  <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">
+    Analcolici
+  </h3>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <MenuItemWithDesc 
+      label="Analcolico alla frutta" 
+      price="5,00€" 
+      desc="Mix di succhi stagionali, granatina, soda" 
+      priceRight 
+    />
+    <MenuItemWithDesc 
+      label="Virgin Mojito" 
+      price="6,00€" 
+      desc="Lime, zucchero di canna, menta, ginger ale" 
+      priceRight 
+    />
+    <MenuItemWithDesc 
+      label="Crodino / Sanbitter" 
+      price="4,50€" 
+      desc="Servito con ghiaccio e fetta d'arancia" 
+      priceRight 
+    />
+  </div>
+</section>
         
       </div>
     </div>
