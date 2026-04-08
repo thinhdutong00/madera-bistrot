@@ -48,7 +48,7 @@ export default function GlobalMenu() {
 
   return (
     <div 
-      className={`left-1/2 -translate-x-1/2 z-[100] flex items-center bg-[#642d3a]/80 backdrop-blur-md text-[#ffefcc] px-8 py-1.5 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[320px] justify-between transition-all duration-300 ${
+      className={`left-1/2 -translate-x-1/2 z-[100] flex items-center bg-[#642d3a]/95 backdrop-blur-md text-[#ffefcc] px-8 py-1.5 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[320px] justify-between transition-all duration-300 ${
         isAtFooter ? 'absolute bottom-10' : 'fixed bottom-8'
       }`}
     >
