@@ -70,17 +70,17 @@ export default function DrinkPage() {
     <div ref={containerRef} className="relative min-h-screen bg-white pt-32 pb-40 px-4 md:px-8 w-full">
       
       {/* MENU GALLEGGIANTE ANCOR - Dinamico per il footer */}
-      <div className={`left-1/2 -translate-x-1/2 z-[90] flex items-center bg-[#642d3a] text-[#ffefcc] px-6 py-3 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[280px] justify-between transition-all duration-300 ${
+      <div className={`left-1/2 -translate-x-1/2 z-[90] flex items-center bg-[#642d3a]/80 backdrop-blur-md text-[#ffefcc] px-8 py-1.5 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[320px] justify-between transition-all duration-300 ${
         isAtFooter ? 'absolute bottom-10' : 'fixed bottom-8'
       }`}>
         <button 
           onClick={() => navigate('prev')}
-          className="text-2xl font-black p-2 hover:scale-125 transition-transform"
+          className="text-xl font-black p-2 hover:scale-125 transition-transform"
         >
           &lt;
         </button>
         
-        <span className="text-sm font-black uppercase italic tracking-widest text-center flex-1 mx-4">
+        <span className="text-[11px] tracking-[0.2em] font-black uppercase italic tracking-widest text-center flex-1 mx-4">
           {categories[currentIndex].name}
         </span>
 
