@@ -3,20 +3,21 @@ import { MenuItem, MenuItemWithDesc } from '@/components/MenuComponents';
 
 export default function DrinkPage() {
   return (
-    <div className="min-h-screen bg-white pt-32 pb-20 px-6 w-full">
-      {/* Header Pagina */}
-      <div className="max-w-[800px] mx-auto mb-16">
+    <div className="min-h-screen bg-white pt-32 pb-20 px-4 md:px-8 w-full">
+      {/* Header Pagina - Allineato alla nuova larghezza */}
+      <div className="max-w-[1100px] mx-auto mb-16 px-2">
         <h2 className="text-5xl font-black uppercase tracking-tighter italic text-[#642d3a]">
           Drink List
         </h2>
       </div>
 
-      <div className="max-w-[800px] mx-auto space-y-24">
+      {/* Contenitore Principale Largo */}
+      <div className="max-w-[1100px] mx-auto space-y-24">
         
-        {/* SIGNATURE */}
+        {/* SIGNATURE - Ora su 2 colonne su Desktop */}
         <section>
-          <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Signature</h3>
-          <div className="space-y-6">
+          <h3 className="text-2xl font-black uppercase mb-10 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Signature</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
             <MenuItemWithDesc label="Cosmopoli-Thain" price="10,00€" desc="Vodka, cointreau, lime, cranberry, kaffir lime, lemongrass" priceRight />
             <MenuItemWithDesc label="Wild Turkey" price="10,00€" desc="Wild turkey 101, miele, limone, ginger beer" priceRight />
             <MenuItemWithDesc label="Balsamic" price="10,00€" desc="Gin, fragola, limone, zucchero, aceto balsamico" priceRight />
@@ -40,7 +41,7 @@ export default function DrinkPage() {
         {/* GINTONERIA */}
         <section>
           <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Gintoneria</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-3">
             <MenuItem label="Gordon's / Tanqueray" price="7,00€" />
             <MenuItem label="Bombay Sapphire" price="8,00€" />
             <MenuItem label="Hendrick's" price="10,00€" />
@@ -61,10 +62,10 @@ export default function DrinkPage() {
           </div>
         </section>
 
-        {/* COCKTAIL INTERNAZIONALI */}
+        {/* COCKTAIL INTERNAZIONALI - 2 Colonne su Desktop */}
         <section>
-          <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Cocktail Internazionali</h3>
-          <div className="space-y-6">
+          <h3 className="text-2xl font-black uppercase mb-10 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Cocktail Internazionali</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6">
             <MenuItemWithDesc label="Americano" price="7,00€" desc="Vermouth rosso, Campari, soda" priceRight />
             <MenuItemWithDesc label="Negroni" price="7,00€" desc="Gin, Vermouth rosso, Campari" priceRight />
             <MenuItemWithDesc label="Negroni Sbagliato" price="7,00€" desc="Prosecco, Vermouth rosso, Campari" priceRight />
@@ -96,8 +97,8 @@ export default function DrinkPage() {
           </div>
         </section>
 
-        {/* SPRITZ, SOUR, MULE, PESTATI (Griglia 2 Colonne) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
+        {/* GRUPPO MIX - 2 Sezioni per riga su Desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-24">
             <section>
               <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Spritz Family</h3>
               <div className="space-y-4">
@@ -132,10 +133,10 @@ export default function DrinkPage() {
             </section>
         </div>
 
-        {/* DISTILLATI (Riorganizzati in Griglia) */}
-        <section className="pt-10 border-t border-gray-100">
+        {/* DISTILLATI - Griglia ottimizzata */}
+        <section className="pt-16 border-t border-gray-100">
           <h3 className="text-4xl font-black uppercase mb-16 italic text-[#642d3a] text-center tracking-tighter">I Nostri Distillati</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
             <div>
               <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Whiskey</h4>
               <div className="space-y-2">
@@ -174,7 +175,7 @@ export default function DrinkPage() {
         {/* ANALCOLICI */}
         <section className="pb-20">
           <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Analcolici</h3>
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <MenuItemWithDesc label="Analcolico alla frutta" price="5,00€" desc="Mix di succhi stagionali, granatina, soda" priceRight />
             <MenuItemWithDesc label="Virgin Mojito" price="6,00€" desc="Lime, zucchero di canna, menta, ginger ale" priceRight />
           </div>
