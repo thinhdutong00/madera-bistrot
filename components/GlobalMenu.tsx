@@ -1,10 +1,11 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function GlobalMenu() {
   const pathname = usePathname();
+  const [isAtFooter, setIsAtFooter] = useState(false);
 
   const pages = [
     { name: 'Bar & Caffetteria', href: '/menu/caffetteria' },
@@ -15,15 +16,34 @@ export default function GlobalMenu() {
     { name: 'Birre', href: '/menu/birre' },
   ];
 
-  // Trova l'indice della pagina attuale
+  useEffect(() => {
+    const handleScroll = () => {
+      // Calcoliamo quanto manca alla fine della pagina
+      const scrollHeight = document.documentElement.scrollHeight;
+      const scrollPos = window.innerHeight + window.scrollY;
+      const footerThreshold = 100; // Distanza dal fondo per bloccare il menu
+
+      if (scrollHeight - scrollPos <= footerThreshold) {
+        setIsAtFooter(true);
+      } else {
+        setIsAtFooter(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const currentIndex = pages.findIndex(p => p.href === pathname);
-  
-  // Calcola i link precedente e successivo
   const prevPage = pages[(currentIndex - 1 + pages.length) % pages.length];
   const nextPage = pages[(currentIndex + 1) % pages.length];
 
   return (
-    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] flex items-center bg-[#642d3a]/80 backdrop-blur-md text-[#ffefcc] px-8 py-1.5 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[320px] justify-between transition-all duration-300">
+    <div 
+      className={`left-1/2 -translate-x-1/2 z-[100] flex items-center bg-[#642d3a]/80 backdrop-blur-md text-[#ffefcc] px-8 py-1.5 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[320px] justify-between transition-all duration-300 ${
+        isAtFooter ? 'absolute bottom-10' : 'fixed bottom-8'
+      }`}
+    >
       <Link 
         href={prevPage.href}
         className="text-xl font-black p-2 hover:scale-125 transition-transform"
