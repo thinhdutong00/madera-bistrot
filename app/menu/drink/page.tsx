@@ -138,43 +138,61 @@ export default function DrinkPage() {
         </div>
 
         {/* DISTILLATI */}
-        <section className="pt-10 border-t border-gray-100">
-          <h3 className="text-3xl font-black uppercase mb-10 italic text-[#642d3a] text-center">I Nostri Distillati</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
-              <h4 className="font-bold uppercase text-[#642d3a] mb-3">Whiskey</h4>
-              <div className="text-sm space-y-1">
-                <MenuItem label="Jack Daniel's" price="6€" />
-                <MenuItem label="Jameson" price="6€" />
-                <MenuItem label="Laphroaig 10" price="10€" />
-                <MenuItem label="Lagavulin 16" price="14€" />
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold uppercase text-[#642d3a] mb-3">Vodka</h4>
-              <div className="text-sm space-y-1">
-                <MenuItem label="Moskovskaya" price="6€" />
-                <MenuItem label="Belvedere" price="10€" />
-                <MenuItem label="Grey Goose" price="10€" />
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold uppercase text-[#642d3a] mb-3">Rum</h4>
-              <div className="text-sm space-y-1">
-                <MenuItem label="Havana 7" price="6€" />
-                <MenuItem label="Diplomatico" price="10€" />
-                <MenuItem label="Zacapa 23" price="12€" />
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold uppercase text-[#642d3a] mb-3">Extra</h4>
-              <div className="text-sm space-y-1">
-                <MenuItem label="Amari" price="4€" />
-                <MenuItem label="Grappe" price="5€" />
-              </div>
-            </div>
-          </div>
-        </section>
+<section className="pt-20 border-t border-gray-100">
+  <h2 className="text-4xl font-black uppercase mb-16 italic text-[#642d3a] text-center tracking-tighter">
+    I Nostri Distillati
+  </h2>
+
+  <div className="space-y-16">
+    {/* WHISKEY */}
+    <div className="max-w-[600px] mx-auto">
+      <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">
+        Whiskey
+      </h4>
+      <div className="space-y-2">
+        <MenuItem label="Jack Daniel's" price="6,00€" />
+        <MenuItem label="Jameson" price="6,00€" />
+        <MenuItem label="Laphroaig 10" price="10,00€" />
+        <MenuItem label="Lagavulin 16" price="14,00€" />
+      </div>
+    </div>
+
+    {/* VODKA */}
+    <div className="max-w-[600px] mx-auto">
+      <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">
+        Vodka
+      </h4>
+      <div className="space-y-2">
+        <MenuItem label="Moskovskaya" price="6,00€" />
+        <MenuItem label="Belvedere" price="10,00€" />
+        <MenuItem label="Grey Goose" price="10,00€" />
+      </div>
+    </div>
+
+    {/* RUM */}
+    <div className="max-w-[600px] mx-auto">
+      <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">
+        Rum
+      </h4>
+      <div className="space-y-2">
+        <MenuItem label="Havana 7" price="6,00€" />
+        <MenuItem label="Diplomatico" price="10,00€" />
+        <MenuItem label="Zacapa 23" price="12,00€" />
+      </div>
+    </div>
+
+    {/* AMARI E GRAPPE */}
+    <div className="max-w-[600px] mx-auto">
+      <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">
+        Amari & Grappe
+      </h4>
+      <div className="space-y-2">
+        <MenuItem label="Amari" price="4,00€" />
+        <MenuItem label="Grappe" price="5,00€" />
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* ANALCOLICI */}
         <section className="pb-20">
