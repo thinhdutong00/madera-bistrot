@@ -62,6 +62,20 @@ export default function DrinkPage() {
           </div>
         </section>
 
+
+        {/* ICED TEA FAMILY */}
+        <section className="pb-20">
+          <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Iced Tea Family</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <MenuItemWithDesc label="Analcolico alla frutta" price="5,00€" desc="Mix di succhi stagionali, granatina, soda" priceRight />
+            <MenuItemWithDesc label="Virgin Mojito" price="6,00€" desc="Lime, zucchero di canna, menta, ginger ale" priceRight />
+          </div>
+        </section>
+
+
+
+
+
         {/* COCKTAIL INTERNAZIONALI - 2 Colonne su Desktop */}
         <section>
           <h3 className="text-2xl font-black uppercase mb-10 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Cocktail Internazionali</h3>
@@ -163,7 +177,7 @@ export default function DrinkPage() {
               </div>
             </div>
             <div>
-              <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Extra</h4>
+              <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Liquori</h4>
               <div className="space-y-2">
                 <MenuItem label="Amari" price="4,00€" />
                 <MenuItem label="Grappe" price="5,00€" />
