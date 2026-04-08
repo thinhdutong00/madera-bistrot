@@ -177,13 +177,29 @@ export default function DrinkPage() {
         </section>
 
         {/* ANALCOLICI */}
-        <section className="pb-20">
-          <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Analcolici</h3>
-          <div className="space-y-4">
-            <MenuItemWithDesc price="5,00€" label="Analcolico alla frutta" desc="Mix di succhi stagionali, granatina, soda" />
-            <MenuItemWithDesc price="6,00€" label="Virgin Mojito" desc="Lime, zucchero di canna, menta, ginger ale" />
-          </div>
-        </section>
+<section className="pb-20">
+  <h3 className="text-2xl font-black uppercase mb-6 italic text-[#642d3a]">Analcolici</h3>
+  <div className="space-y-4">
+    
+    {/* Usiamo una classe wrapper per invertire l'ordine visivo dei figli del componente */}
+    <div className="[&>div]:flex-row-reverse">
+      <MenuItemWithDesc 
+        label="Analcolico alla frutta" 
+        price="5,00€" 
+        desc="Mix di succhi stagionali, granatina, soda" 
+      />
+    </div>
+
+    <div className="[&>div]:flex-row-reverse">
+      <MenuItemWithDesc 
+        label="Virgin Mojito" 
+        price="6,00€" 
+        desc="Lime, zucchero di canna, menta, ginger ale" 
+      />
+    </div>
+
+  </div>
+</section>
         
       </div>
     </div>
