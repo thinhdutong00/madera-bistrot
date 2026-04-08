@@ -75,7 +75,7 @@ export default function DrinkPage() {
 
         {/* COCKTAIL INTERNAZIONALI - 2 Colonne su Desktop */}
         <section>
-          <h3 className="text-2xl font-black uppercase mb-10 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Cocktail Internazionali</h3>
+          <h3 className="text-2xl font-black uppercase mb-10 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Cocktail</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6">
             <MenuItemWithDesc label="Americano" price="7,00€" desc="Vermouth rosso, Campari, soda" priceRight />
             <MenuItemWithDesc label="Negroni" price="7,00€" desc="Gin, Vermouth rosso, Campari" priceRight />
