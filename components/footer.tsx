@@ -1,6 +1,6 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Footer() {
   const orari = [
@@ -13,67 +13,84 @@ export default function Footer() {
     { giorno: "Domenica", ore: "08–01" },
   ];
 
+  const linkUtili = [
+    { name: "Home", href: "/" },
+    { name: "Chi Siamo", href: "/chi-siamo" },
+    { name: "Il Menù", href: "/menu" },
+    { name: "Apericena", href: "/menu/apericena" },
+    { name: "Drink List", href: "/menu/drink" },
+    { name: "Contatti", href: "/contatti" },
+  ];
+
   return (
     <footer className="w-full">
-      {/* SEZIONE BORDEAUX - #642d3a */}
-      <div className="bg-[#642d3a] text-[#ffefcc] py-12 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-4">
+      {/* SEZIONE PRINCIPALE BORDEAUX */}
+      <div className="bg-[#642d3a] text-[#ffefcc] pt-16 pb-12 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           
-          {/* 1. Orari */}
-          <div className="w-full lg:w-auto min-w-fit space-y-4">
+          {/* 1. ORARI - Sempre leggibili */}
+          <div className="space-y-5">
             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffefcc]/20 pb-2">
               Orari di Apertura
             </h4>
-            <ul className="space-y-1.5 text-[12px] font-medium opacity-90">
+            <ul className="space-y-2 text-[12px] font-medium">
               {orari.map((item) => (
-                <li key={item.giorno} className="flex justify-between gap-8 border-b border-[#ffefcc]/5 pb-1">
-                  <span className="opacity-70">{item.giorno}</span>
+                <li key={item.giorno} className="flex justify-between border-b border-[#ffefcc]/5 pb-1">
+                  <span className="opacity-60">{item.giorno}</span>
                   <span className="font-bold tracking-tighter">{item.ore}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* 2. Contatti & Dove Siamo */}
-          <div className="flex flex-col space-y-6 lg:mx-4">
-            <div className="space-y-1">
+          {/* 2. LINK UTILI - Sostituisce l'immagine */}
+          <div className="space-y-5">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffefcc]/20 pb-2">
+              Navigazione
+            </h4>
+            <ul className="space-y-3">
+              {linkUtili.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href} 
+                    className="text-sm font-bold uppercase tracking-widest hover:pl-2 transition-all duration-300 block opacity-80 hover:opacity-100"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* 3. CONTATTI & DOVE SIAMO */}
+          <div className="space-y-8">
+            <div className="space-y-2">
               <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
-              <a href="tel:3517688658" className="text-2xl font-black tracking-tighter hover:text-white transition-colors block">
+              <a href="tel:3517688658" className="text-2xl font-black tracking-tighter hover:text-white transition-colors block italic">
                 351 768 8658
               </a>
             </div>
-            <div className="space-y-1">
+            <div className="space-y-2">
               <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Dove Siamo</h4>
-              <p className="text-sm font-bold leading-tight">
+              <p className="text-sm font-bold leading-tight uppercase tracking-tight">
                 Via Alcide Garagnani, 10,<br/> 
                 41012 Carpi (MO)
               </p>
             </div>
           </div>
 
-          {/* 3. Immagine */}
-          <div className="relative w-full max-w-[340px] aspect-[16/10] overflow-hidden rounded-xl shadow-2xl border border-[#ffefcc]/10">
-            <Image 
-              src="/barmadera.jpg" 
-              alt="Interno Madera" 
-              fill 
-              className="object-cover"
-            />
-          </div>
-
-          {/* 4. Branding + Pulsante Riserva */}
-          <div className="flex flex-col items-center lg:items-end gap-6 min-w-fit">
-             <div className="text-center lg:text-right">
-                <p className="text-[22px] lg:text-[26px] uppercase tracking-[0.2em] font-black leading-[0.9] italic">
+          {/* 4. BRANDING & ACTION */}
+          <div className="flex flex-col items-start lg:items-end justify-between py-2">
+             <div className="text-left lg:text-right mb-8 lg:mb-0">
+                <p className="text-3xl lg:text-4xl uppercase tracking-[0.1em] font-black leading-[0.8] italic">
                   Madera<br/>
-                  <span className="text-[11px] tracking-[0.4em] not-italic opacity-40 block mt-1">Caffetteria</span>
-                  <span className="text-[11px] tracking-[0.4em] not-italic opacity-40 block">& Bistrot</span>
+                  <span className="text-[10px] tracking-[0.5em] not-italic opacity-40 block mt-2">Caffetteria & Bistrot</span>
                 </p>
              </div>
              
              <Link 
                href="/riserva-un-tavolo" 
-               className="bg-[#ffefcc] text-[#642d3a] px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white transition-all shadow-lg active:scale-95"
+               className="w-full lg:w-auto text-center bg-[#ffefcc] text-[#642d3a] px-8 py-4 rounded-full text-[11px] font-black uppercase tracking-[0.2em] hover:bg-white transition-all shadow-xl active:scale-95"
              >
                Riserva un tavolo
              </Link>
@@ -82,18 +99,21 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* SEZIONE GRIGIO MEDIO-SCURO */}
-      <div className="bg-[#2a2a2a] py-8 px-6 border-t border-white/5">
-        <div className="max-w-7xl mx-auto flex flex-col items-center space-y-6">
-          <div className="flex space-x-6 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-bold text-[#aaaaaa]">
+      {/* SEZIONE COPYRIGHT - DARK */}
+      <div className="bg-[#1a1a1a] py-10 px-6 border-t border-white/5">
+        <div className="max-w-7xl mx-auto flex flex-col items-center space-y-8">
+          
+          <div className="flex flex-wrap justify-center gap-6 text-[10px] uppercase tracking-[0.2em] font-bold text-[#666666]">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <span className="opacity-20">|</span>
             <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
           </div>
-          <p className="text-[#999999] text-[8px] md:text-[9px] leading-relaxed uppercase tracking-[0.2em] font-medium text-center">
-            Copyright 2026 Madera Caffetteria & Cocktail Bar - Carpi (MO) Via L. A. Muratori, 47 CAP 41012 <br/>
-            P.IVA 03831040369 - REA MO - 421443 - Powered by <span className="text-white/80 font-bold">Mago Digital</span>
-          </p>
+
+          <div className="text-[#444444] text-[9px] leading-loose uppercase tracking-[0.15em] font-medium text-center max-w-3xl">
+            <p>
+              © 2026 Madera Caffetteria & Cocktail Bar - Carpi (MO) Via Alcide Garagnani, 10 <br className="hidden md:block"/>
+              P.IVA 03831040369 • Powered by <span className="text-[#888888] font-bold">Mago Digital</span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
