@@ -31,32 +31,31 @@ export default function StuzzicheriePage() {
 
         {/* COLONNA DESTRA: MENU SFIZI COMPLETO */}
         <div className="flex flex-col justify-center">
-          <div className="space-y-6 pl-4 border-l-2 border-[#642d3a]/20">
-            {/* Voci da IMG_9953 */}
+          <div className="space-y-6 pl-4 border-l-2 border-[#642d3a]/20 max-w-lg">
+            
             <MenuItemWithDesc 
-              label="8 pz gnocco fritto con affettati misti" 
-              price="8,00€" 
+              label="8 pz gnocco + affettati ........... 8,00€" 
+              price="" 
               desc="3 salame, 2 crudo, 2 mortadella" 
             />
             
             <MenuItemWithDesc 
-              label="8 pz gnocco fritto con solo crudo" 
-              price="10,00€" 
+              label="8 pz gnocco solo crudo ........... 10,00€" 
+              price="" 
               desc="8 fette" 
             />
             
-            <MenuItem label="4 pz gnocco fritto" price="3,00€" />
+            <MenuItem label="4 pz gnocco fritto ...................... 3,00€" price="" />
             
             <MenuItemWithDesc 
-              label="Mix fritto" 
-              price="6,00€" 
-              desc="Patatine, crocchette di patate, crocchette di pollo, olive ascolane" 
+              label="Mix fritto ........................................... 6,00€" 
+              price="" 
+              desc="Patatine, crocchette di pollo, olive ascolane" 
             />
             
-            {/* Voci da IMG_9954 */}
-            <MenuItem label="Patatine Fritte" price="5,00€" />
+            <MenuItem label="Patatine Fritte .............................. 5,00€" price="" />
             
-            <MenuItem label="Tagliere di Formaggi Misti" price="7,00€" />
+            <MenuItem label="Tagliere Formaggi ....................... 7,00€" price="" />
           </div>
 
           {/* NOTA AGGIUNTIVA */}
