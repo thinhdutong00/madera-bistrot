@@ -7,7 +7,7 @@ export default function GlobalMenu() {
   const pathname = usePathname();
 
   const pages = [
-    { name: 'Bar & Caffetteria', href: '/bar-caffetteria' },
+    { name: 'Bar & Caffetteria', href: '/caffetteria' },
     { name: 'Stuzzicherie', href: '/stuzzicherie' },
     { name: 'Apericena', href: '/apericena' },
     { name: 'Drink', href: '/drink' },
