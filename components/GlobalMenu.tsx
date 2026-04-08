@@ -18,25 +18,33 @@ export default function GlobalMenu() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Calcoliamo quanto manca alla fine della pagina
-      const scrollHeight = document.documentElement.scrollHeight;
-      const scrollPos = window.innerHeight + window.scrollY;
-      const footerThreshold = 100; // Distanza dal fondo per bloccare il menu
+      // Cerchiamo il tag <footer> nel DOM
+      const footer = document.querySelector('footer');
+      if (!footer) return;
 
-      if (scrollHeight - scrollPos <= footerThreshold) {
+      const footerRect = footer.getBoundingClientRect();
+      
+      // Se la parte superiore del footer entra nella vista (con un margine di 100px)
+      // il menu passa da fixed ad absolute
+      if (footerRect.top <= window.innerHeight) {
         setIsAtFooter(true);
       } else {
         setIsAtFooter(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Eseguiamo un controllo immediato al caricamento
+    handleScroll();
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const currentIndex = pages.findIndex(p => p.href === pathname);
-  const prevPage = pages[(currentIndex - 1 + pages.length) % pages.length];
-  const nextPage = pages[(currentIndex + 1) % pages.length];
+  const safeIndex = currentIndex === -1 ? 0 : currentIndex;
+  
+  const prevPage = pages[(safeIndex - 1 + pages.length) % pages.length];
+  const nextPage = pages[(safeIndex + 1) % pages.length];
 
   return (
     <div 
@@ -52,7 +60,7 @@ export default function GlobalMenu() {
       </Link>
       
       <span className="text-[11px] font-black uppercase italic tracking-[0.2em] text-center flex-1 mx-4">
-        {pages[currentIndex === -1 ? 0 : currentIndex].name}
+        {pages[safeIndex].name}
       </span>
 
       <Link 
