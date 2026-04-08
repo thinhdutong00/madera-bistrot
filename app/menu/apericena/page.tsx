@@ -18,7 +18,7 @@ export default function ApericenaPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <ApericenaCard image="/apericena-tradizionale.jpg" title="Tradizionale" price="12,00€" desc="Tagliere di affettati misti con gnocco fritto, porzione di patatine e crocchette." />
-          <ApericenaCard image="/apericena-madera.jpg" title="Madera" price="14,00€" desc="Tagliere di affettati e formaggi misti, crostone, focaccia, olive e salse." />
+          <ApericenaCard image="/gnocco&salumi.jpg" title="Madera" price="14,00€" desc="Tagliere di affettati e formaggi misti, crostone, focaccia, olive e salse." />
           <ApericenaCard image="/apericena-vegetariano.jpg" title="Vegetariano" price="16,00€" desc="Burger veg, olive, formaggio, zucchine grigliate, flan di verdure e parmigiana." />
         </div>
       </div>
