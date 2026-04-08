@@ -73,9 +73,6 @@ export default function DrinkPage() {
         </section>
 
 
-
-
-
         {/* COCKTAIL INTERNAZIONALI - 2 Colonne su Desktop */}
         <section>
           <h3 className="text-2xl font-black uppercase mb-10 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Cocktail Internazionali</h3>
