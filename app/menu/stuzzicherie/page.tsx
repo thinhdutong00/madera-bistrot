@@ -1,12 +1,14 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import { MenuItem, MenuItemWithDesc } from '@/components/MenuComponents';
+import GlobalMenu from '@/components/GlobalMenu';
 
 export default function StuzzicheriePage() {
   return (
-    <div className="min-h-screen bg-white pt-32 pb-20 px-6 w-full">
+    <div className="relative min-h-screen bg-white pt-12 md:pt-32 pb-40 px-6 w-full">
       {/* INTESTAZIONE PAGINA */}
-      <div className="max-w-[1400px] mx-auto mb-16">
+      <div className="max-w-[1400px] mx-auto mb-16 px-2">
         <h2 className="text-4xl font-black uppercase tracking-tighter italic text-[#642d3a]">
           Stuzzicherie
         </h2>
@@ -65,6 +67,8 @@ export default function StuzzicheriePage() {
           </div>
         </div>
       </div>
+
+      <GlobalMenu />
     </div>
   );
 }
