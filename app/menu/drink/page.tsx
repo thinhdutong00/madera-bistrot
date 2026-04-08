@@ -1,21 +1,84 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import { MenuItem, MenuItemWithDesc } from '@/components/MenuComponents';
 
 export default function DrinkPage() {
+  // Configurazione categorie per il menu galleggiante
+  const categories = [
+    { name: 'Signature', id: 'signature' },
+    { name: 'Gintoneria', id: 'gintoneria' },
+    { name: 'Iced Tea Family', id: 'iced-tea' },
+    { name: 'Cocktail', id: 'cocktail' },
+    { name: 'Spritz Family', id: 'spritz' },
+    { name: 'Sour', id: 'sour' },
+    { name: 'Mule', id: 'mule' },
+    { name: 'Pestati', id: 'pestati' },
+    { name: 'Whiskey', id: 'whiskey' },
+    { name: 'Vodka', id: 'vodka' },
+    { name: 'Rum', id: 'rum' },
+    { name: 'Liquori', id: 'liquori' },
+    { name: 'Analcolici', id: 'analcolici' },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Risolto l'errore TS specificando il tipo (string)
+  const navigate = (direction: 'next' | 'prev') => {
+    let newIndex = direction === 'next' 
+      ? (currentIndex + 1) % categories.length 
+      : (currentIndex - 1 + categories.length) % categories.length;
+    
+    setCurrentIndex(newIndex);
+    const element = document.getElementById(categories[newIndex].id);
+    if (element) {
+      const offset = 100;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-white pt-32 pb-20 px-4 md:px-8 w-full">
-      {/* Header Pagina - Allineato alla nuova larghezza */}
+    <div className="min-h-screen bg-white pt-32 pb-40 px-4 md:px-8 w-full">
+      
+      {/* MENU GALLEGGIANTE ANCOR */}
+      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[90] flex items-center bg-[#642d3a] text-[#ffefcc] px-6 py-3 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[280px] justify-between">
+        <button 
+          onClick={() => navigate('prev')}
+          className="text-2xl font-black p-2 hover:scale-125 transition-transform"
+        >
+          &lt;
+        </button>
+        
+        <span className="text-sm font-black uppercase italic tracking-widest text-center flex-1 mx-4">
+          {categories[currentIndex].name}
+        </span>
+
+        <button 
+          onClick={() => navigate('next')}
+          className="text-2xl font-black p-2 hover:scale-125 transition-transform"
+        >
+          &gt;
+        </button>
+      </div>
+
+      {/* Header Pagina */}
       <div className="max-w-[1100px] mx-auto mb-16 px-2">
         <h2 className="text-5xl font-black uppercase tracking-tighter italic text-[#642d3a]">
           Drink List
         </h2>
       </div>
 
-      {/* Contenitore Principale Largo */}
+      {/* Contenitore Principale */}
       <div className="max-w-[1100px] mx-auto space-y-24">
         
-        {/* SIGNATURE - Ora su 2 colonne su Desktop */}
-        <section>
+        <section id="signature">
           <h3 className="text-2xl font-black uppercase mb-10 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Signature</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
             <MenuItemWithDesc label="Cosmopoli-Thain" price="10,00€" desc="Vodka, cointreau, lime, cranberry, kaffir lime, lemongrass" priceRight />
@@ -38,8 +101,7 @@ export default function DrinkPage() {
           </div>
         </section>
 
-        {/* GINTONERIA */}
-        <section>
+        <section id="gintoneria">
           <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Gintoneria</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-3">
             <MenuItem label="Gordon's / Tanqueray" price="7,00€" />
@@ -62,9 +124,7 @@ export default function DrinkPage() {
           </div>
         </section>
 
-
-        {/* ICED TEA FAMILY */}
-        <section className="pb-20">
+        <section id="iced-tea" className="pb-20">
           <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Iced Tea Family</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <MenuItemWithDesc label="Analcolico alla frutta" price="5,00€" desc="Mix di succhi stagionali, granatina, soda" priceRight />
@@ -72,9 +132,7 @@ export default function DrinkPage() {
           </div>
         </section>
 
-
-        {/* COCKTAIL INTERNAZIONALI - 2 Colonne su Desktop */}
-        <section>
+        <section id="cocktail">
           <h3 className="text-2xl font-black uppercase mb-10 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Cocktail</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6">
             <MenuItemWithDesc label="Americano" price="7,00€" desc="Vermouth rosso, Campari, soda" priceRight />
@@ -108,9 +166,8 @@ export default function DrinkPage() {
           </div>
         </section>
 
-        {/* GRUPPO MIX - 2 Sezioni per riga su Desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-24">
-            <section>
+            <section id="spritz">
               <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Spritz Family</h3>
               <div className="space-y-4">
                 <MenuItemWithDesc label="Spritz" price="5,00€" desc="Prosecco, bitter, soda" priceRight />
@@ -118,7 +175,7 @@ export default function DrinkPage() {
                 <MenuItemWithDesc label="Cynar Spritz" price="6,00€" desc="Cynar, prosecco, soda" priceRight />
               </div>
             </section>
-            <section>
+            <section id="sour">
               <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Sour</h3>
               <div className="space-y-4">
                 <MenuItemWithDesc label="Vodka Sour" price="8,00€" desc="Vodka, limone, zucchero" priceRight />
@@ -126,7 +183,7 @@ export default function DrinkPage() {
                 <MenuItemWithDesc label="Amaretto Sour" price="8,00€" desc="Amaretto, limone, zucchero" priceRight />
               </div>
             </section>
-            <section>
+            <section id="mule">
               <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Mule</h3>
               <div className="space-y-4">
                 <MenuItemWithDesc label="Moscow Mule" price="7,00€" desc="Vodka, lime, ginger beer" priceRight />
@@ -134,7 +191,7 @@ export default function DrinkPage() {
                 <MenuItemWithDesc label="Dark n Stormy" price="8,00€" desc="Rum scuro, lime, ginger beer" priceRight />
               </div>
             </section>
-            <section>
+            <section id="pestati">
               <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Pestati</h3>
               <div className="space-y-4">
                 <MenuItemWithDesc label="Mojito" price="7,00€" desc="Rum, menta, lime, zucchero" priceRight />
@@ -144,11 +201,10 @@ export default function DrinkPage() {
             </section>
         </div>
 
-        {/* DISTILLATI - Griglia ottimizzata */}
         <section className="pt-16 border-t border-gray-100">
           <h3 className="text-4xl font-black uppercase mb-16 italic text-[#642d3a] text-center tracking-tighter">I Nostri Distillati</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-            <div>
+            <div id="whiskey">
               <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Whiskey</h4>
               <div className="space-y-2">
                 <MenuItem label="Jack Daniel's" price="6,00€" />
@@ -157,7 +213,7 @@ export default function DrinkPage() {
                 <MenuItem label="Lagavulin 16" price="14,00€" />
               </div>
             </div>
-            <div>
+            <div id="vodka">
               <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Vodka</h4>
               <div className="space-y-2">
                 <MenuItem label="Moskovskaya" price="6,00€" />
@@ -165,7 +221,7 @@ export default function DrinkPage() {
                 <MenuItem label="Grey Goose" price="10,00€" />
               </div>
             </div>
-            <div>
+            <div id="rum">
               <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Rum</h4>
               <div className="space-y-2">
                 <MenuItem label="Havana 7" price="6,00€" />
@@ -173,7 +229,7 @@ export default function DrinkPage() {
                 <MenuItem label="Zacapa 23" price="12,00€" />
               </div>
             </div>
-            <div>
+            <div id="liquori">
               <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Liquori</h4>
               <div className="space-y-2">
                 <MenuItem label="Amari" price="4,00€" />
@@ -183,32 +239,14 @@ export default function DrinkPage() {
           </div>
         </section>
 
-        {/* ANALCOLICI */}
-<section className="pb-20">
-  <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">
-    Analcolici
-  </h3>
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-    <MenuItemWithDesc 
-      label="SWEET DREAM" 
-      price="7,00€" 
-      desc="Succo di arancia, succo di ananas, fragola, soda al limone, succo di limone fresco" 
-      priceRight 
-    />
-    <MenuItemWithDesc 
-      label="CRODINO LOVERS" 
-      price="7,00€" 
-      desc="Succo di lime fresco, melograno, Crodino, soda aromatizzata al pompelmo" 
-      priceRight 
-    />
-    <MenuItemWithDesc 
-      label="PASSION SUNSET" 
-      price="7,00€" 
-      desc="Succo di arancia, melograno, maracuja, soda al limone, succo di lime fresco" 
-      priceRight 
-    />
-  </div>
-</section>
+        <section id="analcolici" className="pb-20">
+          <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Analcolici</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <MenuItemWithDesc label="SWEET DREAM" price="7,00€" desc="Succo di arancia, succo di ananas, fragola, soda al limone, succo di limone fresco" priceRight />
+            <MenuItemWithDesc label="CRODINO LOVERS" price="7,00€" desc="Succo di lime fresco, melograno, Crodino, soda aromatizzata al pompelmo" priceRight />
+            <MenuItemWithDesc label="PASSION SUNSET" price="7,00€" desc="Succo di arancia, melograno, maracuja, soda al limone, succo di lime fresco" priceRight />
+          </div>
+        </section>
         
       </div>
     </div>
