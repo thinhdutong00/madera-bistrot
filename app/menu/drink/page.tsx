@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { MenuItem, MenuItemWithDesc } from '@/components/MenuComponents';
+
 
 export default function DrinkPage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -46,9 +48,12 @@ export default function DrinkPage() {
   }, []);
 
   const navigate = (direction: 'next' | 'prev') => {
-    let newIndex = direction === 'next' 
-      ? (currentIndex + 1) % categories.length 
-      : (currentIndex - 1 + categories.length) % categories.length;
+    // Se siamo all'inizio e andiamo indietro, o alla fine e andiamo avanti, 
+    // non facciamo nulla qui perché useremo i Link (vedi sotto nel JSX)
+    if (direction === 'prev' && currentIndex === 0) return;
+    if (direction === 'next' && currentIndex === categories.length - 1) return;
+
+    let newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
     
     setCurrentIndex(newIndex);
     const element = document.getElementById(categories[newIndex].id);
@@ -69,27 +74,36 @@ export default function DrinkPage() {
   return (
     <div ref={containerRef} className="relative min-h-screen bg-white pt-12 md:pt-32 pb-40 px-4 md:px-8 w-full">
       
-      {/* MENU GALLEGGIANTE ANCOR - Dinamico per il footer */}
+      {/* MENU GALLEGGIANTE ANCOR - Navigazione Inter-pagina */}
       <div className={`left-1/2 -translate-x-1/2 z-[90] flex items-center bg-[#642d3a]/95 backdrop-blur-md text-[#ffefcc] px-8 py-1.5 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[320px] justify-between transition-all duration-300 ${
         isAtFooter ? 'absolute bottom-10' : 'fixed bottom-8'
       }`}>
-        <button 
-          onClick={() => navigate('prev')}
-          className="text-xl font-black p-2 hover:scale-125 transition-transform"
-        >
-          &lt;
-        </button>
         
-        <span className="text-[11px] tracking-[0.2em] font-black uppercase italic tracking-widest text-center flex-1 mx-4">
+        {/* Pulsante Sinistro: Se primo elemento vai a Apericena, altrimenti scrolla */}
+        {currentIndex === 0 ? (
+          <Link href="/menu/apericena" className="text-xl font-black p-2 hover:scale-125 transition-transform">
+            &lt;
+          </Link>
+        ) : (
+          <button onClick={() => navigate('prev')} className="text-xl font-black p-2 hover:scale-125 transition-transform">
+            &lt;
+          </button>
+        )}
+        
+        <span className="text-[11px] tracking-[0.2em] font-black uppercase italic text-center flex-1 mx-4">
           {categories[currentIndex].name}
         </span>
 
-        <button 
-          onClick={() => navigate('next')}
-          className="text-2xl font-black p-2 hover:scale-125 transition-transform"
-        >
-          &gt;
-        </button>
+        {/* Pulsante Destro: Se ultimo elemento vai a Vini, altrimenti scrolla */}
+        {currentIndex === categories.length - 1 ? (
+          <Link href="/menu/vini" className="text-xl font-black p-2 hover:scale-125 transition-transform">
+            &gt;
+          </Link>
+        ) : (
+          <button onClick={() => navigate('next')} className="text-2xl font-black p-2 hover:scale-125 transition-transform">
+            &gt;
+          </button>
+        )}
       </div>
 
       {/* Header Pagina */}
