@@ -28,7 +28,7 @@ export default function Footer() {
       <div className="bg-[#642d3a] text-[#ffefcc] pt-16 pb-12 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           
-          {/* 1. ORARI - Sempre leggibili */}
+          {/* 1. ORARI */}
           <div className="space-y-5">
             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffefcc]/20 pb-2">
               Orari di Apertura
@@ -43,7 +43,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 2. LINK UTILI - Sostituisce l'immagine */}
+          {/* 2. LINK UTILI */}
           <div className="space-y-5">
             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffefcc]/20 pb-2">
               Navigazione
@@ -99,19 +99,19 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* SEZIONE COPYRIGHT - DARK */}
-      <div className="bg-[#1a1a1a] py-10 px-6 border-t border-white/5">
-        <div className="max-w-7xl mx-auto flex flex-col items-center space-y-8">
+      {/* SEZIONE COPYRIGHT - DARK (RISTRETTA) */}
+      <div className="bg-[#1a1a1a] py-4 px-6 border-t border-white/5">
+        <div className="max-w-7xl mx-auto flex flex-col items-center space-y-2">
           
-          <div className="flex flex-wrap justify-center gap-6 text-[10px] uppercase tracking-[0.2em] font-bold text-[#666666]">
+          <div className="flex flex-wrap justify-center gap-4 text-[9px] uppercase tracking-[0.2em] font-bold text-[#555555]">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <span className="opacity-20">|</span>
             <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
           </div>
 
-          <div className="text-[#444444] text-[9px] leading-loose uppercase tracking-[0.15em] font-medium text-center max-w-3xl">
+          <div className="text-[#333333] text-[8px] uppercase tracking-[0.15em] font-medium text-center">
             <p>
-              © 2026 Madera Caffetteria & Cocktail Bar - Carpi (MO) Via Alcide Garagnani, 10 <br className="hidden md:block"/>
-              P.IVA 03831040369 • Powered by <span className="text-[#888888] font-bold">Mago Digital</span>
+              © 2026 Madera Caffetteria & Cocktail Bar • P.IVA 03831040369 • Powered by <span className="text-[#555555]">Mago Digital</span>
             </p>
           </div>
         </div>
