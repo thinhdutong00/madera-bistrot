@@ -24,11 +24,10 @@ export default function Footer() {
 
   return (
     <footer className="w-full">
-      {/* SEZIONE PRINCIPALE BORDEAUX 
-          Ridotto pt su desktop da 20 a 12 per meno bordo alto
-      */}
+      {/* SEZIONE PRINCIPALE BORDEAUX */}
       <div className="bg-[#642d3a] text-[#ffefcc] pt-10 md:pt-12 pb-10 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        {/* Modificato lg:grid-cols-[1fr_1fr_1.5fr_1.5fr] per distribuire meglio il peso ed eliminare il vuoto a destra */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1.2fr_1.5fr] gap-8 md:gap-12">
           
           {/* 1. ORARI */}
           <div className="space-y-4 md:space-y-5">
@@ -64,14 +63,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* WRAPPER PER MOBILE: Incolonna Contatti e Branding affiancati */}
+          {/* WRAPPER PER MOBILE / DESKTOP CONTATTI + BRANDING */}
           <div className="grid grid-cols-2 lg:grid-cols-2 lg:contents gap-4">
             
             {/* 3. CONTATTI & DOVE SIAMO */}
-            <div className="space-y-6 md:space-y-8">
+            <div className="space-y-6 md:space-y-8 lg:pl-4">
               <div className="space-y-1 md:space-y-2">
                 <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
-                <a href="tel:3517688658" className="text-lg md:text-2xl font-black tracking-tighter hover:text-white transition-colors block italic">
+                <a href="tel:3517688658" className="text-lg md:text-2xl font-black tracking-tighter hover:text-white transition-colors block italic leading-none">
                   351 768 8658
                 </a>
               </div>
@@ -84,7 +83,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* 4. BRANDING & ACTION */}
+            {/* 4. BRANDING & PULSANTE CHIAMATA */}
             <div className="flex flex-col items-start lg:items-end justify-between py-2 lg:mt-0">
                <div className="text-left lg:text-right mb-4 lg:mb-0 w-full">
                   <p className="text-2xl lg:text-4xl uppercase tracking-[0.1em] font-black leading-[0.8] italic">
@@ -93,16 +92,16 @@ export default function Footer() {
                   </p>
                </div>
                
-               {/* Il tasto riserva su mobile sta sotto il branding in questa colonna */}
-               <Link 
-                 href="/riserva-un-tavolo" 
-                 className="w-full lg:w-auto text-center bg-[#ffefcc] text-[#642d3a] px-4 md:px-8 py-3 rounded-full text-[9px] md:text-[11px] font-black uppercase tracking-[0.1em] md:tracking-[0.2em] hover:bg-white transition-all shadow-xl active:scale-95"
+               {/* Pulsante trasformato in chiamata con il numero richiesto */}
+               <a 
+                 href="tel:0597160409" 
+                 className="w-full lg:w-auto text-center bg-[#ffefcc] text-[#642d3a] px-4 md:px-8 py-3 rounded-full text-[9px] md:text-[11px] font-black uppercase tracking-[0.1em] md:tracking-[0.2em] hover:bg-white transition-all shadow-xl active:scale-95 flex items-center justify-center gap-2"
                >
-                 Riserva
-               </Link>
+                 <span className="text-[14px]">📞</span> 059 7160409
+               </a>
             </div>
 
-          </div> {/* Fine Wrapper */}
+          </div>
 
         </div>
       </div>
