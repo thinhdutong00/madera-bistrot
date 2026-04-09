@@ -29,8 +29,8 @@ export default function ViniPage() {
               <Image src="/apericena-tradizionale.jpg" alt="Bollicine Madera" fill className="object-cover" />
             </div>
 
-            {/* Rimosso priceRight per allineare Nome a SX e Prezzo a DX */}
             <div className="space-y-6 w-full">
+              {/* Tolto priceRight: ora il nome sta a sinistra e il prezzo è allineato a destra come richiesto */}
               <MenuItemWithDesc label="DORIGATI - Trento Doc Om De Fer" price="7,00€ / 35,00€" desc="Blanc De Blancs 100% Chardonnay" />
               <MenuItemWithDesc label="LE VEDUTE - Franciacorta Docg Brut" price="35,00€" desc="80% Chardonnay 20% Pinot Nero" />
               <MenuItemWithDesc label="BELLAVISTA - Franciacorta Docg Alma Brut" price="50,00€" desc="Grande Cuvée" />
