@@ -26,7 +26,7 @@ export default function ViniPage() {
             </h3>
             
             <div className="mb-8 lg:hidden relative h-[220px] rounded-2xl overflow-hidden shadow-lg">
-              <Image src="/apericena-tradizionale.jpg" alt="Bollicine Madera" fill className="object-cover" />
+              <Image src="/bollicine01.jpg" alt="Bollicine Madera" fill className="object-cover" />
             </div>
 
             {/* w-full assicura che lo spazio per il justify-between sia massimo */}
@@ -46,7 +46,7 @@ export default function ViniPage() {
             </h3>
 
             <div className="mb-8 lg:hidden relative h-[220px] rounded-2xl overflow-hidden shadow-lg">
-              <Image src="/sfondobottiglieluce.jpg" alt="Vini Bianchi Madera" fill className="object-cover" />
+              <Image src="/vinobianco01.jpg" alt="Vini Bianchi Madera" fill className="object-cover" />
             </div>
 
             <div className="space-y-6 w-full">
