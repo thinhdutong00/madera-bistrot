@@ -17,7 +17,7 @@ export default function CaffetteriaPage() {
         {/* Immagine visibile SOLO su mobile subito dopo il titolo */}
         <div className="mt-6 md:hidden relative w-full h-[250px] rounded-3xl overflow-hidden shadow-xl">
           <Image 
-            src="/panini&croissant.jpg" 
+            src="/cornetti-pistacchio.jpg" 
             alt="Bar Madera" 
             fill 
             className="object-cover"
@@ -78,7 +78,7 @@ export default function CaffetteriaPage() {
               oppure lasciata per spezzare il testo. Qui la lasciamo come da originale */}
           <div className="relative flex-grow min-h-[300px] md:min-h-[400px] mb-12 rounded-3xl overflow-hidden shadow-2xl">
             <Image 
-              src="/cornetti-pistacchio.jpg" 
+              src="/paninoavocado.jpg" 
               alt="Atmosfera Madera" 
               fill 
               className="object-cover"
