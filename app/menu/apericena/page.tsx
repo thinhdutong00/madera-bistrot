@@ -45,9 +45,9 @@ export default function ApericenaPage() {
   </h2>
   
   {/* Aggiunto mt-6 su mobile e mt-8 su desktop per staccarlo dal banner */}
-  <p className="mt-6 md:mt-8 text-[11px] md:text-sm uppercase tracking-[0.15em] md:tracking-[0.2em] font-bold text-[#642d3a] opacity-70 underline decoration-1 underline-offset-4 max-w-2xl mx-auto leading-relaxed text-center">
-    Dalle 18:00 alle 22:30. Incluso puoi scegliere un analcolico, calice di vino, spritz o birra.
-  </p>
+  <p className="mt-6 md:mt-8 text-[11px] md:text-sm uppercase tracking-[0.15em] md:tracking-[0.2em] font-bold text-[#642d3a] opacity-70 underline decoration-1 underline-offset-4 max-w-2xl mx-auto md:ml-0 leading-relaxed text-center md:text-left">
+  Dalle 18:00 alle 22:30. Incluso puoi scegliere un analcolico, calice di vino, spritz o birra.
+</p>
 </div>
 
         {/* GRIGLIA CARD */}
