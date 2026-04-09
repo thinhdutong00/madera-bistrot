@@ -7,10 +7,23 @@ import GlobalMenu from '@/components/GlobalMenu';
 export default function CaffetteriaPage() {
   return (
     <div className="min-h-screen bg-white pt-12 md:pt-32 pb-40 px-6 w-full">
-      <div className="max-w-[1400px] mx-auto mb-16 px-2">
+      
+      {/* HEADER TITOLO */}
+      <div className="max-w-[1400px] mx-auto mb-8 md:mb-16 px-2">
         <h2 className="text-4xl font-black uppercase tracking-tighter italic text-[#642d3a]">
           Bar Caffetteria
         </h2>
+        
+        {/* Immagine visibile SOLO su mobile subito dopo il titolo */}
+        <div className="mt-6 md:hidden relative w-full h-[250px] rounded-3xl overflow-hidden shadow-xl">
+          <Image 
+            src="/panini&croissant.jpg" 
+            alt="Bar Madera" 
+            fill 
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
 
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -61,7 +74,9 @@ export default function CaffetteriaPage() {
 
         {/* COLONNA DESTRA: IMMAGINE & SALATI */}
         <div className="flex flex-col h-full">
-          <div className="relative flex-grow min-h-[400px] mb-12 rounded-3xl overflow-hidden shadow-2xl">
+          {/* Questa immagine rimarrà visibile su desktop, ma viene nascosta su mobile se vuoi evitare doppioni, 
+              oppure lasciata per spezzare il testo. Qui la lasciamo come da originale */}
+          <div className="relative flex-grow min-h-[300px] md:min-h-[400px] mb-12 rounded-3xl overflow-hidden shadow-2xl">
             <Image 
               src="/cornetti-pistacchio.jpg" 
               alt="Atmosfera Madera" 
