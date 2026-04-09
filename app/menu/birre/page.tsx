@@ -9,7 +9,7 @@ export default function BirrePage() {
     <div className="relative min-h-screen bg-white pt-12 md:pt-32 pb-40 px-6 w-full">
       {/* INTESTAZIONE PAGINA */}
       <div className="max-w-[1400px] mx-auto mb-16 px-2">
-        <h2 className="text-5xl font-black uppercase tracking-tighter italic text-[#642d3a]">
+        <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter italic text-[#642d3a]">
           Birre
         </h2>
       </div>

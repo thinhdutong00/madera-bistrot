@@ -108,7 +108,7 @@ export default function DrinkPage() {
 
       {/* Header Pagina */}
       <div className="max-w-[1100px] mx-auto mb-16 px-2">
-        <h2 className="text-5xl font-black uppercase tracking-tighter italic text-[#642d3a]">
+        <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter italic text-[#642d3a]">
           Drink List
         </h2>
       </div>

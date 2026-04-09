@@ -33,7 +33,7 @@ export default function ApericenaPage() {
             Modificato: mb-8 su mobile per avvicinare le card, md:mb-16 su desktop 
         */}
         <div className="text-center mb-8 md:mb-16 px-2">
-          <h2 className="text-5xl font-black uppercase tracking-tighter italic text-[#642d3a] mb-3">
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter italic text-[#642d3a] mb-3">
             Apericena
           </h2>
           <p className="text-[11px] md:text-sm uppercase tracking-[0.15em] md:tracking-[0.2em] font-bold text-[#642d3a] opacity-70 underline decoration-1 underline-offset-4 max-w-2xl mx-auto leading-relaxed">
