@@ -30,7 +30,7 @@ export default function ApericenaPage() {
       <div className="max-w-[1400px] mx-auto">
         
         {/* INTESTAZIONE */}
-        <div className="max-w-[1400px] mx-auto mb-8 md:mb-16 px-2">
+<div className="max-w-[1400px] mx-auto mb-8 md:mb-16 px-2">
   <h2 className="
     /* Sfondo bordeaux e testo bianco sempre */
     bg-[#642d3a] text-white rounded-xl uppercase font-black italic tracking-tighter w-full
@@ -38,15 +38,17 @@ export default function ApericenaPage() {
     /* Mobile: testo centrato e padding */
     text-4xl text-center py-4 px-2
     
-    /* Desktop: allineamento a sinistra (coerente con le altre pagine) e padding maggiore */
+    /* Desktop: allineamento a sinistra e padding maggiore */
     md:text-5xl md:text-left md:py-6 md:px-8
   ">
     Apericena
   </h2>
-          <p className="text-[11px] md:text-sm uppercase tracking-[0.15em] md:tracking-[0.2em] font-bold text-[#642d3a] opacity-70 underline decoration-1 underline-offset-4 max-w-2xl mx-auto leading-relaxed">
-            Dalle 18:00 alle 22:30. Incluso puoi scegliere un analcolico, calice di vino, spritz o birra.
-          </p>
-        </div>
+  
+  {/* Aggiunto mt-6 su mobile e mt-8 su desktop per staccarlo dal banner */}
+  <p className="mt-6 md:mt-8 text-[11px] md:text-sm uppercase tracking-[0.15em] md:tracking-[0.2em] font-bold text-[#642d3a] opacity-70 underline decoration-1 underline-offset-4 max-w-2xl mx-auto leading-relaxed text-center">
+    Dalle 18:00 alle 22:30. Incluso puoi scegliere un analcolico, calice di vino, spritz o birra.
+  </p>
+</div>
 
         {/* GRIGLIA CARD */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
