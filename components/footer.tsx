@@ -70,6 +70,9 @@ export default function Footer() {
             <div className="space-y-6 md:space-y-8 lg:pl-4">
               <div className="space-y-1 md:space-y-2">
                 <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
+                <a href="tel:0597160409" className="text-lg md:text-2xl font-black tracking-tighter hover:text-white transition-colors block italic leading-none">
+                  059 716 0409
+                </a>
                 <a href="tel:3517688658" className="text-lg md:text-2xl font-black tracking-tighter hover:text-white transition-colors block italic leading-none">
                   351 768 8658
                 </a>
@@ -97,7 +100,7 @@ export default function Footer() {
                  href="tel:0597160409" 
                  className="w-full lg:w-auto text-center bg-[#ffefcc] text-[#642d3a] px-4 md:px-8 py-3 rounded-full text-[9px] md:text-[11px] font-black uppercase tracking-[0.1em] md:tracking-[0.2em] hover:bg-white transition-all shadow-xl active:scale-95 flex items-center justify-center gap-2"
                >
-                 <span className="text-[14px]">📞</span> 059 7160409
+                 <span className="text-[14px]">📞</span> Chiama Ora
                </a>
             </div>
 
