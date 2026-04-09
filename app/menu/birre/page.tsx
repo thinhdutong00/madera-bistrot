@@ -25,7 +25,7 @@ export default function BirrePage() {
           {/* MOBILE: Tra sottotitolo e lista */}
           <div className="block md:hidden h-[250px] relative rounded-3xl overflow-hidden shadow-xl mb-8">
             <Image 
-              src="/barmadera.jpg" 
+              src="/birraspinamadera.jpg" 
               alt="Atmosfera Madera" 
               fill 
               className="object-cover"
@@ -54,7 +54,7 @@ export default function BirrePage() {
           {/* DESKTOP: Sopra "In Bottiglia" | MOBILE: Nascosta qui per spostarla sotto */}
           <div className="h-[300px] relative rounded-3xl overflow-hidden shadow-xl mb-12 hidden md:block">
             <Image 
-              src="/2bicchieri.jpg" 
+              src="/barmadera.jpg" 
               alt="Selezione Birre" 
               fill 
               className="object-cover"
@@ -67,12 +67,7 @@ export default function BirrePage() {
 
           {/* MOBILE: Inserita qui tra sottotitolo e Ceres */}
           <div className="block md:hidden h-[250px] relative rounded-3xl overflow-hidden shadow-xl mb-8">
-            <Image 
-              src="/2bicchieri.jpg" 
-              alt="Selezione Birre" 
-              fill 
-              className="object-cover"
-            />
+            
           </div>
 
           <div className="space-y-4 pl-4 border-l-2 border-[#642d3a]/20">
