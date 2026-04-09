@@ -32,9 +32,11 @@ export default function MenuHubPage() {
   };
 
   return (
-    <div className="relative min-h-screen bg-white flex flex-col items-center justify-center pt-4 md:pt-32 overflow-hidden">
+    /* Modificato: pt-0 su mobile per stare incollato al bordo, justify-start per non centrare verticalmente */
+    <div className="relative min-h-screen bg-white flex flex-col items-center justify-start pt-0 md:pt-32 md:justify-center overflow-hidden">
       
-      <div className="text-center mb-4 md:mb-16 z-10 px-6">
+      {/* Modificato: mt-6 per dare giusto un filo di aria dal bordo fisico del telefono, mb-6 per compattare con le card */}
+      <div className="text-center mt-6 mb-6 md:mt-0 md:mb-12 z-10 px-6">
         <h1 className="text-5xl font-black uppercase italic text-[#642d3a] tracking-tighter mb-2">
           Il Menù
         </h1>
