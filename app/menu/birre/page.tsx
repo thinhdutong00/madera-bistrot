@@ -22,7 +22,7 @@ export default function BirrePage() {
             Birre alla Spina (Pils e Ipa)
           </h3>
 
-          {/* IMMAGINE SOLO MOBILE: Spostata qui, tra sottotitolo e lista */}
+          {/* MOBILE: Tra sottotitolo e lista */}
           <div className="block md:hidden h-[250px] relative rounded-3xl overflow-hidden shadow-xl mb-8">
             <Image 
               src="/barmadera.jpg" 
@@ -38,7 +38,7 @@ export default function BirrePage() {
             <MenuItem label="Grande (50 cl.)" price="6,00€" />
           </div>
 
-          {/* IMMAGINE SOLO DESKTOP: Rimane sotto la lista */}
+          {/* DESKTOP: Sotto la lista */}
           <div className="mt-16 h-[350px] relative rounded-3xl overflow-hidden shadow-xl hidden md:block">
             <Image 
               src="/barmadera.jpg" 
@@ -51,8 +51,8 @@ export default function BirrePage() {
 
         {/* COLONNA DESTRA: BIRRE IN BOTTIGLIA */}
         <div className="flex flex-col">
-          {/* Questa immagine appare in alto su entrambi (sopra "In Bottiglia") */}
-          <div className="h-[300px] relative rounded-3xl overflow-hidden shadow-xl mb-12">
+          {/* DESKTOP: Sopra "In Bottiglia" | MOBILE: Nascosta qui per spostarla sotto */}
+          <div className="h-[300px] relative rounded-3xl overflow-hidden shadow-xl mb-12 hidden md:block">
             <Image 
               src="/2bicchieri.jpg" 
               alt="Selezione Birre" 
@@ -65,7 +65,15 @@ export default function BirrePage() {
             In Bottiglia
           </h3>
 
-          {/* RIMOSSA SECONDA IMMAGINE MOBILE CHE C'ERA QUI */}
+          {/* MOBILE: Inserita qui tra sottotitolo e Ceres */}
+          <div className="block md:hidden h-[250px] relative rounded-3xl overflow-hidden shadow-xl mb-8">
+            <Image 
+              src="/2bicchieri.jpg" 
+              alt="Selezione Birre" 
+              fill 
+              className="object-cover"
+            />
+          </div>
 
           <div className="space-y-4 pl-4 border-l-2 border-[#642d3a]/20">
             <MenuItem label="CERES (33 cl.)" price="4,00€" />
