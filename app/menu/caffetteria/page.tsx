@@ -63,7 +63,7 @@ export default function CaffetteriaPage() {
         <div className="flex flex-col h-full">
           <div className="relative flex-grow min-h-[400px] mb-12 rounded-3xl overflow-hidden shadow-2xl">
             <Image 
-              src="/panini&croissant.jpg" 
+              src="/cornetti-pistacchio.jpg" 
               alt="Atmosfera Madera" 
               fill 
               className="object-cover"
