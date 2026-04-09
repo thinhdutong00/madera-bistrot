@@ -18,7 +18,11 @@ export default function BirrePage() {
         
         {/* COLONNA SINISTRA: BIRRE ALLA SPINA */}
         <div className="flex flex-col">
-          {/* IMMAGINE SOLO MOBILE: Tra Titolo Pagina e Sottotitolo Birre alla Spina */}
+          <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a]">
+            Birre alla Spina (Pils e Ipa)
+          </h3>
+
+          {/* IMMAGINE SOLO MOBILE: Spostata qui, tra sottotitolo e lista */}
           <div className="block md:hidden h-[250px] relative rounded-3xl overflow-hidden shadow-xl mb-8">
             <Image 
               src="/barmadera.jpg" 
@@ -28,16 +32,13 @@ export default function BirrePage() {
             />
           </div>
 
-          <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a]">
-            Birre alla Spina (Pils e Ipa)
-          </h3>
           <div className="space-y-4 pl-4 border-l-2 border-[#642d3a]/20">
             <MenuItem label="Piccola (30 cl.)" price="4,50€" />
             <MenuItem label="Media (40 cl.)" price="5,00€" />
             <MenuItem label="Grande (50 cl.)" price="6,00€" />
           </div>
 
-          {/* IMMAGINE SOLO DESKTOP: Sotto la lista alla spina */}
+          {/* IMMAGINE SOLO DESKTOP: Rimane sotto la lista */}
           <div className="mt-16 h-[350px] relative rounded-3xl overflow-hidden shadow-xl hidden md:block">
             <Image 
               src="/barmadera.jpg" 
@@ -50,7 +51,7 @@ export default function BirrePage() {
 
         {/* COLONNA DESTRA: BIRRE IN BOTTIGLIA */}
         <div className="flex flex-col">
-          {/* Questa immagine appare in alto su desktop e mobile (sopra "In Bottiglia") */}
+          {/* Questa immagine appare in alto su entrambi (sopra "In Bottiglia") */}
           <div className="h-[300px] relative rounded-3xl overflow-hidden shadow-xl mb-12">
             <Image 
               src="/2bicchieri.jpg" 
@@ -64,15 +65,7 @@ export default function BirrePage() {
             In Bottiglia
           </h3>
 
-          {/* IMMAGINE SOLO MOBILE: Tra "In Bottiglia" e "Ceres" */}
-          <div className="block md:hidden h-[200px] relative rounded-2xl overflow-hidden shadow-lg mb-6">
-            <Image 
-              src="/2bicchieri.jpg" /* Puoi cambiare con un'altra immagine se vuoi */
-              alt="Dettaglio Birre" 
-              fill 
-              className="object-cover"
-            />
-          </div>
+          {/* RIMOSSA SECONDA IMMAGINE MOBILE CHE C'ERA QUI */}
 
           <div className="space-y-4 pl-4 border-l-2 border-[#642d3a]/20">
             <MenuItem label="CERES (33 cl.)" price="4,00€" />
