@@ -63,7 +63,7 @@ export default function ViniPage() {
         <div className="flex flex-col h-full">
           <div className="hidden lg:block relative flex-grow min-h-[400px] rounded-3xl overflow-hidden shadow-2xl mb-12">
             <Image 
-              src="/vinorosso02.jpg" 
+              src="/vinodesktop.jpg" 
               alt="Selezione Vini Madera" 
               fill 
               className="object-cover"
@@ -77,7 +77,7 @@ export default function ViniPage() {
             </h3>
 
             <div className="mb-8 lg:hidden relative h-[220px] rounded-2xl overflow-hidden shadow-lg">
-              <Image src="/apericena-vegetariano.jpg" alt="Vini Rossi Madera" fill className="object-cover" />
+              <Image src="/vinorosso02.jpg" alt="Vini Rossi Madera" fill className="object-cover" />
             </div>
 
             <div className="space-y-6 w-full">
