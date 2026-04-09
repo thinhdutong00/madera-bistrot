@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* 2. LINK UTILI */}
           <div className="space-y-4 md:space-y-5">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffffff]/20 pb-2 text-[#ffefcc]/80">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffffff]/20 pb-2 text-[#ffffff]/80">
               Navigazione
             </h4>
             <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2 md:gap-y-3">
