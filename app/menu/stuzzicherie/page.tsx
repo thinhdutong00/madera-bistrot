@@ -7,18 +7,22 @@ import GlobalMenu from '@/components/GlobalMenu';
 export default function StuzzicheriePage() {
   return (
     <div className="min-h-screen bg-white pt-12 md:pt-32 pb-40 px-6 w-full">
-      {/* INTESTAZIONE PAGINA */}
-      <div className="max-w-[1400px] mx-auto mb-16 px-2">
+      
+      {/* INTESTAZIONE PAGINA 
+          Modificato: mb-6 su mobile per avvicinare l'immagine, md:mb-16 su desktop
+      */}
+      <div className="max-w-[1400px] mx-auto mb-6 md:mb-16 px-2">
         <h2 className="text-4xl font-black uppercase tracking-tighter italic text-[#642d3a]">
           Stuzzicherie
         </h2>
       </div>
 
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
         
         {/* COLONNA SINISTRA: IMMAGINE */}
         <div className="flex flex-col h-full">
-          <div className="relative flex-grow min-h-[400px] md:min-h-[500px] mb-6 rounded-3xl overflow-hidden shadow-2xl">
+          {/* Ridotta l'altezza minima su mobile (min-h-[300px]) per non spingere troppo in basso il testo */}
+          <div className="relative flex-grow min-h-[300px] md:min-h-[500px] mb-6 rounded-3xl overflow-hidden shadow-2xl">
             <Image 
               src="/gnocco&salumi.jpg" 
               alt="Gnocco Fritto e Salumi Madera" 
@@ -37,9 +41,6 @@ export default function StuzzicheriePage() {
         {/* COLONNA DESTRA: I SFIZI */}
         <div className="flex flex-col">
           <div className="space-y-4 pl-4 border-l-2 border-[#642d3a]/20">
-            {/* Per MenuItemWithDesc usiamo priceRight={true} per spostare il prezzo a destra 
-                (visto che nel tuo componente di base sta a sinistra)
-            */}
             <MenuItemWithDesc 
               label="8 pz gnocco fritto con affettati misti" 
               price="8,00€" 
@@ -54,7 +55,6 @@ export default function StuzzicheriePage() {
               priceRight={true}
             />
             
-            {/* MenuItem semplice ha già il prezzo a destra nel tuo codice */}
             <MenuItem label="4 pz gnocco fritto" price="3,00€" />
             
             <MenuItemWithDesc 
