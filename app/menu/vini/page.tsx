@@ -63,7 +63,7 @@ export default function ViniPage() {
         <div className="flex flex-col h-full">
           <div className="hidden lg:block relative flex-grow min-h-[400px] rounded-3xl overflow-hidden shadow-2xl mb-12">
             <Image 
-              src="/vinorosso01.png" 
+              src="/vinorosso02.jpg" 
               alt="Selezione Vini Madera" 
               fill 
               className="object-cover"
