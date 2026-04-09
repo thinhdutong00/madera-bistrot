@@ -62,11 +62,20 @@ export default function ViniPage() {
   return (
     <div className="relative min-h-screen bg-white pt-12 md:pt-32 pb-40 px-6 w-full text-[#642d3a]">
       {/* INTESTAZIONE */}
-      <div className="max-w-[1400px] mx-auto mb-10 md:mb-16 px-2">
-        <h2 className="text-4xl md:text-5xl text-center md:text-left font-black uppercase tracking-tighter italic text-[#642d3a] w-full">
-  Carta dei Vini
-</h2>
-      </div>
+<div className="max-w-[1400px] mx-auto mb-10 md:mb-16 px-2">
+  <h2 className="
+    /* Sfondo bordeaux e testo bianco sempre */
+    bg-[#642d3a] text-white rounded-xl uppercase font-black italic tracking-tighter w-full
+    
+    /* Mobile: testo centrato e padding */
+    text-4xl text-center py-4 px-2
+    
+    /* Desktop: allineamento a sinistra e padding generoso */
+    md:text-5xl md:text-left md:py-6 md:px-8
+  ">
+    Carta dei Vini
+  </h2>
+</div>
 
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
         

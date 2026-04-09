@@ -106,12 +106,21 @@ export default function DrinkPage() {
         )}
       </div>
 
-      {/* Header Pagina */}
-      <div className="max-w-[1100px] mx-auto mb-16 px-2">
-        <h2 className="text-4xl md:text-5xl text-center md:text-left font-black uppercase tracking-tighter italic text-[#642d3a] w-full">
-  Drink List
-</h2>
-      </div>
+      {/* INTESTAZIONE PAGINA */}
+<div className="max-w-[1400px] mx-auto mb-16 px-2">
+  <h2 className="
+    /* Sfondo bordeaux e testo bianco sempre */
+    bg-[#642d3a] text-white rounded-xl uppercase font-black italic tracking-tighter w-full
+    
+    /* Mobile: testo centrato e padding */
+    text-4xl text-center py-4 px-2
+    
+    /* Desktop: allineamento a sinistra e padding generoso */
+    md:text-5xl md:text-left md:py-6 md:px-8
+  ">
+    Drink List
+  </h2>
+</div>
 
       {/* Contenitore Principale */}
       <div className="max-w-[1100px] mx-auto space-y-24">

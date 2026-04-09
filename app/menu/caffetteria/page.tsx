@@ -11,14 +11,14 @@ export default function CaffetteriaPage() {
       {/* HEADER TITOLO */}
       <div className="max-w-[1400px] mx-auto mb-8 md:mb-16 px-2">
   <h2 className="
-    /* Stili Mobile: Sfondo bordeaux, testo bianco, centrato e padding */
-    bg-[#642d3a] text-white text-center py-4 px-2 rounded-xl
+    /* Sfondo bordeaux e testo bianco per tutti */
+    bg-[#642d3a] text-white rounded-xl uppercase font-black italic tracking-tighter w-full
     
-    /* Reset Desktop: Sfondo trasparente, testo bordeaux, allineato a sinistra e senza padding */
-    md:bg-transparent md:text-[#642d3a] md:text-left md:p-0
+    /* Allineamento e Padding Mobile */
+    text-4xl text-center py-4 px-2
     
-    /* Stili comuni */
-    text-4xl md:text-5xl font-black uppercase tracking-tighter italic w-full
+    /* Allineamento e Padding Desktop */
+    md:text-5xl md:text-left md:py-6 md:px-8
   ">
     Bar Caffetteria
   </h2>
