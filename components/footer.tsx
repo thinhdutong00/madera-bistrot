@@ -117,7 +117,7 @@ export default function Footer() {
             <span className="opacity-20">|</span>
             <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
           </div>
-          <div className="text-[#1a1a1a] text-[8px] uppercase tracking-[0.15em] font-medium text-center">
+          <div className="text-[#969696] text-[8px] uppercase tracking-[0.15em] font-medium text-center">
             <p>© 2026 Madera Caffetteria & Cocktail Bar • P.IVA 03831040369 • Powered by Mago Digital</p>
           </div>
         </div>
