@@ -24,7 +24,7 @@ export default function StuzzicheriePage() {
           {/* Ridotta l'altezza minima su mobile (min-h-[300px]) per non spingere troppo in basso il testo */}
           <div className="relative flex-grow min-h-[300px] md:min-h-[500px] mb-6 rounded-3xl overflow-hidden shadow-2xl">
             <Image 
-              src="/gnocco&salumi.jpg" 
+              src="/stuzzicherie01.jpg" 
               alt="Gnocco Fritto e Salumi Madera" 
               fill 
               className="object-cover"
