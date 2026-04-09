@@ -25,12 +25,12 @@ export default function Footer() {
   return (
     <footer className="w-full">
       {/* SEZIONE PRINCIPALE BORDEAUX 
-          Ottimizzata: pt-10 (mobile) -> pt-20 (desktop) 
+          Ridotto pt su desktop da 20 a 12 per meno bordo alto
       */}
-      <div className="bg-[#642d3a] text-[#ffefcc] pt-10 md:pt-20 pb-10 px-6">
+      <div className="bg-[#642d3a] text-[#ffefcc] pt-10 md:pt-12 pb-10 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           
-          {/* 1. ORARI - Compattati su mobile */}
+          {/* 1. ORARI */}
           <div className="space-y-4 md:space-y-5">
             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffefcc]/20 pb-2 text-[#ffefcc]/80">
               Orari di Apertura
@@ -64,57 +64,59 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 3. CONTATTI & DOVE SIAMO */}
-          <div className="space-y-6 md:space-y-8">
-            <div className="space-y-1 md:space-y-2">
-              <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
-              <a href="tel:3517688658" className="text-xl md:text-2xl font-black tracking-tighter hover:text-white transition-colors block italic">
-                351 768 8658
-              </a>
-            </div>
-            <div className="space-y-1 md:space-y-2">
-              <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Dove Siamo</h4>
-              <p className="text-[12px] md:text-sm font-bold leading-tight uppercase tracking-tight">
-                Via Alcide Garagnani, 10,<br/> 
-                41012 Carpi (MO)
-              </p>
-            </div>
-          </div>
-
-          {/* 4. BRANDING & ACTION */}
-          <div className="flex flex-col items-start lg:items-end justify-between py-2 mt-4 lg:mt-0">
-             <div className="text-left lg:text-right mb-6 lg:mb-0 w-full">
-                <p className="text-3xl lg:text-4xl uppercase tracking-[0.1em] font-black leading-[0.8] italic">
-                  Madera<br/>
-                  <span className="text-[9px] md:text-[10px] tracking-[0.4em] md:tracking-[0.5em] not-italic opacity-40 block mt-2">Caffetteria & Bistrot</span>
+          {/* WRAPPER PER MOBILE: Incolonna Contatti e Branding affiancati */}
+          <div className="grid grid-cols-2 lg:grid-cols-2 lg:contents gap-4">
+            
+            {/* 3. CONTATTI & DOVE SIAMO */}
+            <div className="space-y-6 md:space-y-8">
+              <div className="space-y-1 md:space-y-2">
+                <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
+                <a href="tel:3517688658" className="text-lg md:text-2xl font-black tracking-tighter hover:text-white transition-colors block italic">
+                  351 768 8658
+                </a>
+              </div>
+              <div className="space-y-1 md:space-y-2">
+                <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Dove Siamo</h4>
+                <p className="text-[11px] md:text-sm font-bold leading-tight uppercase tracking-tight">
+                  Via Garagnani, 10,<br/> 
+                  41012 Carpi (MO)
                 </p>
-             </div>
-             
-             <Link 
-               href="/riserva-un-tavolo" 
-               className="w-full lg:w-auto text-center bg-[#ffefcc] text-[#642d3a] px-6 md:px-8 py-3.5 md:py-4 rounded-full text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] hover:bg-white transition-all shadow-xl active:scale-95"
-             >
-               Riserva un tavolo
-             </Link>
-          </div>
+              </div>
+            </div>
+
+            {/* 4. BRANDING & ACTION */}
+            <div className="flex flex-col items-start lg:items-end justify-between py-2 lg:mt-0">
+               <div className="text-left lg:text-right mb-4 lg:mb-0 w-full">
+                  <p className="text-2xl lg:text-4xl uppercase tracking-[0.1em] font-black leading-[0.8] italic">
+                    Madera<br/>
+                    <span className="text-[8px] md:text-[10px] tracking-[0.3em] md:tracking-[0.5em] not-italic opacity-40 block mt-2">Caffetteria & Bistrot</span>
+                  </p>
+               </div>
+               
+               {/* Il tasto riserva su mobile sta sotto il branding in questa colonna */}
+               <Link 
+                 href="/riserva-un-tavolo" 
+                 className="w-full lg:w-auto text-center bg-[#ffefcc] text-[#642d3a] px-4 md:px-8 py-3 rounded-full text-[9px] md:text-[11px] font-black uppercase tracking-[0.1em] md:tracking-[0.2em] hover:bg-white transition-all shadow-xl active:scale-95"
+               >
+                 Riserva
+               </Link>
+            </div>
+
+          </div> {/* Fine Wrapper */}
 
         </div>
       </div>
 
-      {/* SEZIONE COPYRIGHT - DARK (RISTRETTA) */}
+      {/* SEZIONE COPYRIGHT - DARK */}
       <div className="bg-[#1a1a1a] py-4 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto flex flex-col items-center space-y-2">
-          
           <div className="flex flex-wrap justify-center gap-4 text-[9px] uppercase tracking-[0.2em] font-bold text-[#555555]">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <span className="opacity-20">|</span>
             <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
           </div>
-
           <div className="text-[#333333] text-[8px] uppercase tracking-[0.15em] font-medium text-center">
-            <p>
-              © 2026 Madera Caffetteria & Cocktail Bar • P.IVA 03831040369 • Powered by <span className="text-[#555555]">Mago Digital</span>
-            </p>
+            <p>© 2026 Madera Caffetteria & Cocktail Bar • P.IVA 03831040369 • Powered by Mago Digital</p>
           </div>
         </div>
       </div>
