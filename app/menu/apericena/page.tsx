@@ -29,23 +29,27 @@ export default function ApericenaPage() {
     <div className="relative min-h-screen bg-white pt-12 md:pt-32 pb-40 px-6 w-full">
       <div className="max-w-[1400px] mx-auto">
         
-        {/* INTESTAZIONE */}
-        <div className="text-center mb-16 px-2">
-          <h2 className="text-5xl font-black uppercase tracking-tighter italic text-[#642d3a] mb-4">
+        {/* INTESTAZIONE 
+            Modificato: mb-8 su mobile per avvicinare le card, md:mb-16 su desktop 
+        */}
+        <div className="text-center mb-8 md:mb-16 px-2">
+          <h2 className="text-5xl font-black uppercase tracking-tighter italic text-[#642d3a] mb-3">
             Apericena
           </h2>
-          <p className="text-sm uppercase tracking-[0.2em] font-bold text-[#642d3a] opacity-70 underline decoration-1 underline-offset-4 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[11px] md:text-sm uppercase tracking-[0.15em] md:tracking-[0.2em] font-bold text-[#642d3a] opacity-70 underline decoration-1 underline-offset-4 max-w-2xl mx-auto leading-relaxed">
             Dalle 18:00 alle 22:30. Incluso puoi scegliere un analcolico, calice di vino, spritz o birra.
           </p>
         </div>
 
         {/* GRIGLIA CARD */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
           {opzioni.map((item, index) => (
             <div key={index} className="flex flex-col h-full bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100">
               
-              {/* IMMAGINE: Molto alta (proporzione 4:5) */}
-              <div className="relative aspect-[4/5] w-full">
+              {/* IMMAGINE 
+                  Modificato: aspect-square su mobile per non occupare troppa altezza, aspect-[4/5] su desktop 
+              */}
+              <div className="relative aspect-square md:aspect-[4/5] w-full">
                 <Image 
                   src={item.image} 
                   alt={item.title} 
@@ -55,7 +59,7 @@ export default function ApericenaPage() {
                 />
               </div>
 
-              {/* TESTO: Spazio bianco ridotto (p-5 invece di p-10) */}
+              {/* TESTO */}
               <div className="p-5 flex flex-col flex-grow">
                 <div className="flex justify-between items-baseline mb-2">
                   <h3 className="text-xl font-black uppercase italic text-[#642d3a] tracking-tighter">
