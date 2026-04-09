@@ -67,24 +67,26 @@ export default function Footer() {
           <div className="grid grid-cols-2 lg:grid-cols-2 lg:contents gap-4">
             
             {/* 3. CONTATTI & DOVE SIAMO */}
-            <div className="space-y-6 md:space-y-8 lg:pl-4">
-              <div className="space-y-1 md:space-y-2">
-                <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Contattaci</h4>
-                <a href="tel:0597160409" className="text-lg md:text-2xl font-black tracking-tighter hover:text-white transition-colors block italic leading-none">
-                  059 716 0409
-                </a>
-                <a href="tel:3517688658" className="text-lg md:text-2xl font-black tracking-tighter hover:text-white transition-colors block italic leading-none">
-                  351 768 8658
-                </a>
-              </div>
-              <div className="space-y-1 md:space-y-2">
-                <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50">Dove Siamo</h4>
-                <p className="text-[11px] md:text-sm font-bold leading-tight uppercase tracking-tight">
-                  Via Garagnani, 10,<br/> 
-                  41012 Carpi (MO)
-                </p>
-              </div>
-            </div>
+<div className="space-y-6 md:space-y-8 lg:pl-4">
+  <div className="space-y-1 md:space-y-2">
+    {/* Aggiunto text-[#642d3a] */}
+    <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50 text-[#642d3a]">Contattaci</h4>
+    <a href="tel:0597160409" className="text-lg md:text-2xl font-black tracking-tighter hover:text-white transition-colors block italic leading-none text-[#642d3a]">
+      059 716 0409
+    </a>
+    <a href="tel:3517688658" className="text-lg md:text-2xl font-black tracking-tighter hover:text-white transition-colors block italic leading-none text-[#642d3a]">
+      351 768 8658
+    </a>
+  </div>
+  <div className="space-y-1 md:space-y-2">
+    {/* Aggiunto text-[#642d3a] */}
+    <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50 text-[#642d3a]">Dove Siamo</h4>
+    <p className="text-[11px] md:text-sm font-bold leading-tight uppercase tracking-tight text-[#642d3a]">
+      Via Garagnani, 10,<br/> 
+      41012 Carpi (MO)
+    </p>
+  </div>
+</div>
 
             {/* 4. BRANDING & PULSANTE CHIAMATA */}
             <div className="flex flex-col items-start lg:items-end justify-between py-2 lg:mt-0">
