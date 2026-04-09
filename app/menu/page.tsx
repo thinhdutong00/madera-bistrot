@@ -32,9 +32,9 @@ export default function MenuHubPage() {
   };
 
   return (
-    <div className="relative min-h-screen bg-white flex flex-col items-center justify-center pt-8 md:pt-32 overflow-hidden">
+    <div className="relative min-h-screen bg-white flex flex-col items-center justify-center pt-4 md:pt-32 overflow-hidden">
       
-      <div className="text-center mb-12 z-10 px-6">
+      <div className="text-center mb-4 md:mb-16 z-10 px-6">
         <h1 className="text-5xl font-black uppercase italic text-[#642d3a] tracking-tighter mb-2">
           Il Menù
         </h1>
@@ -56,7 +56,6 @@ export default function MenuHubPage() {
         {/* CONTENITORE CARD */}
         <div className="relative w-[300px] h-[450px] md:w-full md:h-[550px] flex items-center justify-center">
           <AnimatePresence mode='popLayout'>
-            {/* Su mobile mostriamo solo la centrale, su desktop l'effetto 3 card */}
             {getVisibleCards().map((card, i) => (
               <motion.div
                 key={`${card.id}-${card.position}`}
@@ -69,7 +68,6 @@ export default function MenuHubPage() {
                   zIndex: card.position === 'center' ? 50 : 10
                 }}
                 exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.2 } }}
-                // Ottimizzazioni fluidità Mobile
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
                 onDragEnd={(_, info) => {
