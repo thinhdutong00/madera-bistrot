@@ -77,8 +77,9 @@ export default function ViniPage() {
               Bollicine
             </h3>
             
-            <div className="mb-8 lg:hidden relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
-              <Image src="/bollicine01.jpg" alt="Bollicine" fill className="object-cover" />
+            {/* Immagine Mobile: aspect-auto e object-contain per vedere tutto */}
+            <div className="mb-8 lg:hidden relative w-full rounded-2xl overflow-hidden">
+              <img src="/bollicine01.jpg" alt="Bollicine" className="w-full h-auto object-contain shadow-lg rounded-2xl" />
             </div>
 
             <PriceHeader />
@@ -97,8 +98,8 @@ export default function ViniPage() {
               Vini Bianchi
             </h3>
 
-            <div className="mb-8 lg:hidden relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
-              <Image src="/vinobianco01.jpg" alt="Bianchi" fill className="object-cover" />
+            <div className="mb-8 lg:hidden relative w-full rounded-2xl overflow-hidden">
+              <img src="/vinobianco01.jpg" alt="Bianchi" className="w-full h-auto object-contain shadow-lg rounded-2xl" />
             </div>
 
             <PriceHeader />
@@ -123,8 +124,8 @@ export default function ViniPage() {
               Vini Rossi
             </h3>
 
-            <div className="mb-8 lg:hidden relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
-              <Image src="/vinorosso02.jpg" alt="Rossi" fill className="object-cover" />
+            <div className="mb-8 lg:hidden relative w-full rounded-2xl overflow-hidden">
+              <img src="/vinorosso02.jpg" alt="Rossi" className="w-full h-auto object-contain shadow-lg rounded-2xl" />
             </div>
 
             <PriceHeader />
