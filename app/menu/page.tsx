@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const menuSections = [
-  { id: 1, title: 'Bar & Caffetteria', href: '/menu/caffetteria', image: '/panini&croissant.jpg' },
+  { id: 1, title: 'Bar & Caffetteria', href: '/menu/caffetteria', image: '/cornetti-pistacchio.jpg' },
   { id: 2, title: 'Stuzzicherie', href: '/menu/stuzzicherie', image: '/gnocco&salumi.jpg' },
   { id: 3, title: 'Apericena', href: '/menu/apericena', image: '/apericena-tradizionale.jpg' },
   { id: 4, title: 'Drink', href: '/menu/drink', image: '/barmadera.jpg' },
