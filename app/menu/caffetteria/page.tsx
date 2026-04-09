@@ -10,9 +10,9 @@ export default function CaffetteriaPage() {
       
       {/* HEADER TITOLO */}
       <div className="max-w-[1400px] mx-auto mb-8 md:mb-16 px-2">
-        <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter italic text-[#642d3a]">
-          Bar Caffetteria
-        </h2>
+        <h2 className="text-4xl md:text-5xl text-center md:text-left font-black uppercase tracking-tighter italic text-[#642d3a]">
+  Bar Caffetteria
+</h2>
         
         {/* Immagine visibile SOLO su mobile subito dopo il titolo */}
         <div className="mt-6 md:hidden relative w-full h-[250px] rounded-3xl overflow-hidden shadow-xl">
