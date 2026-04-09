@@ -25,7 +25,7 @@ export default function Footer() {
   return (
     <footer className="w-full">
       {/* SEZIONE PRINCIPALE BORDEAUX */}
-      <div className="bg-[#642d3a] text-[#ffefcc] pt-10 md:pt-12 pb-10 px-6">
+      <div className="bg-[#1a1a1a] text-[#ffefcc] pt-10 md:pt-12 pb-10 px-6">
         {/* Modificato lg:grid-cols-[1fr_1fr_1.5fr_1.5fr] per distribuire meglio il peso ed eliminare il vuoto a destra */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1.2fr_1.5fr] gap-8 md:gap-12">
           
@@ -110,14 +110,14 @@ export default function Footer() {
       </div>
 
       {/* SEZIONE COPYRIGHT - DARK */}
-      <div className="bg-[#1a1a1a] py-4 px-6 border-t border-white/5">
+      <div className="bg-[#0000008f] py-4 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto flex flex-col items-center space-y-2">
           <div className="flex flex-wrap justify-center gap-4 text-[9px] uppercase tracking-[0.2em] font-bold text-[#555555]">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <span className="opacity-20">|</span>
             <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
           </div>
-          <div className="text-[#333333] text-[8px] uppercase tracking-[0.15em] font-medium text-center">
+          <div className="text-[#1a1a1a] text-[8px] uppercase tracking-[0.15em] font-medium text-center">
             <p>© 2026 Madera Caffetteria & Cocktail Bar • P.IVA 03831040369 • Powered by Mago Digital</p>
           </div>
         </div>
