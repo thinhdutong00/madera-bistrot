@@ -12,9 +12,9 @@ export default function StuzzicheriePage() {
           Modificato: mb-6 su mobile per avvicinare l'immagine, md:mb-16 su desktop
       */}
       <div className="max-w-[1400px] mx-auto mb-6 md:mb-16 px-2">
-        <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter italic text-[#642d3a]">
-          Stuzzicherie
-        </h2>
+        <h2 className="text-4xl md:text-5xl text-center md:text-left font-black uppercase tracking-tighter italic text-[#642d3a] w-full">
+  Stuzzicherie
+</h2>
       </div>
 
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
