@@ -25,7 +25,7 @@ export default function Footer() {
   return (
     <footer className="w-full">
       {/* SEZIONE PRINCIPALE BORDEAUX */}
-      <div className="bg-[#1a1a1a] text-[#ffefcc] pt-10 md:pt-12 pb-10 px-6">
+      <div className="bg-[#1a1a1a] text-[#ffffff] pt-10 md:pt-12 pb-10 px-6">
         {/* Modificato lg:grid-cols-[1fr_1fr_1.5fr_1.5fr] per distribuire meglio il peso ed eliminare il vuoto a destra */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1.2fr_1.5fr] gap-8 md:gap-12">
           
