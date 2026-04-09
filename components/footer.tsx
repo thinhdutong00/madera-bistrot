@@ -110,7 +110,7 @@ export default function Footer() {
       </div>
 
       {/* SEZIONE COPYRIGHT - DARK */}
-      <div className="bg-[#000000B8] py-4 px-6 border-t border-white/5">
+      <div className="bg-[#642d3a] py-4 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto flex flex-col items-center space-y-2">
           <div className="flex flex-wrap justify-center gap-4 text-[9px] uppercase tracking-[0.2em] font-bold text-[#555555]">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
