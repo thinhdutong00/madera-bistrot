@@ -26,7 +26,7 @@ export default function ViniPage() {
             </h3>
             
             {/* Immagine Mobile: Dopo Titolo / Prima della lista */}
-            <div className="mb-8 lg:hidden relative h-[250px] rounded-2xl overflow-hidden shadow-lg">
+            <div className="mb-8 lg:hidden relative h-[220px] rounded-2xl overflow-hidden shadow-lg">
               <Image src="/apericena-tradizionale.jpg" alt="Bollicine Madera" fill className="object-cover" />
             </div>
 
@@ -46,7 +46,7 @@ export default function ViniPage() {
             </h3>
 
             {/* Immagine Mobile: Dopo Titolo / Prima della lista */}
-            <div className="mb-8 lg:hidden relative h-[250px] rounded-2xl overflow-hidden shadow-lg">
+            <div className="mb-8 lg:hidden relative h-[220px] rounded-2xl overflow-hidden shadow-lg">
               <Image src="/sfondobottiglieluce.jpg" alt="Vini Bianchi Madera" fill className="object-cover" />
             </div>
 
@@ -62,7 +62,7 @@ export default function ViniPage() {
 
         {/* COLONNA DESTRA: IMMAGINE DESKTOP & ROSSI */}
         <div className="flex flex-col h-full">
-          {/* Immagine Desktop: Incastrata bene in alto per pareggiare le colonne */}
+          {/* Immagine Desktop: Pareggia la colonna sinistra */}
           <div className="hidden lg:block relative flex-grow min-h-[400px] rounded-3xl overflow-hidden shadow-2xl mb-12">
             <Image 
               src="/sfondobottiglieluce.jpg" 
@@ -79,7 +79,7 @@ export default function ViniPage() {
             </h3>
 
             {/* Immagine Mobile: Dopo Titolo / Prima della lista */}
-            <div className="mb-8 lg:hidden relative h-[250px] rounded-2xl overflow-hidden shadow-lg">
+            <div className="mb-8 lg:hidden relative h-[220px] rounded-2xl overflow-hidden shadow-lg">
               <Image src="/apericena-vegetariano.jpg" alt="Vini Rossi Madera" fill className="object-cover" />
             </div>
 
