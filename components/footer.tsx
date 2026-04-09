@@ -98,7 +98,7 @@ export default function Footer() {
                {/* Pulsante trasformato in chiamata con il numero richiesto */}
                <a 
                  href="tel:0597160409" 
-                 className="w-full lg:w-auto text-center bg-[#ffefcc] text-[#642d3a] px-4 md:px-8 py-3 rounded-full text-[9px] md:text-[11px] font-black uppercase tracking-[0.1em] md:tracking-[0.2em] hover:bg-white transition-all shadow-xl active:scale-95 flex items-center justify-center gap-2"
+                 className="w-full lg:w-auto text-center bg-[#ffffff] text-[#642d3a] px-4 md:px-8 py-3 rounded-full text-[9px] md:text-[11px] font-black uppercase tracking-[0.1em] md:tracking-[0.2em] hover:bg-white transition-all shadow-xl active:scale-95 flex items-center justify-center gap-2"
                >
                  <span className="text-[14px]">📞</span> Chiama Ora
                </a>
