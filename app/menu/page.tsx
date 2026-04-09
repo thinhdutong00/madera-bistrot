@@ -32,7 +32,7 @@ export default function MenuHubPage() {
   };
 
   return (
-    <div className="relative min-h-screen bg-white flex flex-col items-center justify-center pt-20 overflow-hidden">
+    <div className="relative min-h-screen bg-white flex flex-col items-center justify-center pt-8 md:pt-32 overflow-hidden">
       
       <div className="text-center mb-12 z-10 px-6">
         <h1 className="text-5xl font-black uppercase italic text-[#642d3a] tracking-tighter mb-2">
