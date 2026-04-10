@@ -191,7 +191,7 @@ export default function DrinkPage() {
           <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Iced Tea Family</h3>
           <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
   <Image 
-    src="/icedteafamily01.jpg" 
+    src="/icedteafamily02.jpg" 
     alt="Descrizione categoria" 
     fill 
     className="object-cover"
@@ -250,7 +250,7 @@ export default function DrinkPage() {
               <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Spritz Family</h3>
               <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
   <Image 
-    src="/nome-tua-immagine.jpg" 
+    src="/spritz01.jpg" 
     alt="Descrizione categoria" 
     fill 
     className="object-cover"
