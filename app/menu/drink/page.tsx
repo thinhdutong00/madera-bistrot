@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { MenuItem, MenuItemWithDesc } from '@/components/MenuComponents';
-
+import Image from 'next/image';
 
 export default function DrinkPage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -127,6 +127,14 @@ export default function DrinkPage() {
         
         <section id="signature">
           <h3 className="text-2xl font-black uppercase mb-10 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Signature</h3>
+          <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
+  <Image 
+    src="/drinkmenta.jpg" 
+    alt="Descrizione categoria" 
+    fill 
+    className="object-cover"
+  />
+</div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
             <MenuItemWithDesc label="Cosmopoli-Thain" price="10,00€" desc="Vodka, cointreau, lime, cranberry, kaffir lime, lemongrass" priceRight />
             <MenuItemWithDesc label="Wild Turkey" price="10,00€" desc="Wild turkey 101, miele, limone, ginger beer" priceRight />
