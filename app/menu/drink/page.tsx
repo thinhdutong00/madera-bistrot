@@ -314,14 +314,7 @@ export default function DrinkPage() {
 
         <section className="pt-16 border-t border-gray-100">
           <h3 className="text-4xl font-black uppercase mb-16 italic text-[#642d3a] text-center tracking-tighter">I Nostri Distillati</h3>
-          <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
-  <Image 
-    src="/nome-tua-immagine.jpg" 
-    alt="Descrizione categoria" 
-    fill 
-    className="object-cover"
-  />
-</div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
             <div id="whiskey">
               <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Whiskey</h4>
