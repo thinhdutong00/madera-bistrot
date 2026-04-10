@@ -77,7 +77,7 @@ export default function HomePage() {
           </div>
           {/* Bento Box Immagine */}
           <div className="relative h-[400px] lg:h-[600px] w-full rounded-[40px] md:rounded-[80px] overflow-hidden border-[15px] border-[#1a1a1a]/5 shadow-inner">
-             <Image src="/sfondobottiglieluce.jpg" alt="Interno Madera" fill className="object-cover" />
+             <Image src="/bartender01.jpg" alt="Interno Madera" fill className="object-cover" />
           </div>
         </div>
 
@@ -94,7 +94,7 @@ export default function HomePage() {
                 </div>
             </div>
             <div id="eventi" className="relative h-[300px] rounded-[30px] overflow-hidden border-2 border-white/50 group">
-                <Image src="/dj.jpg" alt="Prossimi Eventi" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                <Image src="/sfondobottiglieluce.jpg" alt="Prossimi Eventi" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-black/60 flex flex-col justify-end p-8 space-y-4">
                     <h4 className="text-3xl font-black text-white uppercase italic tracking-tighter">Madera Caffè & Bistrot</h4>
                     <div className="flex gap-4">
