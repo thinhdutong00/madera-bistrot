@@ -32,12 +32,11 @@ export default function MenuHubPage() {
   };
 
   return (
-    /* Modificato: pt-0 su mobile per stare incollato al bordo, justify-start per non centrare verticalmente */
     <div className="relative min-h-screen bg-white flex flex-col items-center justify-start pt-0 md:pt-32 md:justify-center overflow-hidden">
       
-      {/* Modificato: mt-6 per dare giusto un filo di aria dal bordo fisico del telefono, mb-6 per compattare con le card */}
-      <div className="text-center mt-6 mb-6 md:mt-0 md:mb-12 z-10 px-6">
-        <h1 className="text-5xl font-black uppercase italic text-[#642d3a] tracking-tighter mb-2">
+      {/* Intestazione con font-titoli aggiornato */}
+      <div className="text-center mt-10 mb-6 md:mt-0 md:mb-12 z-10 px-6">
+        <h1 className="text-5xl font-titoli uppercase italic text-[#642d3a] tracking-tighter mb-2">
           Il Menù
         </h1>
         <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#642d3a]/40">
@@ -55,10 +54,10 @@ export default function MenuHubPage() {
           &lt;
         </button>
 
-        {/* CONTENITORE CARD */}
-        <div className="relative w-[300px] h-[450px] md:w-full md:h-[550px] flex items-center justify-center">
+        {/* CONTENITORE CARD: Aumentata altezza mobile a 500px per accomodare le card più grandi */}
+        <div className="relative w-full h-[500px] md:h-[550px] flex items-center justify-center">
           <AnimatePresence mode='popLayout'>
-            {getVisibleCards().map((card, i) => (
+            {getVisibleCards().map((card) => (
               <motion.div
                 key={`${card.id}-${card.position}`}
                 initial={{ opacity: 0, x: card.position === 'left' ? -100 : card.position === 'right' ? 100 : 0, scale: 0.8 }}
@@ -77,7 +76,8 @@ export default function MenuHubPage() {
                   if (info.offset.x < -50) nextCard();
                 }}
                 transition={{ type: "spring", stiffness: 260, damping: 25 }}
-                className={`absolute w-[300px] h-[450px] md:w-[380px] md:h-[520px] 
+                /* DIMENSIONI CARD: Larghezza 340px e Altezza 500px su Mobile */
+                className={`absolute w-[340px] h-[500px] md:w-[380px] md:h-[520px] 
                   ${card.position !== 'center' ? 'hidden md:block cursor-pointer' : 'block cursor-grab active:cursor-grabbing'}
                 `}
                 onClick={() => card.position !== 'center' && (card.position === 'left' ? prevCard() : nextCard())}
@@ -90,10 +90,10 @@ export default function MenuHubPage() {
                     className="object-cover pointer-events-none"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#642d3a] via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#642d3a] via-transparent to-transparent opacity-90" />
                   
                   <div className="absolute bottom-8 left-0 right-0 text-center px-6">
-                    <h3 className="text-3xl font-black text-[#ffefcc] uppercase italic tracking-tighter mb-4">
+                    <h3 className="text-3xl font-titoli text-[#ffefcc] uppercase italic tracking-tighter mb-4 leading-none">
                       {card.title}
                     </h3>
                     {card.position === 'center' && (
@@ -121,7 +121,7 @@ export default function MenuHubPage() {
       </div>
 
       {/* PUNTINI DI NAVIGAZIONE (Mobile) */}
-      <div className="flex gap-2 mt-8 md:hidden">
+      <div className="flex gap-2 mt-12 md:hidden mb-10">
         {menuSections.map((_, i) => (
           <div 
             key={i} 
