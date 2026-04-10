@@ -158,6 +158,14 @@ export default function DrinkPage() {
 
         <section id="gintoneria">
           <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Gintoneria</h3>
+          <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
+  <Image 
+    src="/nome-tua-immagine.jpg" 
+    alt="Descrizione categoria" 
+    fill 
+    className="object-cover"
+  />
+</div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-3">
             <MenuItem label="Gordon's / Tanqueray" price="7,00€" />
             <MenuItem label="Bombay Sapphire" price="8,00€" />
@@ -181,6 +189,14 @@ export default function DrinkPage() {
 
         <section id="iced-tea" className="pb-20">
           <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Iced Tea Family</h3>
+          <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
+  <Image 
+    src="/nome-tua-immagine.jpg" 
+    alt="Descrizione categoria" 
+    fill 
+    className="object-cover"
+  />
+</div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <MenuItemWithDesc label="Analcolico alla frutta" price="5,00€" desc="Mix di succhi stagionali, granatina, soda" priceRight />
             <MenuItemWithDesc label="Virgin Mojito" price="6,00€" desc="Lime, zucchero di canna, menta, ginger ale" priceRight />
@@ -189,6 +205,14 @@ export default function DrinkPage() {
 
         <section id="cocktail">
           <h3 className="text-2xl font-black uppercase mb-10 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Cocktail</h3>
+          <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
+  <Image 
+    src="/nome-tua-immagine.jpg" 
+    alt="Descrizione categoria" 
+    fill 
+    className="object-cover"
+  />
+</div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6">
             <MenuItemWithDesc label="Americano" price="7,00€" desc="Vermouth rosso, Campari, soda" priceRight />
             <MenuItemWithDesc label="Negroni" price="7,00€" desc="Gin, Vermouth rosso, Campari" priceRight />
@@ -224,6 +248,14 @@ export default function DrinkPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-24">
             <section id="spritz">
               <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Spritz Family</h3>
+              <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
+  <Image 
+    src="/nome-tua-immagine.jpg" 
+    alt="Descrizione categoria" 
+    fill 
+    className="object-cover"
+  />
+</div>
               <div className="space-y-4">
                 <MenuItemWithDesc label="Spritz" price="5,00€" desc="Prosecco, bitter, soda" priceRight />
                 <MenuItemWithDesc label="Hugo" price="6,00€" desc="Sambuco, prosecco, menta" priceRight />
@@ -232,6 +264,14 @@ export default function DrinkPage() {
             </section>
             <section id="sour">
               <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Sour</h3>
+              <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
+  <Image 
+    src="/nome-tua-immagine.jpg" 
+    alt="Descrizione categoria" 
+    fill 
+    className="object-cover"
+  />
+</div>
               <div className="space-y-4">
                 <MenuItemWithDesc label="Vodka Sour" price="8,00€" desc="Vodka, limone, zucchero" priceRight />
                 <MenuItemWithDesc label="Whiskey Sour" price="9,00€" desc="Bourbon, limone, zucchero" priceRight />
@@ -240,6 +280,14 @@ export default function DrinkPage() {
             </section>
             <section id="mule">
               <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Mule</h3>
+              <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
+  <Image 
+    src="/nome-tua-immagine.jpg" 
+    alt="Descrizione categoria" 
+    fill 
+    className="object-cover"
+  />
+</div>
               <div className="space-y-4">
                 <MenuItemWithDesc label="Moscow Mule" price="7,00€" desc="Vodka, lime, ginger beer" priceRight />
                 <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime, ginger beer" priceRight />
@@ -248,6 +296,14 @@ export default function DrinkPage() {
             </section>
             <section id="pestati">
               <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Pestati</h3>
+              <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
+  <Image 
+    src="/nome-tua-immagine.jpg" 
+    alt="Descrizione categoria" 
+    fill 
+    className="object-cover"
+  />
+</div>
               <div className="space-y-4">
                 <MenuItemWithDesc label="Mojito" price="7,00€" desc="Rum, menta, lime, zucchero" priceRight />
                 <MenuItemWithDesc label="Caipirinha" price="7,00€" desc="Cachaça, lime, zucchero" priceRight />
@@ -258,6 +314,14 @@ export default function DrinkPage() {
 
         <section className="pt-16 border-t border-gray-100">
           <h3 className="text-4xl font-black uppercase mb-16 italic text-[#642d3a] text-center tracking-tighter">I Nostri Distillati</h3>
+          <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
+  <Image 
+    src="/nome-tua-immagine.jpg" 
+    alt="Descrizione categoria" 
+    fill 
+    className="object-cover"
+  />
+</div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
             <div id="whiskey">
               <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Whiskey</h4>
@@ -296,6 +360,14 @@ export default function DrinkPage() {
 
         <section id="analcolici" className="pb-20">
           <h3 className="text-2xl font-black uppercase mb-8 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Analcolici</h3>
+          <div className="block lg:hidden w-full aspect-square relative rounded-3xl overflow-hidden shadow-xl mb-8">
+  <Image 
+    src="/nome-tua-immagine.jpg" 
+    alt="Descrizione categoria" 
+    fill 
+    className="object-cover"
+  />
+</div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             <MenuItemWithDesc label="SWEET DREAM" price="7,00€" desc="Succo di arancia, succo di ananas, fragola, soda al limone, succo di limone fresco" priceRight />
             <MenuItemWithDesc label="CRODINO LOVERS" price="7,00€" desc="Succo di lime fresco, melograno, Crodino, soda aromatizzata al pompelmo" priceRight />
