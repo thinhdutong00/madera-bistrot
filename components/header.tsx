@@ -165,7 +165,7 @@ const isMenuPage = pathname?.startsWith('/menu');
                 <Link 
                   href={link.href} 
                   onClick={toggleMenu} 
-                  className="text-4xl font-black tracking-tighter text-[#1a1a1a] uppercase active:text-[#642d3a] transition-colors"
+                  className="text-3xl font-black tracking-tighter text-[#1a1a1a] uppercase active:text-[#642d3a] transition-colors"
                 >
                   {link.name}
                 </Link>
