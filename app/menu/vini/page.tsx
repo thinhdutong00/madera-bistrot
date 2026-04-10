@@ -125,7 +125,7 @@ export default function ViniPage() {
         <div className="flex flex-col h-full">
           {/* IMMAGINE DESKTOP */}
           <div className="hidden lg:block relative flex-grow min-h-[400px] rounded-3xl overflow-hidden shadow-2xl mb-12">
-            <Image src="/vinodesktop.jpg" alt="Selezione" fill className="object-cover" priority />
+            <Image src="/pinotgrigio012.png" alt="Selezione" fill className="object-cover" priority />
           </div>
 
           <div className="w-full">
