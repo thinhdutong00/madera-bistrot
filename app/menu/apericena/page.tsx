@@ -18,7 +18,7 @@ export default function ApericenaPage() {
       desc: "Tagliere di affettati e formaggi misti, crostone, focaccia, olive e salse."
     },
     {
-      image: "/apericena-vegetariano.jpg",
+      image: "/apericena-vegetariano01.jpg",
       title: "Vegetariano",
       price: "16,00€",
       desc: "Burger veg, olive, formaggio, zucchine grigliate, flan di verdure e parmigiana."
