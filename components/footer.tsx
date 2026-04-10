@@ -67,15 +67,17 @@ export default function Footer() {
             
             {/* 3. CONTATTI & DOVE SIAMO */}
             <div className="space-y-6 md:space-y-8 lg:pl-4">
-              <div className="space-y-1 md:space-y-2">
-                <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50 text-white">Contattaci</h4>
-                <a href="tel:0597160409" className="text-lg md:text-2xl font-black tracking-tighter hover:text-white transition-colors block italic leading-none">
-                  059 716 0409
-                </a>
-                <a href="tel:3517688658" className="text-lg md:text-2xl font-black tracking-tighter hover:text-white transition-colors block italic leading-none">
-                  351 768 8658
-                </a>
-              </div>
+  <div className="space-y-1 md:space-y-2">
+    <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50 text-white">
+      Contattaci
+    </h4>
+    <a href="tel:0597160409" className="text-base md:text-xl font-black tracking-tighter hover:text-white transition-colors block italic leading-none">
+      059 716 0409
+    </a>
+    <a href="tel:3517688658" className="text-base md:text-xl font-black tracking-tighter hover:text-white transition-colors block italic leading-none">
+      351 768 8658
+    </a>
+  </div>
               <div className="space-y-1 md:space-y-2">
                 <h4 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50 text-white">Dove Siamo</h4>
                 <p className="text-[11px] md:text-sm font-bold leading-tight uppercase tracking-tight">
