@@ -31,7 +31,7 @@ export default function Footer() {
           
           {/* 1. ORARI */}
           <div className="space-y-4 md:space-y-5">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffefcc]/20 pb-2 text-[#642d3a]/80">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffefcc]/20 pb-2 text-[#642d3a]">
               Orari di Apertura
             </h4>
             <ul className="space-y-1.5 md:space-y-2 text-[12px] font-medium">
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* 2. LINK UTILI */}
           <div className="space-y-4 md:space-y-5">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffffff]/20 pb-2 text-[#642d3a]/80">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] border-b border-[#ffffff]/20 pb-2 text-[#642d3a]">
               Navigazione
             </h4>
             <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2 md:gap-y-3">
