@@ -6,11 +6,11 @@ import Image from 'next/image';
 
 const menuSections = [
   { id: 1, title: 'Bar & Caffetteria', href: '/menu/caffetteria', image: '/cornetti-pistacchio.jpg' },
-  { id: 2, title: 'Stuzzicherie', href: '/menu/stuzzicherie', image: '/gnocco&salumi.jpg' },
-  { id: 3, title: 'Apericena', href: '/menu/apericena', image: '/apericena-tradizionale.jpg' },
-  { id: 4, title: 'Drink', href: '/menu/drink', image: '/barmadera.jpg' },
-  { id: 5, title: 'Vini', href: '/menu/vini', image: '/sfondobottiglieluce.jpg' },
-  { id: 6, title: 'Birre', href: '/menu/birre', image: '/2bicchieri.jpg' },
+  { id: 2, title: 'Stuzzicherie', href: '/menu/stuzzicherie', image: '/stuzzicherie01.jpg' },
+  { id: 3, title: 'Apericena', href: '/menu/apericena', image: '/apericena-vegetariano01.jpg' },
+  { id: 4, title: 'Drink', href: '/menu/drink', image: '/drinkmenta.jpg' },
+  { id: 5, title: 'Vini', href: '/menu/vini', image: '/vinodesktop.jpg' },
+  { id: 6, title: 'Birre', href: '/menu/birre', image: '/birraspinamadera.jpg' },
 ];
 
 export default function MenuHubPage() {
