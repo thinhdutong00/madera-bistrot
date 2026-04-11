@@ -87,15 +87,17 @@ export default function ApericenaPage() {
                       priority
                     />
                   </div>
-                  <div className="p-5 flex flex-col flex-grow justify-center">
-                    <div className="flex justify-between items-baseline">
-                      <h3 className="text-2xl font-titoli uppercase italic text-[#642d3a] tracking-tighter">
-                        {item.title}
-                      </h3>
-                      <span className="text-[#642d3a] font-black text-lg">{item.price}</span>
-                    </div>
-                    <p className="text-[10px] uppercase tracking-widest mt-2 text-gray-300 font-bold md:hidden">Scopri gli ingredienti</p>
-                  </div>
+                  <div className="p-5 pb-3 flex flex-col flex-grow justify-end"> 
+  <div className="flex justify-between items-baseline">
+    <h3 className="text-2xl font-titoli uppercase italic text-[#642d3a] tracking-tighter">
+      {item.title}
+    </h3>
+    <span className="text-[#642d3a] font-black text-lg">{item.price}</span>
+  </div>
+  <p className="text-[10px] uppercase tracking-widest mt-2 text-gray-300 font-bold md:hidden">
+    Scopri gli ingredienti
+  </p>
+</div>
                 </div>
 
                 {/* PARTE DIETRO (BACK) */}
