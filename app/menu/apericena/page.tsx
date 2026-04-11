@@ -33,7 +33,7 @@ export default function ApericenaPage() {
     const handleScroll = () => {
       if (!containerRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
-      const footerThreshold = 100;
+      const footerThreshold = 80;
       if (rect.bottom <= window.innerHeight + footerThreshold) {
         setIsAtFooter(true);
       } else {
@@ -77,7 +77,6 @@ export default function ApericenaPage() {
                 
                 {/* PARTE DAVANTI (FRONT) */}
                 <div className="absolute inset-0 flex flex-col bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 [backface-visibility:hidden]">
-                  {/* Aspect ratio allungato anche su mobile */}
                   <div className="relative aspect-[4/5] w-full">
                     <Image 
                       src={item.image} 
@@ -87,9 +86,9 @@ export default function ApericenaPage() {
                       priority
                     />
                   </div>
-                  {/* Ridotto lo spazio bianco sopra e sotto il titolo */}
-                  <div className="p-4 md:p-5 flex flex-col flex-grow justify-between"> 
-                    <div className="flex justify-between items-baseline mt-1">
+                  {/* Spazio bilanciato: justify-center su mobile e padding inferiore ridotto */}
+                  <div className="p-4 md:p-5 flex flex-col flex-grow justify-center md:justify-between pb-2 md:pb-5"> 
+                    <div className="flex justify-between items-baseline md:mt-1">
                       <h3 className="text-2xl font-titoli uppercase italic text-[#642d3a] tracking-tighter leading-none">
                         {item.title}
                       </h3>
@@ -115,8 +114,8 @@ export default function ApericenaPage() {
         </div>
       </div>
 
-      {/* Fix Menu galleggiante più in basso */}
-      <div className={`left-1/2 -translate-x-1/2 z-[90] w-full max-w-fit transition-all duration-300 ${isAtFooter ? 'absolute bottom-6' : 'fixed bottom-4'}`}>
+      {/* Menu galleggiante ancora più in basso e centrato */}
+      <div className={`left-1/2 -translate-x-1/2 z-[90] w-full max-w-fit transition-all duration-300 ${isAtFooter ? 'absolute bottom-4' : 'fixed bottom-2'}`}>
         <GlobalMenu />
       </div>
     </div>
