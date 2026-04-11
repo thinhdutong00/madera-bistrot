@@ -1,27 +1,44 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { MenuItem } from '@/components/MenuComponents';
 import GlobalMenu from '@/components/GlobalMenu';
 
 export default function CaffetteriaPage() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isAtFooter, setIsAtFooter] = useState(false);
+
+  // Logica per rilevare il footer e bloccare il menu galleggiante
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      
+      const rect = containerRef.current.getBoundingClientRect();
+      const footerThreshold = 120; 
+      
+      if (rect.bottom <= window.innerHeight + footerThreshold) {
+        setIsAtFooter(true);
+      } else {
+        setIsAtFooter(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-white pt-12 md:pt-32 pb-40 px-6 w-full">
+    <div ref={containerRef} className="relative min-h-screen bg-white pt-12 md:pt-32 pb-40 px-6 w-full">
       
       {/* HEADER TITOLO */}
       <div className="max-w-[1400px] mx-auto mb-8 md:mb-16 px-2">
-  <h2 className="
-    /* Sfondo bordeaux e testo bianco per tutti */
-    bg-[#642d3a] text-white rounded-xl uppercase font-black italic tracking-tighter w-full
-    
-    /* Allineamento e Padding Mobile */
-    text-4xl text-center py-4 px-2
-    
-    /* Allineamento e Padding Desktop */
-    md:text-5xl md:text-left md:py-6 md:px-8
-  ">
-    Bar Caffetteria
-  </h2>
+        <h2 className="
+          bg-[#642d3a] text-white rounded-xl uppercase font-titoli italic tracking-tighter w-full
+          text-4xl text-center py-4 px-2
+          md:text-5xl md:text-left md:py-6 md:px-8
+        ">
+          Bar Caffetteria
+        </h2>
         
         {/* Immagine visibile SOLO su mobile subito dopo il titolo */}
         <div className="mt-6 md:hidden relative w-full h-[250px] rounded-3xl overflow-hidden shadow-xl">
@@ -68,8 +85,8 @@ export default function CaffetteriaPage() {
           </div>
 
           <div className="mt-12">
-            <h3 className="text-2xl font-black uppercase mb-2 italic text-[#642d3a]">Food</h3>
-            <p className="text-[10px] uppercase tracking-[0.2em] opacity-60 mb-6 text-[#642d3a]">
+            <h3 className="text-2xl font-titoli uppercase mb-2 italic text-[#642d3a]">Food</h3>
+            <p className="text-[10px] uppercase tracking-[0.2em] opacity-60 mb-6 text-[#642d3a] font-bold">
               (A seconda della disponibilità)
             </p>
             <div className="space-y-1 pl-4 border-l-2 border-[#642d3a]/20">
@@ -83,8 +100,6 @@ export default function CaffetteriaPage() {
 
         {/* COLONNA DESTRA: IMMAGINE & SALATI */}
         <div className="flex flex-col h-full">
-          {/* Questa immagine rimarrà visibile su desktop, ma viene nascosta su mobile se vuoi evitare doppioni, 
-              oppure lasciata per spezzare il testo. Qui la lasciamo come da originale */}
           <div className="relative flex-grow min-h-[300px] md:min-h-[400px] mb-12 rounded-3xl overflow-hidden shadow-2xl">
             <Image 
               src="/paninoavocado.jpg" 
@@ -110,7 +125,14 @@ export default function CaffetteriaPage() {
         </div>
       </div>
 
-      <GlobalMenu />
+      {/* MENU GALLEGGIANTE CON FIX POSIZIONAMENTO */}
+      <div className={`
+        left-1/2 -translate-x-1/2 z-[90] w-full max-w-fit transition-all duration-300
+        ${isAtFooter ? 'absolute bottom-10' : 'fixed bottom-8'}
+      `}>
+        <GlobalMenu />
+      </div>
+
     </div>
   );
 }
