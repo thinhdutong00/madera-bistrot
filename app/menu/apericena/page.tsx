@@ -33,7 +33,7 @@ export default function ApericenaPage() {
     const handleScroll = () => {
       if (!containerRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
-      const footerThreshold = 120;
+      const footerThreshold = 100;
       if (rect.bottom <= window.innerHeight + footerThreshold) {
         setIsAtFooter(true);
       } else {
@@ -68,7 +68,7 @@ export default function ApericenaPage() {
             <div 
               key={index} 
               onClick={() => handleCardClick(index)}
-              className="group [perspective:1000px] h-[500px] md:h-[600px] cursor-pointer"
+              className="group [perspective:1000px] h-[520px] md:h-[600px] cursor-pointer"
             >
               <div className={`relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] 
                 ${flippedIndex === index ? '[transform:rotateY(180deg)]' : ''} 
@@ -77,7 +77,8 @@ export default function ApericenaPage() {
                 
                 {/* PARTE DAVANTI (FRONT) */}
                 <div className="absolute inset-0 flex flex-col bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 [backface-visibility:hidden]">
-                  <div className="relative aspect-square md:aspect-[4/5] w-full">
+                  {/* Aspect ratio allungato anche su mobile */}
+                  <div className="relative aspect-[4/5] w-full">
                     <Image 
                       src={item.image} 
                       alt={item.title} 
@@ -86,10 +87,10 @@ export default function ApericenaPage() {
                       priority
                     />
                   </div>
-                  {/* Testo centrato e padding ridotto su mobile per eliminare lo spazio eccessivo */}
-                  <div className="p-4 md:p-6 flex flex-col flex-grow justify-center"> 
-                    <div className="flex justify-between items-baseline">
-                      <h3 className="text-2xl font-titoli uppercase italic text-[#642d3a] tracking-tighter">
+                  {/* Ridotto lo spazio bianco sopra e sotto il titolo */}
+                  <div className="p-4 md:p-5 flex flex-col flex-grow justify-between"> 
+                    <div className="flex justify-between items-baseline mt-1">
+                      <h3 className="text-2xl font-titoli uppercase italic text-[#642d3a] tracking-tighter leading-none">
                         {item.title}
                       </h3>
                       <span className="text-[#642d3a] font-black text-lg">{item.price}</span>
@@ -114,7 +115,8 @@ export default function ApericenaPage() {
         </div>
       </div>
 
-      <div className={`left-1/2 -translate-x-1/2 z-[90] w-full max-w-fit transition-all duration-300 ${isAtFooter ? 'absolute bottom-10' : 'fixed bottom-8'}`}>
+      {/* Fix Menu galleggiante più in basso */}
+      <div className={`left-1/2 -translate-x-1/2 z-[90] w-full max-w-fit transition-all duration-300 ${isAtFooter ? 'absolute bottom-6' : 'fixed bottom-4'}`}>
         <GlobalMenu />
       </div>
     </div>
