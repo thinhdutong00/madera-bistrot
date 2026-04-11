@@ -319,26 +319,31 @@ export default function DrinkPage() {
             <div id="whiskey">
               <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Whiskey</h4>
               <div className="space-y-2">
-                <MenuItem label="Jack Daniel's" price="6,00€" />
-                <MenuItem label="Jameson" price="6,00€" />
-                <MenuItem label="Laphroaig 10" price="10,00€" />
-                <MenuItem label="Lagavulin 16" price="14,00€" />
+                <MenuItem label="Ballantine's" price="8,00€" />
+                <MenuItem label="Jack Daniel's" price="8,00€" />
+                <MenuItem label="Wild Turkey" price="8,00€" />
+                <MenuItem label="Jack Daniel's Miele" price="8,00€" />
+                <MenuItem label="Drambuie" price="8,00€" />
+                <MenuItem label="Laphroaig" price="8,00€" />
+                <MenuItem label="Lagavulin" price="8,00€" />
               </div>
             </div>
             <div id="vodka">
               <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Vodka</h4>
               <div className="space-y-2">
-                <MenuItem label="Moskovskaya" price="6,00€" />
+                <MenuItem label="Absolut" price="8,00€" />
+                <MenuItem label="Beluga" price="10,00€" />
                 <MenuItem label="Belvedere" price="10,00€" />
-                <MenuItem label="Grey Goose" price="10,00€" />
+                <MenuItem label="Snow Leopard" price="11,00€" />
               </div>
             </div>
             <div id="rum">
               <h4 className="text-xl font-black uppercase mb-6 italic text-[#642d3a] border-l-4 border-[#642d3a] pl-4">Rum</h4>
               <div className="space-y-2">
-                <MenuItem label="Havana 7" price="6,00€" />
+                <MenuItem label="Havana 7" price="8,00€" />
+                <MenuItem label="Don Papa" price="9,00€" />
                 <MenuItem label="Diplomatico" price="10,00€" />
-                <MenuItem label="Zacapa 23" price="12,00€" />
+                <MenuItem label="Zacapa 23" price="10,00€" />
               </div>
             </div>
             <div id="liquori">
