@@ -16,7 +16,7 @@ export default function ApericenaPage() {
       desc: "Tagliere di affettati misti con gnocco fritto, porzione di patatine, crocchette di pollo e crocchette di patate."
     },
     {
-      image: "/taglieremateraapericena.jpg",
+      image: "/gnocco&salumi.jpg",
       title: "Madera",
       price: "14,00€",
       desc: "Tagliere di affettati e formaggi misti, crostone e focaccia, olive, salse di miele e aceto balsamico."
