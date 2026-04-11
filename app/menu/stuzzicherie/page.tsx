@@ -8,13 +8,13 @@ export default function StuzzicheriePage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isAtFooter, setIsAtFooter] = useState(false);
 
-  // Logica per rilevare il footer e bloccare il menu galleggiante
+  // Logica per rilevare il footer e bloccare il menu galleggiante in linea con le altre pagine
   useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current) return;
       
       const rect = containerRef.current.getBoundingClientRect();
-      const footerThreshold = 120; 
+      const footerThreshold = 100; 
       
       // Se la fine del contenuto è vicina al fondo della viewport
       if (rect.bottom <= window.innerHeight + footerThreshold) {
@@ -103,10 +103,10 @@ export default function StuzzicheriePage() {
         </div>
       </div>
 
-      {/* MENU GALLEGGIANTE CON FIX POSIZIONAMENTO */}
+      {/* MENU GALLEGGIANTE CON POSIZIONAMENTO RIBASSATO */}
       <div className={`
         left-1/2 -translate-x-1/2 z-[90] w-full max-w-fit transition-all duration-300
-        ${isAtFooter ? 'absolute bottom-10' : 'fixed bottom-8'}
+        ${isAtFooter ? 'absolute bottom-6' : 'fixed bottom-4'}
       `}>
         <GlobalMenu />
       </div>
