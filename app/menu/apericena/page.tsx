@@ -33,7 +33,7 @@ export default function ApericenaPage() {
     const handleScroll = () => {
       if (!containerRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
-      const footerThreshold = 80;
+      const footerThreshold = 100;
       if (rect.bottom <= window.innerHeight + footerThreshold) {
         setIsAtFooter(true);
       } else {
@@ -63,12 +63,12 @@ export default function ApericenaPage() {
         </div>
 
         {/* GRIGLIA CARD GIREVOLI */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {opzioni.map((item, index) => (
             <div 
               key={index} 
               onClick={() => handleCardClick(index)}
-              className="group [perspective:1000px] h-[520px] md:h-[600px] cursor-pointer"
+              className="group [perspective:1000px] h-[420px] md:h-[580px] cursor-pointer"
             >
               <div className={`relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] 
                 ${flippedIndex === index ? '[transform:rotateY(180deg)]' : ''} 
@@ -77,7 +77,8 @@ export default function ApericenaPage() {
                 
                 {/* PARTE DAVANTI (FRONT) */}
                 <div className="absolute inset-0 flex flex-col bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 [backface-visibility:hidden]">
-                  <div className="relative aspect-[4/5] w-full">
+                  {/* Aspect Ratio Differenziato: desktop 1:1, mobile più basso */}
+                  <div className="relative aspect-[16/10] md:aspect-square w-full">
                     <Image 
                       src={item.image} 
                       alt={item.title} 
@@ -86,9 +87,9 @@ export default function ApericenaPage() {
                       priority
                     />
                   </div>
-                  {/* Spazio bilanciato: justify-center su mobile e padding inferiore ridotto */}
-                  <div className="p-4 md:p-5 flex flex-col flex-grow justify-center md:justify-between pb-2 md:pb-5"> 
-                    <div className="flex justify-between items-baseline md:mt-1">
+                  {/* Spazio titoli corretto su desktop e mobile */}
+                  <div className="p-5 md:pt-8 md:pb-10 flex flex-col flex-grow justify-center md:justify-end"> 
+                    <div className="flex justify-between items-baseline">
                       <h3 className="text-2xl font-titoli uppercase italic text-[#642d3a] tracking-tighter leading-none">
                         {item.title}
                       </h3>
@@ -114,8 +115,8 @@ export default function ApericenaPage() {
         </div>
       </div>
 
-      {/* Menu galleggiante ancora più in basso e centrato */}
-      <div className={`left-1/2 -translate-x-1/2 z-[90] w-full max-w-fit transition-all duration-300 ${isAtFooter ? 'absolute bottom-4' : 'fixed bottom-2'}`}>
+      {/* Menu galleggiante bilanciato al centro in basso */}
+      <div className={`left-1/2 -translate-x-1/2 z-[90] w-full max-w-fit transition-all duration-300 ${isAtFooter ? 'absolute bottom-6' : 'fixed bottom-4'}`}>
         <GlobalMenu />
       </div>
     </div>
