@@ -171,7 +171,7 @@ export default function DrinkPage() {
             <MenuItem label="Bombay Sapphire" price="8,00€" />
             <MenuItem label="Tanqueray" price="8,00€" />
             <MenuItem label="Ondina" price="10,00€" />
-            <MenuItem label="Malfy (Classico/arancia/limone/pompelmo)" price="10,00€" />
+            <MenuItem label="Malfy" price="10,00€" />
             <MenuItem label="Plymouth" price="10,00€" />
             <MenuItem label="Fifty pounds" price="10,00€" />
             <MenuItem label="Tanqueray 10" price="10,00€" />
