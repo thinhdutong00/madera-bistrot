@@ -94,7 +94,7 @@ export default function ApericenaPage() {
                       </h3>
                       <span className="text-[#642d3a] font-black text-lg">{item.price}</span>
                     </div>
-                    <p className="text-[10px] uppercase tracking-widest mt-2 text-gray-300 font-bold md:hidden">Tocca per gli ingredienti</p>
+                    <p className="text-[10px] uppercase tracking-widest mt-2 text-gray-300 font-bold md:hidden">Scopri gli ingredienti</p>
                   </div>
                 </div>
 
