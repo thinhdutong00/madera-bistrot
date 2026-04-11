@@ -167,23 +167,22 @@ export default function DrinkPage() {
   />
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-3">
-            <MenuItem label="Gordon's / Tanqueray" price="7,00€" />
+            <MenuItem label="Beefeater" price="8,00€" />
             <MenuItem label="Bombay Sapphire" price="8,00€" />
-            <MenuItem label="Hendrick's" price="10,00€" />
-            <MenuItem label="Gin Mare" price="12,00€" />
-            <MenuItem label="Monkey 47" price="14,00€" />
-            <MenuItem label="Bulldog" price="9,00€" />
-            <MenuItem label="Roku" price="10,00€" />
-            <MenuItem label="Malfy (Rosa, Arancia, Limone)" price="9,00€" />
-            <MenuItem label="Tanqueray 10" price="12,00€" />
-            <MenuItem label="Elephant" price="12,00€" />
-            <MenuItem label="Nordés" price="10,00€" />
-            <MenuItem label="Engine" price="10,00€" />
-            <MenuItem label="The Botanist" price="12,00€" />
-            <MenuItem label="Brockmans" price="12,00€" />
-            <MenuItem label="Opihr" price="10,00€" />
-            <MenuItem label="Gin del Professore" price="12,00€" />
-            <MenuItem label="Sipsmith" price="10,00€" />
+            <MenuItem label="Tanqueray" price="8,00€" />
+            <MenuItem label="Ondina" price="10,00€" />
+            <MenuItem label="Malfy (Classico/arancia/limone/pompelmo)" price="10,00€" />
+            <MenuItem label="Plymouth" price="10,00€" />
+            <MenuItem label="Fifty pounds" price="10,00€" />
+            <MenuItem label="Tanqueray 10" price="10,00€" />
+            <MenuItem label="Poppe gin" price="10,00€" />
+            <MenuItem label="Filos" price="10,00€" />
+            <MenuItem label="Elephant" price="10,00€" />
+            <MenuItem label="Mare" price="10,00€" />
+            <MenuItem label="Monkey" price="12,00€" />
+            <MenuItem label="Hendrick's" price="12,00€" />
+            <MenuItem label="Roku" price="12,00€" />
+            <MenuItem label="Gin premium" price="12,00€" />
           </div>
         </section>
 
