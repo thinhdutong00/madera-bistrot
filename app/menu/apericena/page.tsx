@@ -68,7 +68,7 @@ export default function ApericenaPage() {
             <div 
               key={index} 
               onClick={() => handleCardClick(index)}
-              className="group [perspective:1000px] h-[420px] md:h-[580px] cursor-pointer"
+              className="group [perspective:1000px] h-[550px] md:h-[600px] cursor-pointer"
             >
               <div className={`relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] 
                 ${flippedIndex === index ? '[transform:rotateY(180deg)]' : ''} 
@@ -77,8 +77,9 @@ export default function ApericenaPage() {
                 
                 {/* PARTE DAVANTI (FRONT) */}
                 <div className="absolute inset-0 flex flex-col bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 [backface-visibility:hidden]">
-                  {/* Aspect Ratio Differenziato: desktop 1:1, mobile più basso */}
-                  <div className="relative aspect-[16/10] md:aspect-square w-full">
+                  
+                  {/* IMMAGINE: 3/4 dell'altezza (75%) */}
+                  <div className="relative basis-3/4 w-full">
                     <Image 
                       src={item.image} 
                       alt={item.title} 
@@ -87,8 +88,9 @@ export default function ApericenaPage() {
                       priority
                     />
                   </div>
-                  {/* Spazio titoli corretto su desktop e mobile */}
-                  <div className="p-5 md:pt-8 md:pb-10 flex flex-col flex-grow justify-center md:justify-end"> 
+
+                  {/* TESTO: 1/4 dell'altezza (25%) */}
+                  <div className="basis-1/4 p-5 flex flex-col justify-center"> 
                     <div className="flex justify-between items-baseline">
                       <h3 className="text-2xl font-titoli uppercase italic text-[#642d3a] tracking-tighter leading-none">
                         {item.title}
@@ -115,8 +117,8 @@ export default function ApericenaPage() {
         </div>
       </div>
 
-      {/* Menu galleggiante bilanciato al centro in basso */}
-      <div className={`left-1/2 -translate-x-1/2 z-[90] w-full max-w-fit transition-all duration-300 ${isAtFooter ? 'absolute bottom-6' : 'fixed bottom-4'}`}>
+      {/* Menu galleggiante ancora più basso e centrato */}
+      <div className={`left-1/2 -translate-x-1/2 z-[90] w-full max-w-fit transition-all duration-300 ${isAtFooter ? 'absolute bottom-4' : 'fixed bottom-2'}`}>
         <GlobalMenu />
       </div>
     </div>
