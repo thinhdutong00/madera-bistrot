@@ -288,12 +288,12 @@ export default function DrinkPage() {
   />
 </div>
               <div className="space-y-4">
-                <MenuItemWithDesc label="Moscow Mule" price="7,00€" desc="Vodka, lime, ginger beer" priceRight />
-                <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime, ginger beer" priceRight />
-                <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime, ginger beer" priceRight />
-                <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime, ginger beer" priceRight />
-                <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime, ginger beer" priceRight />
-                <MenuItemWithDesc label="Dark n Stormy" price="8,00€" desc="Rum scuro, lime, ginger beer" priceRight />
+                <MenuItemWithDesc label="Dark' N' Stormy" price="8,00€" desc="Rum scuro, lime, ginger beer" priceRight />
+                <MenuItemWithDesc label="Moscow" price="8,00€" desc="Vodka, lime, ginger beer" priceRight />
+                <MenuItemWithDesc label="London" price="8,00€" desc="Gin, lime, ginger beer" priceRight />
+                <MenuItemWithDesc label="Kentucky" price="8,00€" desc="Whiskey, lime, ginger beer" priceRight />
+                <MenuItemWithDesc label="Mexican" price="8,00€" desc="Tequila, lime, ginger beer" priceRight />
+                <MenuItemWithDesc label="Strega" price="8,00€" desc="Strega, lime, ginger beer" priceRight />
               </div>
             </section>
             <section id="pestati">
