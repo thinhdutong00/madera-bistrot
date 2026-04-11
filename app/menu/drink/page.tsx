@@ -259,9 +259,9 @@ export default function DrinkPage() {
   />
 </div>
               <div className="space-y-4">
-                <MenuItemWithDesc label="Spritz" price="5,00€" desc="Prosecco, bitter, soda" priceRight />
-                <MenuItemWithDesc label="Hugo" price="6,00€" desc="Sambuco, prosecco, menta" priceRight />
-                <MenuItemWithDesc label="Cynar Spritz" price="6,00€" desc="Cynar, prosecco, soda" priceRight />
+                <MenuItemWithDesc label="Aperol" price="6,00€" desc="Prosecco, Aperol, soda" priceRight />
+                <MenuItemWithDesc label="Campari" price="6,00€" desc="Capari, prosecco, soda" priceRight />
+                <MenuItemWithDesc label="Hugo" price="6,00€" desc="Fior di sambuco, menta, prosecco, soda" priceRight />
               </div>
             </section>
             <section id="sour">
