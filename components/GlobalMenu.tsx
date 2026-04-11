@@ -24,8 +24,8 @@ export default function GlobalMenu() {
 
       const footerRect = footer.getBoundingClientRect();
       
-      // Se la parte superiore del footer entra nella vista (con un margine di 100px)
-      // il menu passa da fixed ad absolute
+      // Se la parte superiore del footer entra nella vista
+      // il menu passa da fixed ad absolute per non sovrapporsi graficamente al footer
       if (footerRect.top <= window.innerHeight) {
         setIsAtFooter(true);
       } else {
@@ -49,7 +49,8 @@ export default function GlobalMenu() {
   return (
     <div 
       className={`left-1/2 -translate-x-1/2 z-[100] flex items-center bg-[#642d3a]/95 backdrop-blur-md text-[#ffefcc] px-8 py-1.5 rounded-full shadow-2xl border border-[#ffefcc]/20 min-w-[320px] justify-between transition-all duration-300 ${
-        isAtFooter ? 'absolute bottom-10' : 'fixed bottom-8'
+        /* Posizionamento ribassato: bottom-4 quando scorre, bottom-6 quando tocca il footer */
+        isAtFooter ? 'absolute bottom-6' : 'fixed bottom-4'
       }`}
     >
       <Link 
