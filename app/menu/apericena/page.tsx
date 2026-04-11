@@ -9,19 +9,19 @@ export default function ApericenaPage() {
       image: "/apericena-tradizionale.jpg",
       title: "Tradizionale",
       price: "12,00€",
-      desc: "Tagliere di affettati misti con gnocco fritto, porzione di patatine e crocchette."
+      desc: "Tagliere di affettati misti con gnocco fritto, porzione di patatine, crocchette di pollo e corocchette di patate."
     },
     {
       image: "/taglieremateraapericena.jpg",
       title: "Madera",
       price: "14,00€",
-      desc: "Tagliere di affettati e formaggi misti, crostone, focaccia, olive e salse."
+      desc: "Tagliere di affettati e formaggi misti, crostone e focaccia, olive, salse di miele e aceto balsamico. "
     },
     {
       image: "/apericena-vegetariano01.jpg",
       title: "Vegetariano",
       price: "16,00€",
-      desc: "Burger veg, olive, formaggio, zucchine grigliate, flan di verdure e parmigiana."
+      desc: "Burger vegetariano, olive, formaggio, uovo sodo, zucchine grigliate, flan di verdure, peperoni arrostiti, parmigiana di melanzane stick."
     }
   ];
 
