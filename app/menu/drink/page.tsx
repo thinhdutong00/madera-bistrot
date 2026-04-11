@@ -290,6 +290,9 @@ export default function DrinkPage() {
               <div className="space-y-4">
                 <MenuItemWithDesc label="Moscow Mule" price="7,00€" desc="Vodka, lime, ginger beer" priceRight />
                 <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime, ginger beer" priceRight />
+                <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime, ginger beer" priceRight />
+                <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime, ginger beer" priceRight />
+                <MenuItemWithDesc label="London Mule" price="7,00€" desc="Gin, lime, ginger beer" priceRight />
                 <MenuItemWithDesc label="Dark n Stormy" price="8,00€" desc="Rum scuro, lime, ginger beer" priceRight />
               </div>
             </section>
