@@ -136,7 +136,7 @@ export default function DrinkPage() {
   />
 </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
-            <MenuItemWithDesc label="Cosmopoli-Thain" price="10,00€" desc="Vodka, cointreau, lime, cranberry, kaffir lime, lemongrass" priceRight />
+            <MenuItemWithDesc label="Cosmopolitan" price="10,00€" desc="Vodka, triple sec, lime, mirtillo" priceRight />
             <MenuItemWithDesc label="Wild Turkey" price="10,00€" desc="Wild turkey 101, miele, limone, ginger beer" priceRight />
             <MenuItemWithDesc label="Balsamic" price="10,00€" desc="Gin, fragola, limone, zucchero, aceto balsamico" priceRight />
             <MenuItemWithDesc label="Ginn-Ebro" price="10,00€" desc="Gin, liquore al pino, rosmarino, limone, zucchero" priceRight />
@@ -219,31 +219,31 @@ export default function DrinkPage() {
             <MenuItemWithDesc label="Americano" price="7,00€" desc="Vermouth rosso, Campari, soda" priceRight />
             <MenuItemWithDesc label="Negroni" price="7,00€" desc="Gin, Vermouth rosso, Campari" priceRight />
             <MenuItemWithDesc label="Negroni Sbagliato" price="7,00€" desc="Prosecco, Vermouth rosso, Campari" priceRight />
-            <MenuItemWithDesc label="Mito" price="7,00€" desc="Vermouth rosso, Campari" priceRight />
-            <MenuItemWithDesc label="Garibaldi" price="7,00€" desc="Campari, spremuta d'arancia" priceRight />
-            <MenuItemWithDesc label="Cardinale" price="7,00€" desc="Gin, Vermouth dry, Campari" priceRight />
-            <MenuItemWithDesc label="Boulevardier" price="8,00€" desc="Bourbon, Vermouth rosso, Campari" priceRight />
-            <MenuItemWithDesc label="Martini Cocktail" price="9,00€" desc="Gin, Vermouth dry" priceRight />
-            <MenuItemWithDesc label="Vesper Martini" price="10,00€" desc="Gin, Vodka, Lillet Blanc" priceRight />
-            <MenuItemWithDesc label="Espresso Martini" price="8,00€" desc="Vodka, liquore caffè, espresso, zucchero" priceRight />
+            <MenuItemWithDesc label="John Collins" price="7,00€" desc="Gin, limone, zucchero, soda, angostura" priceRight />
+            <MenuItemWithDesc label="Southsite" price="7,00€" desc="Gin, limone, zucchero, menta" priceRight />
+            <MenuItemWithDesc label="Hayman's Old Tom" price="7,00€" desc="" priceRight />
+            <MenuItemWithDesc label="Boulevardier" price="8,00€" desc="Whiskey, Vermouth rosso, Campari" priceRight />
+            <MenuItemWithDesc label="Gin Tonic" price="9,00€" desc="Gin e tonica" priceRight />
+            <MenuItemWithDesc label="Gin Lemon" price="10,00€" desc="Gin e lemon soda" priceRight />
+            <MenuItemWithDesc label="Espresso Martini" price="8,00€" desc="Vodka, kahlua, zucchero, caffè" priceRight />
             <MenuItemWithDesc label="Cosmopolitan" price="8,00€" desc="Vodka, triple sec, lime, cranberry" priceRight />
-            <MenuItemWithDesc label="Manhattan" price="9,00€" desc="Rye whiskey, Vermouth rosso, angostura" priceRight />
-            <MenuItemWithDesc label="Old Fashioned" price="9,00€" desc="Bourbon, zucchero, angostura, soda" priceRight />
+            <MenuItemWithDesc label="Manhattan" price="9,00€" desc="Bourbon whiskey, Vermouth rosso, angostura" priceRight />
+            <MenuItemWithDesc label="Vodka Lemon/tonic" price="9,00€" desc="" priceRight />
             <MenuItemWithDesc label="Daiquiri" price="7,00€" desc="Rum bianco, lime, zucchero" priceRight />
-            <MenuItemWithDesc label="Margarita" price="8,00€" desc="Tequila, triple sec, lime" priceRight />
-            <MenuItemWithDesc label="Tommy's Margarita" price="9,00€" desc="Tequila, lime, sciroppo d'agave" priceRight />
+            <MenuItemWithDesc label="Angelo Azzurro" price="8,00€" desc="Gin, triple sec, blu curaçao, limone" priceRight />
+            <MenuItemWithDesc label="Sex on the beach" price="9,00€" desc="Vodka, vodka pesca, arancia, mirtillo" priceRight />
             <MenuItemWithDesc label="Tequila Sunrise" price="7,00€" desc="Tequila, arancia, granatina" priceRight />
-            <MenuItemWithDesc label="Paloma" price="8,00€" desc="Tequila, lime, soda al pompelmo" priceRight />
-            <MenuItemWithDesc label="Black Russian" price="7,00€" desc="Vodka, liquore al caffè" priceRight />
-            <MenuItemWithDesc label="White Russian" price="8,00€" desc="Vodka, liquore al caffè, panna" priceRight />
-            <MenuItemWithDesc label="Bloody Mary" price="9,00€" desc="Vodka, pomodoro, spezie" priceRight />
-            <MenuItemWithDesc label="Aviation" price="10,00€" desc="Gin, maraschino, crème de violette, limone" priceRight />
-            <MenuItemWithDesc label="Clover Club" price="9,00€" desc="Gin, sciroppo di lampone, limone, albume" priceRight />
-            <MenuItemWithDesc label="Last Word" price="10,00€" desc="Gin, chartreuse verde, maraschino, lime" priceRight />
-            <MenuItemWithDesc label="Pisco Sour" price="10,00€" desc="Pisco, limone, zucchero, albume, angostura" priceRight />
-            <MenuItemWithDesc label="Sidecar" price="10,00€" desc="Cognac, triple sec, limone" priceRight />
-            <MenuItemWithDesc label="French 75" price="9,00€" desc="Gin, limone, zucchero, Prosecco" priceRight />
-            <MenuItemWithDesc label="Gimlet" price="7,00€" desc="Gin, lime cordial" priceRight />
+            <MenuItemWithDesc label="Paloma" price="8,00€" desc="Tequila, lime, sale, soda al pompelmo" priceRight />
+            <MenuItemWithDesc label="Black Russian" price="7,00€" desc="Vodka, kahlua" priceRight />
+            <MenuItemWithDesc label="White Lady" price="8,00€" desc="Gin, triple sec, limone" priceRight />
+            <MenuItemWithDesc label="Jager Bomb" price="9,00€" desc="Jagermeister, red bull" priceRight />
+            <MenuItemWithDesc label="Coca e Rum" price="10,00€" desc="" priceRight />
+            <MenuItemWithDesc label="Cuba Libre" price="9,00€" desc="Rum cubano, lime, coca cola" priceRight />
+            <MenuItemWithDesc label="Gin Fizz" price="10,00€" desc="Gin, limone, zucchero, soda" priceRight />
+            <MenuItemWithDesc label="Pina Colada" price="10,00€" desc="Rum cubano, crema di cocco, ananas" priceRight />
+            <MenuItemWithDesc label="Vodka Red Bull" price="10,00€" desc="Vodka e Redbull" priceRight />
+            <MenuItemWithDesc label="Mai tai" price="9,00€" desc="Rum, triple sec, orzata, lime, zucchero" priceRight />
+            <MenuItemWithDesc label="Cocktail Martini" price="7,00€" desc="Gin, dry martini" priceRight />
           </div>
         </section>
 
