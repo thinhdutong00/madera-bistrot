@@ -1,21 +1,24 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import GlobalMenu from '@/components/GlobalMenu';
 
 export default function ApericenaPage() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isAtFooter, setIsAtFooter] = useState(false);
+
   const opzioni = [
     {
       image: "/apericena-tradizionale.jpg",
       title: "Tradizionale",
       price: "12,00€",
-      desc: "Tagliere di affettati misti con gnocco fritto, porzione di patatine, crocchette di pollo e corocchette di patate."
+      desc: "Tagliere di affettati misti con gnocco fritto, porzione di patatine, crocchette di pollo e crocchette di patate."
     },
     {
       image: "/taglieremateraapericena.jpg",
       title: "Madera",
       price: "14,00€",
-      desc: "Tagliere di affettati e formaggi misti, crostone e focaccia, olive, salse di miele e aceto balsamico. "
+      desc: "Tagliere di affettati e formaggi misti, crostone e focaccia, olive, salse di miele e aceto balsamico."
     },
     {
       image: "/apericena-vegetariano01.jpg",
@@ -25,68 +28,82 @@ export default function ApericenaPage() {
     }
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const footerThreshold = 120;
+      if (rect.bottom <= window.innerHeight + footerThreshold) {
+        setIsAtFooter(true);
+      } else {
+        setIsAtFooter(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="relative min-h-screen bg-white pt-12 md:pt-32 pb-40 px-6 w-full">
+    <div ref={containerRef} className="relative min-h-screen bg-white pt-12 md:pt-32 pb-40 px-6 w-full">
       <div className="max-w-[1400px] mx-auto">
         
         {/* INTESTAZIONE */}
-<div className="max-w-[1400px] mx-auto mb-8 md:mb-16 px-2">
-  <h2 className="
-    /* Sfondo bordeaux e testo bianco sempre */
-    bg-[#642d3a] text-white rounded-xl uppercase font-black italic tracking-tighter w-full
-    
-    /* Mobile: testo centrato e padding */
-    text-4xl text-center py-4 px-2
-    
-    /* Desktop: allineamento a sinistra e padding maggiore */
-    md:text-5xl md:text-left md:py-6 md:px-8
-  ">
-    Apericena
-  </h2>
-  
-  {/* Aggiunto mt-6 su mobile e mt-8 su desktop per staccarlo dal banner */}
-  <p className="mt-6 md:mt-8 text-[11px] md:text-sm uppercase tracking-[0.15em] md:tracking-[0.2em] font-bold text-[#642d3a] opacity-70 underline decoration-1 underline-offset-4 max-w-2xl mx-auto md:ml-0 leading-relaxed text-center md:text-left">
-  Dalle 18:00 alle 22:30. Incluso puoi scegliere un analcolico, calice di vino, spritz o birra.
-</p>
-</div>
+        <div className="max-w-[1400px] mx-auto mb-8 md:mb-16 px-2">
+          <h2 className="bg-[#642d3a] text-white rounded-xl uppercase font-titoli italic tracking-tighter w-full text-4xl text-center py-4 px-2 md:text-5xl md:text-left md:py-6 md:px-8">
+            Apericena
+          </h2>
+          <p className="mt-6 md:mt-8 text-[11px] md:text-sm uppercase tracking-[0.15em] md:tracking-[0.2em] font-bold text-[#642d3a] opacity-70 underline decoration-1 underline-offset-4 max-w-2xl mx-auto md:ml-0 leading-relaxed text-center md:text-left">
+            Dalle 18:00 alle 22:30. Incluso puoi scegliere un analcolico, calice di vino, spritz o birra.
+          </p>
+        </div>
 
-        {/* GRIGLIA CARD */}
+        {/* GRIGLIA CARD GIREVOLI */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
           {opzioni.map((item, index) => (
-            <div key={index} className="flex flex-col h-full bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100">
-              
-              {/* IMMAGINE 
-                  Modificato: aspect-square su mobile per non occupare troppa altezza, aspect-[4/5] su desktop 
-              */}
-              <div className="relative aspect-square md:aspect-[4/5] w-full">
-                <Image 
-                  src={item.image} 
-                  alt={item.title} 
-                  fill 
-                  className="object-cover"
-                  priority
-                />
-              </div>
-
-              {/* TESTO */}
-              <div className="p-5 flex flex-col flex-grow">
-                <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="text-xl font-black uppercase italic text-[#642d3a] tracking-tighter">
-                    {item.title}
-                  </h3>
-                  <span className="text-[#642d3a] font-black text-sm">{item.price}</span>
+            <div key={index} className="group [perspective:1000px] h-[500px] md:h-[600px]">
+              <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                
+                {/* PARTE DAVANTI (FRONT) */}
+                <div className="absolute inset-0 flex flex-col bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 [backface-visibility:hidden]">
+                  <div className="relative aspect-square md:aspect-[4/5] w-full">
+                    <Image 
+                      src={item.image} 
+                      alt={item.title} 
+                      fill 
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                  <div className="p-5 flex flex-col flex-grow justify-center">
+                    <div className="flex justify-between items-baseline">
+                      <h3 className="text-2xl font-titoli uppercase italic text-[#642d3a] tracking-tighter">
+                        {item.title}
+                      </h3>
+                      <span className="text-[#642d3a] font-black text-lg">{item.price}</span>
+                    </div>
+                    <p className="text-[10px] uppercase tracking-widest mt-2 text-gray-400 font-bold">Passa sopra per gli ingredienti</p>
+                  </div>
                 </div>
-                <p className="text-[12px] leading-snug text-gray-600 font-medium">
-                  {item.desc}
-                </p>
-              </div>
 
+                {/* PARTE DIETRO (BACK) */}
+                <div className="absolute inset-0 h-full w-full rounded-3xl bg-[#642d3a] p-8 text-white [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-center items-center text-center">
+                  <h3 className="text-xl font-titoli uppercase italic mb-6 border-b border-[#ffefcc]/30 pb-2 text-[#ffefcc]">
+                    Ingredienti
+                  </h3>
+                  <p className="text-lg leading-relaxed font-black uppercase tracking-tight">
+                    {item.desc}
+                  </p>
+                </div>
+
+              </div>
             </div>
           ))}
         </div>
       </div>
 
-      <GlobalMenu />
+      <div className={`left-1/2 -translate-x-1/2 z-[90] w-full max-w-fit transition-all duration-300 ${isAtFooter ? 'absolute bottom-10' : 'fixed bottom-8'}`}>
+        <GlobalMenu />
+      </div>
     </div>
   );
 }
