@@ -6,6 +6,7 @@ import GlobalMenu from '@/components/GlobalMenu';
 export default function ApericenaPage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isAtFooter, setIsAtFooter] = useState(false);
+  const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
 
   const opzioni = [
     {
@@ -43,6 +44,11 @@ export default function ApericenaPage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleCardClick = (index: number) => {
+    // Se clicchi sulla stessa card già girata, torna al fronte, altrimenti gira la nuova
+    setFlippedIndex(flippedIndex === index ? null : index);
+  };
+
   return (
     <div ref={containerRef} className="relative min-h-screen bg-white pt-12 md:pt-32 pb-40 px-6 w-full">
       <div className="max-w-[1400px] mx-auto">
@@ -60,8 +66,15 @@ export default function ApericenaPage() {
         {/* GRIGLIA CARD GIREVOLI */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
           {opzioni.map((item, index) => (
-            <div key={index} className="group [perspective:1000px] h-[500px] md:h-[600px]">
-              <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div 
+              key={index} 
+              onClick={() => handleCardClick(index)}
+              className="group [perspective:1000px] h-[500px] md:h-[600px] cursor-pointer"
+            >
+              <div className={`relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] 
+                ${flippedIndex === index ? '[transform:rotateY(180deg)]' : ''} 
+                md:group-hover:[transform:rotateY(180deg)]`}
+              >
                 
                 {/* PARTE DAVANTI (FRONT) */}
                 <div className="absolute inset-0 flex flex-col bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 [backface-visibility:hidden]">
@@ -81,7 +94,7 @@ export default function ApericenaPage() {
                       </h3>
                       <span className="text-[#642d3a] font-black text-lg">{item.price}</span>
                     </div>
-                    
+                    <p className="text-[10px] uppercase tracking-widest mt-2 text-gray-300 font-bold md:hidden">Tocca per gli ingredienti</p>
                   </div>
                 </div>
 
@@ -93,6 +106,7 @@ export default function ApericenaPage() {
                   <p className="text-lg leading-relaxed font-black uppercase tracking-tight">
                     {item.desc}
                   </p>
+                  <p className="text-[10px] uppercase tracking-widest mt-8 text-[#ffefcc]/50 font-bold md:hidden">Tocca per tornare</p>
                 </div>
 
               </div>
