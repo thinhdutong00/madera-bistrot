@@ -305,9 +305,12 @@ export default function DrinkPage() {
   />
 </div>
               <div className="space-y-4">
-                <MenuItemWithDesc label="Mojito" price="7,00€" desc="Rum, menta, lime, zucchero" priceRight />
-                <MenuItemWithDesc label="Caipirinha" price="7,00€" desc="Cachaça, lime, zucchero" priceRight />
-                <MenuItemWithDesc label="Caipiroska" price="7,00€" desc="Vodka, lime, zucchero" priceRight />
+                <MenuItemWithDesc label="Mojito" price="8,00€" desc="Rum bianco, menta, lime, zucchero di canna, soda" priceRight />
+                <MenuItemWithDesc label="Mojito Madera" price="8,00€" desc="Rum bianco, lime, menta, fragola, cocco, zucchero di canna, soda " priceRight />
+                <MenuItemWithDesc label="Caipirinha" price="8,00€" desc="Cachaça, lime, zucchero di canna, soda" priceRight />
+                <MenuItemWithDesc label="Caipiroska" price="8,00€" desc="Vodka, lime, zucchero di canna, soda" priceRight />
+                <MenuItemWithDesc label="Piscis" price="8,00€" desc="Rum bianco, lime pestato, zucchero di canna, menta, blu curaçao, soda" priceRight />
+                <MenuItemWithDesc label="Punch cubano" price="8,00€" desc="Rum scuro, zucchero di canna, lime pestato, coca cola" priceRight />
               </div>
             </section>
         </div>
