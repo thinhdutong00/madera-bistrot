@@ -275,9 +275,11 @@ export default function DrinkPage() {
   />
 </div>
               <div className="space-y-4">
-                <MenuItemWithDesc label="Vodka Sour" price="8,00€" desc="Vodka, limone, zucchero" priceRight />
-                <MenuItemWithDesc label="Whiskey Sour" price="9,00€" desc="Bourbon, limone, zucchero" priceRight />
-                <MenuItemWithDesc label="Amaretto Sour" price="8,00€" desc="Amaretto, limone, zucchero" priceRight />
+                <MenuItemWithDesc label="Vodka" price="7,00€" desc="Vodka, zucchero, sweet&sour" priceRight />
+                <MenuItemWithDesc label="Pisco" price="7,00€" desc="Pisco, zucchero, sweet&sour" priceRight />
+                <MenuItemWithDesc label="Disaronno" price="7,00€" desc="Disaronno, zucchero, sweet&sour" priceRight />
+                <MenuItemWithDesc label="Whiskey" price="8,00€" desc="Whiskey, zucchero, sweet&sour" priceRight />
+                <MenuItemWithDesc label="Midori" price="8,00€" desc="Midori, zucchero, sweet&sour" priceRight />
               </div>
             </section>
             <section id="mule">
