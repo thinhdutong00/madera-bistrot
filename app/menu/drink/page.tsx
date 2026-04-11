@@ -197,8 +197,11 @@ export default function DrinkPage() {
   />
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <MenuItemWithDesc label="Analcolico alla frutta" price="5,00€" desc="Mix di succhi stagionali, granatina, soda" priceRight />
-            <MenuItemWithDesc label="Virgin Mojito" price="6,00€" desc="Lime, zucchero di canna, menta, ginger ale" priceRight />
+            <MenuItemWithDesc label="Long Island" price="9,00€" desc="Vodka, gin, rum, triple sec, limone, zucchero, coca cola" priceRight />
+            <MenuItemWithDesc label="Japanese" price="9,00€" desc="Vodka, gin, rum, midori, limone, zucchero, shweppes lemon" priceRight />
+            <MenuItemWithDesc label="Miami" price="9,00€" desc="Vodka, gin, rum, blu curaçao, limone, zucchero, schweppes lemon" priceRight />
+            <MenuItemWithDesc label="Passion" price="9,00€" desc="Vodka, gin, rum, passoa, limone, zucchero, schweppes lemon" priceRight />
+            <MenuItemWithDesc label="Italian" price="9,00€" desc="Vodka, gin, rum, disaronno, limone, zucchero, shweppes lemon" priceRight />
           </div>
         </section>
 
