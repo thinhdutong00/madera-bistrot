@@ -42,7 +42,7 @@ export default function StuzzicheriePage() {
           </div>
           <div className="hidden md:block opacity-60">
             <p className="text-[10px] uppercase tracking-[0.2em] text-[#642d3a]">
-              Prodotti freschi e selezionati ogni giorno
+              Mordi e sorseggia.
             </p>
           </div>
         </div>
