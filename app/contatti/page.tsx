@@ -16,9 +16,9 @@ export default function ContattiPage() {
   const [isHoursOpen, setIsHoursOpen] = useState(true);
 
   const sede = { 
-    n: 'Madera Bar', 
-    a: 'Via Indirizzo del Bar, 123 - Città (Prov)', 
-    u: "https://www.google.com/maps/embed?pb=!1m18!1m12..." 
+    n: 'Madera caffè & bistrot', 
+    a: 'Via Alcide Garagnani, 10, 41012 Carpi MO', 
+    u: "https://maps.app.goo.gl/n6R8awtv4CbzpvAH9" 
   };
 
   return (
