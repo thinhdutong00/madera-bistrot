@@ -11,14 +11,14 @@ import {
 } from 'lucide-react';
 
 export default function ContattiPage() {
-  // Inserisci qui il link "Embed" di Google Maps per la tua sede
-  const [mapUrl, setMapUrl] = useState("https://www.google.com/maps/place/Madera+caff%C3%A8+%26+bistrot/@44.7781656,10.8806783,17z/data=!4m15!1m8!3m7!1s0x477ff2cb150e2113:0x8dba234bd7cf8dc3!2sMadera+caff%C3%A8+%26+bistrot!8m2!3d44.7781656!4d10.8832532!10e2!16s%2Fg%2F11cs2419hx!3m5!1s0x477ff2cb150e2113:0x8dba234bd7cf8dc3!8m2!3d44.7781656!4d10.8832532!16s%2Fg%2F11cs2419hx?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D");
+  // Il link deve essere di tipo "Embed" per funzionare nell'iframe
+  const [mapUrl] = useState("http://googleusercontent.com/maps.google.com/7");
   const [isHoursOpen, setIsHoursOpen] = useState(true);
 
   const sede = { 
     n: 'Madera caffè & bistrot', 
     a: 'Via Alcide Garagnani, 10, 41012 Carpi MO', 
-    u: "https://maps.app.goo.gl/n6R8awtv4CbzpvAH9" 
+    u: "http://googleusercontent.com/maps.google.com/8" 
   };
 
   return (
@@ -45,7 +45,7 @@ export default function ContattiPage() {
               Il Nostro <br className="hidden md:block" /> 
               <span className="text-[#642d3a]/60">Locale.</span>
             </h2>
-            <p className="text-slate-500 font-medium mb-12 max-w-sm">Dalla colazione all'aperitivo, ti aspettiamo per un momento di relax unico.</p>
+            <p className="text-slate-500 font-medium mb-12 max-w-sm">Dalla colazione all'aperitivo, ti aspettiamo nel cuore di Carpi.</p>
             
             <div className="space-y-4 w-full">
               {/* Sede Singola */}
@@ -115,7 +115,7 @@ export default function ContattiPage() {
           <iframe 
             src={mapUrl} 
             title="Mappa Madera Bar"
-            className="w-full h-full grayscale-[0.3] contrast-[1.2] invert-[0.05]" 
+            className="w-full h-full grayscale-[0.3] contrast-[1.2]" 
             style={{ border: 0 }} 
             allowFullScreen 
             loading="lazy"
