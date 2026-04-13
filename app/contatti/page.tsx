@@ -81,13 +81,13 @@ export default function ContattiPage() {
               <div className={`transition-all duration-500 ease-in-out ${isHoursOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
                 <div className="p-5 pt-0 space-y-3 border-t border-slate-50">
                   {[
-                    { d: 'Lunedì', o: '07:00 – 22:30' },
-                    { d: 'Martedì', o: '07:00 – 22:30' },
-                    { d: 'Mercoledì', o: '07:00 – 22:30' },
-                    { d: 'Giovedì', o: '07:00 – 22:30' },
-                    { d: 'Venerdì', o: '07:00 – 00:00' },
-                    { d: 'Sabato', o: '08:00 – 00:00' },
-                    { d: 'Domenica', o: '08:00 – 22:30' },
+                    { d: 'Lunedì', o: '07:00 – 01:00' },
+                    { d: 'Martedì', o: '07:00 – 01:00' },
+                    { d: 'Mercoledì', o: '07:00 – 01:00' },
+                    { d: 'Giovedì', o: '07:00 – 01:00' },
+                    { d: 'Venerdì', o: '07:00 – 03:00' },
+                    { d: 'Sabato', o: '07:00 – 03:00' },
+                    { d: 'Domenica', o: '08:00 – 01:00' },
                   ].map((item, idx) => (
                     <div key={idx} className="flex justify-between items-center gap-4">
                       <span className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter shrink-0">{item.d}</span>
