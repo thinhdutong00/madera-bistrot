@@ -140,19 +140,19 @@ export default function DrinkPage() {
             <MenuItemWithDesc label="Tropical Spritz" price="6,00€" desc="Aperol, maracuja, prosecco, soda" priceRight />
             <MenuItemWithDesc label="Violette Spritz" price="6,00€" desc="Liquore alla violetta, prosecco, soda" priceRight />
             <MenuItemWithDesc label="Witch Negroni" price="8,00€" desc="Vermouth rosso carpano classico, bitter Campari, liquore alle erbe" priceRight />
-            <MenuItemWithDesc label="Basito" price="10,00€" desc="Limoncello, liquore all'arancia, succo di limone fresco, zucchero liquido, panna" priceRight />
-            <MenuItemWithDesc label="Zio Tobia" price="10,00€" desc="Rye whiskey, cynar, cherry brandy" priceRight />
-            <MenuItemWithDesc label="Ginetto" price="10,00€" desc="Gin, mela verde, cetriolo, lime, zucchero" priceRight />
-            <MenuItemWithDesc label="Don Vito" price="10,00€" desc="Bourbon, amaretto di saronno, limone, zucchero" priceRight />
-            <MenuItemWithDesc label="Ciapel" price="10,00€" desc="Bourbon, peach tree, limone, zucchero" priceRight />
-            <MenuItemWithDesc label="Italian Mule" price="10,00€" desc="Vermouth rosso, lime, ginger beer" priceRight />
-            <MenuItemWithDesc label="Tiki-Taka" price="12,00€" desc="Mix di Rum, lime, orzata, pompelmo, ananas" priceRight />
-            <MenuItemWithDesc label="Passion" price="10,00€" desc="Vodka, passion fruit, lime, zucchero" priceRight />
-            <MenuItemWithDesc label="Zenzy" price="10,00€" desc="Vodka, zenzero fresco, lime, zucchero" priceRight />
-            <MenuItemWithDesc label="Paloma Madera" price="10,00€" desc="Tequila, agave, lime, soda al pompelmo rosa" priceRight />
-            <MenuItemWithDesc label="Samba" price="10,00€" desc="Cachaca, mela verde, lime, zucchero" priceRight />
-            <MenuItemWithDesc label="Smokey Negroni" price="12,00€" desc="Gin, Campari, Vermouth rosso, Mezcal" priceRight />
-            <MenuItemWithDesc label="Garden Gin" price="10,00€" desc="Gin, sambuco, menta, cetriolo, lime, soda" priceRight />
+            <MenuItemWithDesc label="Lemon Cheesecake" price="9,00€" desc="Limoncello, liquore all'arancia, succo di limone fresco, zucchero liquido, panna" priceRight />
+            <MenuItemWithDesc label="Cookies" price="9,00€" desc="Liquore al caffè, crema di whiskey, cioccolato, un caffè espresso" priceRight />
+            <MenuItemWithDesc label="Maderinha" price="9,00€" desc="Cachaca brasiliana, liquore alla ciliegia, lime pestato, zucchero di canna, melograno, soda" priceRight />
+            <MenuItemWithDesc label="Klab" price="8,00€" desc="Aperol, succo di limone fresco, liquore alle amarene, succo di arancia, zucchero liquido" priceRight />
+            <MenuItemWithDesc label="Scorpion Kelbo's" price="10,00€" desc="Whiskey wild turkey, rum scuro Havana 7yr., gin, succo di lime fresco, maracuja, succo di arancia, sciroppo di orzata" priceRight />
+            <MenuItemWithDesc label="Pornostar Madera" price="9,00€" desc="Tequila Josè Cuervo especial silver, liquore all'arancia, succo di lime fresco, zucchero liquido, maracuja" priceRight />
+            <MenuItemWithDesc label="Suerte" price="8,00€" desc="Rum scuro Havana 7yr., sciroppo di orzata, fragola, bitter angostura, soda aromatizzata allo zenzero" priceRight />
+            <MenuItemWithDesc label="Machu Picchu" price="8,00€" desc="Pisco peruviano, cocco, fragola, succo di lime fresco, oli essenziali" priceRight />
+            <MenuItemWithDesc label="Jam Collin's" price="10,00€" desc="Vodka, succo di limone fresco, zucchero liquido, marmellata, soda" priceRight />
+            <MenuItemWithDesc label="Mojito Pina Colada" price="9,00€" desc="Lime pestato, zucchero di canna,, rum aromatizzato al cocco, menta, cocco, succo di ananas" priceRight />
+            <MenuItemWithDesc label="Old Mule" price="8,00€" desc="Liquore al melone, liquore alle erbe, succo di lime fresco, soda aromatizzata allo zenzero" priceRight />
+            <MenuItemWithDesc label="Spring Sour" price="8,00€" desc="Liquore alla violetta, fiori di sambuco, succo di lime fresco, oli essenziali" priceRight />
+            <MenuItemWithDesc label="Liquid Marijuna" price="12,00€" desc="Rum scuro Havana 7yr., rum aromatizzato al cocco, liquore al limone, blue curaçao, succo di lime fresco, zucchero liquido, succo di ananas" priceRight />
           </div>
         </section>
 
