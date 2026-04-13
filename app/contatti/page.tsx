@@ -12,7 +12,7 @@ import {
 
 export default function ContattiPage() {
   // Inserisci qui il link "Embed" di Google Maps per la tua sede
-  const [mapUrl, setMapUrl] = useState("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.000000000000!2d10.880000!3d44.640000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDM4JzI0LjAiTiAxMMKwNTInNDguMCJF!5e0!3m2!1sit!2sit!4v1234567890");
+  const [mapUrl, setMapUrl] = useState("https://www.google.com/maps/place/Madera+caff%C3%A8+%26+bistrot/@44.7781656,10.8806783,17z/data=!4m15!1m8!3m7!1s0x477ff2cb150e2113:0x8dba234bd7cf8dc3!2sMadera+caff%C3%A8+%26+bistrot!8m2!3d44.7781656!4d10.8832532!10e2!16s%2Fg%2F11cs2419hx!3m5!1s0x477ff2cb150e2113:0x8dba234bd7cf8dc3!8m2!3d44.7781656!4d10.8832532!16s%2Fg%2F11cs2419hx?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D");
   const [isHoursOpen, setIsHoursOpen] = useState(true);
 
   const sede = { 
