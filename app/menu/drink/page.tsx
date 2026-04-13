@@ -136,11 +136,11 @@ export default function DrinkPage() {
   />
 </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
-            <MenuItemWithDesc label="Cosmopolitan" price="10,00€" desc="Vodka, triple sec, lime, mirtillo" priceRight />
-            <MenuItemWithDesc label="Wild Turkey" price="10,00€" desc="Wild turkey 101, miele, limone, ginger beer" priceRight />
-            <MenuItemWithDesc label="Balsamic" price="10,00€" desc="Gin, fragola, limone, zucchero, aceto balsamico" priceRight />
-            <MenuItemWithDesc label="Ginn-Ebro" price="10,00€" desc="Gin, liquore al pino, rosmarino, limone, zucchero" priceRight />
-            <MenuItemWithDesc label="Basito" price="10,00€" desc="Gin, basilico, lime, zucchero, soda" priceRight />
+            <MenuItemWithDesc label="Coco Blue Sky" price="8,00€" desc="Rum aromatizzato al cocco, blue caraçao, panna" priceRight />
+            <MenuItemWithDesc label="Tropical Spritz" price="6,00€" desc="Aperol, maracuja, prosecco, soda" priceRight />
+            <MenuItemWithDesc label="Violette Spritz" price="6,00€" desc="Liquore alla violetta, prosecco, soda" priceRight />
+            <MenuItemWithDesc label="Witch Negroni" price="8,00€" desc="Vermouth rosso carpano classico, bitter Campari, liquore alle erbe" priceRight />
+            <MenuItemWithDesc label="Basito" price="10,00€" desc="Limoncello, liquore all'arancia, succo di limone fresco, zucchero liquido, panna" priceRight />
             <MenuItemWithDesc label="Zio Tobia" price="10,00€" desc="Rye whiskey, cynar, cherry brandy" priceRight />
             <MenuItemWithDesc label="Ginetto" price="10,00€" desc="Gin, mela verde, cetriolo, lime, zucchero" priceRight />
             <MenuItemWithDesc label="Don Vito" price="10,00€" desc="Bourbon, amaretto di saronno, limone, zucchero" priceRight />
