@@ -11,14 +11,14 @@ import {
 } from 'lucide-react';
 
 export default function ContattiPage() {
-  // Il link deve essere di tipo "Embed" per funzionare nell'iframe
-  const [mapUrl] = useState("http://googleusercontent.com/maps.google.com/7");
+  // Utilizziamo il link fornito per l'integrazione della mappa
+  const [mapUrl] = useState("https://maps.app.goo.gl/oGU83mh5zBuj4Sut8");
   const [isHoursOpen, setIsHoursOpen] = useState(true);
 
   const sede = { 
     n: 'Madera caffè & bistrot', 
-    a: 'Via Alcide Garagnani, 10, 41012 Carpi MO', 
-    u: "http://googleusercontent.com/maps.google.com/8" 
+    a: 'Via Alcide Garagnani, 10, 41012 Carpi MO',
+    linkGoogle: "https://www.google.com/maps/place/Madera+caff%C3%A8+%26+bistrot/@44.7781656,10.8806783,17z/data=!4m15!1m8!3m7!1s0x477ff2cb150e2113:0x8dba234bd7cf8dc3!2sMadera+caff%C3%A8+%26+bistrot!8m2!3d44.7781656!4d10.8832532!10e2!16s%2Fg%2F11cs2419hx!3m5!1s0x477ff2cb150e2113:0x8dba234bd7cf8dc3!8m2!3d44.7781656!4d10.8832532!16s%2Fg%2F11cs2419hx?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D"
   };
 
   return (
@@ -37,6 +37,7 @@ export default function ContattiPage() {
         
         {/* LATO TESTI E DETTAGLI */}
         <div className="lg:w-2/5 w-full p-6 md:p-16 lg:p-24 flex flex-col justify-center bg-gradient-to-br from-white to-[#ffefcc]/20 relative overflow-hidden">
+          {/* Elemento decorativo di sfondo */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#642d3a]/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl pointer-events-none"></div>
           
           <div className="relative z-10 w-full">
@@ -48,8 +49,13 @@ export default function ContattiPage() {
             <p className="text-slate-500 font-medium mb-12 max-w-sm">Dalla colazione all'aperitivo, ti aspettiamo nel cuore di Carpi.</p>
             
             <div className="space-y-4 w-full">
-              {/* Sede Singola */}
-              <div className="group w-full flex items-center gap-4 p-5 rounded-[2rem] transition-all duration-500 border bg-[#642d3a] text-white shadow-xl border-[#642d3a]">
+              {/* Card Indirizzo */}
+              <a 
+                href={sede.linkGoogle}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group w-full flex items-center gap-4 p-5 rounded-[2rem] transition-all duration-500 border bg-[#642d3a] text-white shadow-xl border-[#642d3a] hover:scale-[1.02]"
+              >
                 <div className="p-3 rounded-2xl shrink-0 bg-[#ffefcc] text-[#642d3a]">
                   <MapPin size={22} />
                 </div>
@@ -57,7 +63,7 @@ export default function ContattiPage() {
                   <p className="font-black text-base leading-none mb-1 truncate">{sede.n}</p>
                   <p className="text-[10px] font-bold uppercase tracking-widest truncate text-[#ffefcc]">{sede.a}</p>
                 </div>
-              </div>
+              </a>
             </div>
 
             {/* FISARMONICA ORARI */}
@@ -110,12 +116,12 @@ export default function ContattiPage() {
           </div>
         </div>
 
-        {/* LATO MAPPA */}
-        <div className="lg:w-3/5 w-full h-[500px] lg:h-auto min-h-[500px] relative bg-slate-200">
+        {/* LATO MAPPA - Pulito da filtri per massimizzare la compatibilità */}
+        <div className="lg:w-3/5 w-full h-[500px] lg:h-auto min-h-[500px] relative bg-slate-100">
           <iframe 
             src={mapUrl} 
             title="Mappa Madera Bar"
-            className="w-full h-full grayscale-[0.3] contrast-[1.2]" 
+            className="w-full h-full" 
             style={{ border: 0 }} 
             allowFullScreen 
             loading="lazy"
